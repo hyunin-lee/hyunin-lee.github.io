@@ -12,6 +12,7 @@ Prior to joining Berkeley, I workd with [Prof.Yong-Lae Park](https://softrobotic
 
 <[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en), Linkedin>
 
+Beside my research, I am interested in Public education. I cofounde(ed) and currently advise [Outta](https://outta.ai/)
 
 ### News 
 * New paper on Non-stationary Reinforcement Learning 
