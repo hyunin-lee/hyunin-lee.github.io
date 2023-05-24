@@ -13,3 +13,5 @@ Prior to joining Berkeley, I workd with [Prof.Yong-Lae Park](https://softrobotic
 <Google scholar, CV, Linkedin>
 
 ### News 
+* New paper on Non-stationary Reinforcement Learning 
+* New paper on Neuroscience and machine learning
