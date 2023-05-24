@@ -10,7 +10,8 @@ I work with [Prof.Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/ind
 
 Prior to joining Berkeley, I workd with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/) in Seoul National University. 
 
-<Google scholar, Linkedin>
+<[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en), Linkedin>
+
 
 ### News 
 * New paper on Non-stationary Reinforcement Learning 
