@@ -8,5 +8,5 @@ I work with [Prof.Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/ind
 
 Prior to joining Berkeley, I workd with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/) in Seoul National University. 
 
-<Google Scholar, CV, Linkedin>
+<Google scholar, CV, Linkedin>
 
