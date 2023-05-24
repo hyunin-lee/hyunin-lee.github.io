@@ -10,7 +10,7 @@ I work with [Prof.Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/ind
 
 Prior to joining Berkeley, I workd with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/) in Seoul National University. 
 
-<[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en), Linkedin>
+<[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en), [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1)>
 
 Beside my research, I am interested in AI education. I cofound and currently advise [Outta](https://outta.ai/). 
 
