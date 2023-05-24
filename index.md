@@ -6,7 +6,7 @@ I am a Ph.D student at UC Berkeley.
 
 My research focus on Reinforcement learning, Optimization theory. 
 
-I work with [Prof.Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html), [Prof.Javad Lavaei](https://lavaei.ieor.berkeley.edu/).
+I am fortunate to work with [Prof.Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html), [Prof.Javad Lavaei](https://lavaei.ieor.berkeley.edu/).
 
 Prior to joining Berkeley, I workd with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/) in Seoul National University. 
 
