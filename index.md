@@ -2,7 +2,7 @@
 layout: page
 title: ""
 ---
-![](/assets/hyunin.png| width=100)
+![](/assets/hyunin.png | width=100)
 
 I am a Ph.D student at UC Berkeley. 
 
