@@ -15,6 +15,6 @@ Prior to joining Berkeley, I workd with [Prof.Yong-Lae Park](https://softrobotic
 Beside my research, I am interested in AI education. I cofound and currently advise [Outta](https://outta.ai/). 
 
 ### News 
-* New paper on Non-stationary Reinforcement Learning 
-* New paper on causal machine learning
-* New paper on Neuroscience and machine learning
+* [2023.05] New paper on [Non-stationary Reinforcement Learning]() 
+* [2023.01] New paper on causal machine learning
+* [2022.03] New paper on [Neuroscience and machine learning](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861)
