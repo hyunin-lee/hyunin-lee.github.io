@@ -2,6 +2,7 @@
 layout: page
 title: ""
 ---
+![hyunin](/assets/Lee-Hyunin.png))
 I am a Ph.D student at UC Berkeley. 
 
 My research focus on Reinforcement learning, Optimization theory. 
