@@ -4,7 +4,8 @@ title: ""
 ---
 ![](/assets/hyunin.png)
 
-Hi! my name is Hyunin Lee.  
+Hi! my name is Hyunin Lee.
+
 I am a second-year Ph.D. student at UC Berkeley.  
 My research focuses on ***Reinforcement learning***, ***Optimization theory***.  
 I am fortunate to work with [Prof. Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html), [Prof. Javad Lavaei](https://lavaei.ieor.berkeley.edu/).
