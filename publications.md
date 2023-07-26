@@ -2,8 +2,7 @@
 layout: page
 title: ""
 ---
-asdfasdfasdfasdf
-asdfasdfasdfasdf
+
 ### Preprint 
 * Adapt to Adapt: A Tempo-control Framework for Non-stationary Reinforcement Learning  
 __H.Lee__, Y.Ding, J. Lee, M.Jin, J. Lavaei, S. Sojoudi  
