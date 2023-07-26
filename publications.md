@@ -17,7 +17,7 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE).
 
 ### Conference
 * [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf)  
-S.Pfrommer, Y.Bai, __H.Lee__, S.Sojoudi
+S.Pfrommer, Y.Bai, __H.Lee__, S.Sojoudi  
 IEEE conference on Decision and Control (CDC), 2023.
 
 
