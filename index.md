@@ -22,3 +22,5 @@ Non-stationary Reinforcement Learning]().
 * [2022.05] I received the Kwanjeong Education Foundation Scholarship.
 * [2022.03] New paper on Neuroscience and machine learning: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861).
 
+### Contact 
+hyunin(at)berkeley(dot)edu
