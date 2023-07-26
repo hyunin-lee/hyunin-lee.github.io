@@ -24,8 +24,9 @@ Non-stationary Reinforcement Learning]().
 
 ### Education 
 * Ph.D., University of California, Berkeley, 2022.08 - current
-* Served military service in Korean Combat Traning Center, 2017.07 - 2019.03
 * B.S., Seoul National University, 2015.03 - 2022.02
+
+  (Served military service in Korean Combat Traning Center, 2017.07 - 2019.03)
 
 ### Contact 
 hyunin(at)berkeley(dot)edu
