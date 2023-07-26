@@ -17,8 +17,8 @@ Besides my research, I am interested in AI education. I cofound and currently ad
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1)
 
 ### News 
----
 * [2023.05] New paper on [Non-stationary Reinforcement Learning]() 
 * [2023.01] New paper on [causal machine learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf)
+* [2022.05] I received the Kwanjeong Education Foundation Scholarship
 * [2022.03] New paper on [Neuroscience and machine learning](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861)
 
