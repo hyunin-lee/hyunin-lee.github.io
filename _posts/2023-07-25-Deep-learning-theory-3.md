@@ -1,5 +1,5 @@
 ---
-title:  "Deep learning theoery 3.Effective Theory of Deep Linear Network at initialization"
+title:  "Deep learning theory 3.Effective Theory of Deep Linear Network at Initialization"
 mathjax: true
 layout: post
 categories: media
