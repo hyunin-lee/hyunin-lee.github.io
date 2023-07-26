@@ -8,11 +8,9 @@ The most important principle: wide and deep neural networks are governed by near
 ### [1.1] Gaussian integrals.
 * single variable gaussian distribution**
     - Gaussian distributions with zero-mean & variance K
-    - # $$ e^{i\theta}=\cos(\theta)+i\sin(\theta) $$
+    - $$ e^{i\theta}=\cos(\theta)+i\sin(\theta) $$
     - Expectation values of general functions $\mathcal{O}(z)$ (observable function) when $z$ follows the gaussian distribution.
 
-
-![Swiss Alps](https://user-images.githubusercontent.com/4943215/55412536-edbba180-5567-11e9-9c70-6d33bca3f8ed.jpg)
 
 
 
