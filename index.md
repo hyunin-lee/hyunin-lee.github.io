@@ -18,8 +18,7 @@ Besides my research, I am interested in democratizing AI education. I cofound an
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1)
 
 ### News 
-* [2023.05] New paper on Non-stationary Reinforcement Learning: [Adapt to Adapt: A Tempo-control Framework for
-Non-stationary Reinforcement Learning]().
+* [2023.05] New paper on Non-stationary Reinforcement Learning: []().
 * [2023.01] New paper on Causal machine learning: [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf).
 * [2022.08] I started Ph.D. at UC Berkeley.
 * [2022.05] I received the Kwanjeong Education Foundation Scholarship.
