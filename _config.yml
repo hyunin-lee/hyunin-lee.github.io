@@ -17,7 +17,7 @@ minimal: true             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "./assets/CV.pdf", title: "CV"}
+  - {file: "https://hyunin-lee.github.io/assets/CV.pdf", title: "CV"}
   - {file: "blog.md", title: "Blog"}
   - {file: "publications.md", title: "Publications"}
 
