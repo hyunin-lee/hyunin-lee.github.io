@@ -19,12 +19,12 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 ### Conference
 
 * [Tempo Adaption in Non-stationary Reinforcement Learning]().
-__Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi
+__Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi 
 Under review for Neural Information Processing Systems (NeurIPS), 2023
 
 
 * [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf)  
-Samuel Pfrommer, Yatong Bai, __Hyunin Lee__, and     
+Samuel Pfrommer, Yatong Bai, __Hyunin Lee__, and Somayeh Sojoudi    
 IEEE conference on Decision and Control (CDC), 2023.
 
 
