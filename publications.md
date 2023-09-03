@@ -19,7 +19,7 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 ### Conference
 
 * [Tempo Adaption in Non-stationary Reinforcement Learning]().  
-__Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi 
+__Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
 Under review for Neural Information Processing Systems (NeurIPS), 2023
 
 
