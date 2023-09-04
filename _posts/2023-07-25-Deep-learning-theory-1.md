@@ -13,6 +13,7 @@ The chapter 1 can be grapsed as __Wide and Deep Neural Networks are goverend by 
 ## Gaussian integrals. 
 ### single variable gaussian distribution
 we define the gaussian distributions with zero-mean with variance K as 
+$$ p(z)= \frac{1}{\sqrt{2 \pi K}} e^{-z^2 / 2K}$$
 
 
 
