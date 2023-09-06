@@ -3,6 +3,10 @@ title:  "Formal model in stochastic process by Markov Decision Process"
 mathjax: true
 layout: post
 categories: media
+header-includes:
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{amsthm}
 ---
 
 _The contents are from [Markov Decision Processes: Discrete Stochastic Dynamic Programming - MARTIN L. PUTERMAN], section 2.1.6_
