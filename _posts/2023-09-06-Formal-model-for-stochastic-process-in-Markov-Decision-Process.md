@@ -17,12 +17,12 @@ _The contents are from [Markov Decision Processes: Discrete Stochastic Dynamic P
 # Probability model for stochastic process in MDP
 
 The probability model consists of three elements: 
-* A sample space \Omega
+* A sample space $\Omega$
 * $\sigma$-algebra of measurable subsets of $\Omega$ : $B(\Omega)$
 * Probability measure $P$ on  $B(\Omega)$
 
 Note that when the sample space $\Omega$ is finite, then $B(\Omega)=$ all subsets of $\Omega$ and the probability measure $P$ is the probability mass function.
-In finite MDP, we choose the \textcolor{red}{sample space $\Omega$} as
+In finite MDP, we choose the sample space $\Omega$ as
 $$\Omega = \mathcal{S} \times \mathcal{A} \times \mathcal{S} \times \mathcal{A} \times \mathcal{S} = (\mathcal{S} \times \mathcal{A})^{N-1} \times \mathcal{S}$$
 and the event $\omega \in \Omega$ as 
 $$\omega = (s_1,a_1,...,a_{N-1},s_{N-1})$$
