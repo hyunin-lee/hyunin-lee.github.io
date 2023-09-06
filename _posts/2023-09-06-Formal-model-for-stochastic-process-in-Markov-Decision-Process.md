@@ -1,4 +1,3 @@
-
 ---
 title:  "Formal model in stochastic process by Markov Decision Process"
 mathjax: true
