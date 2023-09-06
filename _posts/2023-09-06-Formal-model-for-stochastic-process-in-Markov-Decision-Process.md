@@ -32,4 +32,10 @@ $$Z_1(w) = s_1,~Z_t(w) = (s_1,a_1,...,s_t)$$.
 
 Now, a randomized history-dependent policy $\pi = (d_1, d_2, . . . , d_{N-1}),~N \leq \infty$ induces a probability $P^{\pi}$ on $(\Omega, B(\Omega))$ through 
 
+\begin{align}
+  P^{\pi}(X_t = s) = P_t(s), \\ 
+  P^{\pi}(Y_t = a | Z_t = h_t) = q_{d_t(h_t)}(a),\\ 
+  P^{\pi}(X_{t+1}=s | Z_t=(h_{t-1},a_{t-1},s_{t}),Y_t=a_t) = p_t(s|s_t,a_t)
+\end[align}
+
 
