@@ -8,7 +8,7 @@ categories: media
 _The contents are from [Markov Decision Processes: Discrete Stochastic Dynamic Programming - MARTIN L. PUTERMAN], section 2.1.6_
 
 
-# Formal model for stochastic process in MDP
+# Probability model for stochastic process in MDP
 
 The probability model consists of three elements: 
 * A sample space $\Omega$
@@ -39,5 +39,7 @@ $$
   & P^{\pi}(X_{t+1}=s | Z_t=(h_{t-1},a_{t-1},s_{t}),Y_t=a_t) = p_t(s|s_t,a_t)
 \end{aligned}
 $$
+
+so that the probabilty of a sample path $\boldsymbol{w}$
 
 
