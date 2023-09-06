@@ -22,6 +22,14 @@ and the event $\omega \in \Omega$ as
 $$\omega = (s_1,a_1,...,a_{N-1},s_{N-1})$$
 where we refer $w$ as sample path.
 
-Now, We define the random variables $X$, and $Y$, which take values in $\mathcal{S}$ and $\mathcal{A}$, respectively, by
+Also, we define the random variables $X$, and $Y$, which take values in $\mathcal{S}$ and $\mathcal{A}$, respectively, by
 
 $$X_t(\omega) = s_t,~Y_t(\omega)=a_t$$
+
+and the history process $Z_t$ as 
+
+$$Z_1(w) = s_1,~Z_t(w) = (s_1,a_1,...,s_t)$$.
+
+Now, a randomized history-dependent policy $\pi = (d_1, d_2, . . . , d_{N-1}),~N \leq \infty$ induces a probability $P^{\pi}$ on $(\Omega, B(\Omega))$ through 
+
+
