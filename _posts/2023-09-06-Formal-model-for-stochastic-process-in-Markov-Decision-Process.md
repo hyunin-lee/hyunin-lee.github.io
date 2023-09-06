@@ -11,7 +11,7 @@ _The contents are from [Markov Decision Processes: Discrete Stochastic Dynamic P
 # Probability model for stochastic process in MDP
 
 The probability model consists of three elements: 
-* A sample space \textcolor{red}{$\Omega$}
+* A sample space $\Omega$
 * $\sigma$-algebra of measurable subsets of $\Omega$ : $B(\Omega)$
 * Probability measure $P$ on  $B(\Omega)$
 
