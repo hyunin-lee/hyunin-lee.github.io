@@ -5,6 +5,7 @@ mathjax: true
 layout: post
 categories: media
 ---
+
 _The contents are from [Markov Decision Processes: Discrete Stochastic Dynamic Programming - MARTIN L. PUTERMAN], section 2.1.6_
 
 
