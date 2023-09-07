@@ -10,4 +10,4 @@ categories: media
 
 # Neural Networks 
 
-In order to approximate an unknown non-linear function with nerual network, it requrires to learn (or estimate) the parameters $W^{(l)}_{ij}, b^{(l)}_{i}$
+In order to approximate an unknown non-linear function with neural network, it requires to learn (or estimate) the parameters $W^{(l)}_{i,j}, b^{(l)}_{i}$
