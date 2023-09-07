@@ -18,4 +18,4 @@ Usually, the obvious choice is the Gaussian distribution
 
 $$\mathbb{E} [b^l_{i_{1}} b^l_{i_{1}}] = \delta_{i_1, i_2} C_{b}^{(l)}$$
 
-$$$\mathbb{E} \left[ W^{(l)}_{i_1,j_1} W^{(l)}_{i_2,j_2} \right]$
+$$$\mathbb{E} \left[ W^{(l)}_{i_1,j_1} W^{(l)}_{i_2,j_2} \right] = \delta_{i_1 i_2} \delta_{j_1 j_2} \frac{C^{(l)}_W}{n_{l-1}}$
