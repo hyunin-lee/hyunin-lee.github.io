@@ -17,3 +17,5 @@ In order to approximate an unknown non-linear function with neural network, it r
 Usually, the obvious choice is the Gaussian distribution
 
 $$\mathbb{E} [b^l_{i_{1}} b^l_{i_{1}}] = \delta_{i_1, i_2} C_{b}^{(l)}$$
+
+$$$\mathbb{E} \left[ W^{(l)}_{i_1,j_1} W^{(l)}_{i_2,j_2} \right]$
