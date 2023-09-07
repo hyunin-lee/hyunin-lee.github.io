@@ -1,4 +1,4 @@
----
+eeee---
 title:  "Deep learning theory 2.Neural Network"
 mathjax: true
 layout: post
@@ -16,4 +16,4 @@ In order to approximate an unknown non-linear function with neural network, it r
 
 Usually, the obvious choice is the Gaussian distribution
 
-$$ \mathbb{E} [b^l_{i_{1}} b^l_{i_{1}}] = \sigma_{i_1} \sigma_{i_2} C_{b}^{(l)}$$
+$$\mathbb{E} [b^l_{i_{1}} b^l_{i_{1}}] = \sigma_{i_1} \sigma_{i_2} C_{b}^{(l)}$$
