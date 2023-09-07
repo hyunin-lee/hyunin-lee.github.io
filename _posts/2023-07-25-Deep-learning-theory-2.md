@@ -10,4 +10,10 @@ categories: media
 
 # Neural Networks 
 
-In order to approximate an unknown non-linear function with neural network, it requires to learn (or estimate) the parameters $W^{(l)}_{i,j}$, $b^{(l)}_{i}$. This gives a hindsight on __how to initialize the parameters distribution__ is significatn for neural network. 
+In order to approximate an unknown non-linear function with neural network, it requires to learn (or estimate) the parameters $W^{(l)}_{i,j}$, $b^{(l)}_{i}$. This gives a hindsight on __how to initialize the parameters distribution__ is significant for the neural networks. 
+
+## Initialization distribution of biases and weights
+
+Usually, the obvious choice is the Gaussian distribution
+
+$$ \mathbb{E} [b^l_{i_{1}} b^l_{i_{1}}]$$
