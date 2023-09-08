@@ -9,6 +9,7 @@ header-includes:
   \usepackage{amsthm}
 ---
 
-## Motivation : Coin flipping 
+## Motivation: Coin flipping 
 
-Suppose $x_{1},X_{2},...,X_{n} \sim \text{Bernoulli}(\theta)$
+Suppose $X_{1},X_{2},...,X_{n} \sim \text{Bernoulli}({\theta})$.  
+Then $X \sim \Pi_{i}
