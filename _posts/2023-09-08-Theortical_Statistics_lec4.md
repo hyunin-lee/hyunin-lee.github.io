@@ -12,4 +12,4 @@ header-includes:
 ## Motivation: Coin flipping 
 
 Suppose $X_{1},X_{2},...,X_{n} \sim \text{Bernoulli}({\theta})$.  
-Then $X \sim \Pi_{i}
+Then $X \sim {\Pi}_{i} {\theta}^{x_i} (1- {\theta}^{1- {X}_{i})})$
