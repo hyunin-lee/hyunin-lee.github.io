@@ -8,3 +8,7 @@ header-includes:
   \usepackage{amssymb}
   \usepackage{amsthm}
 ---
+
+## Motivation : Coin flipping 
+
+Suppose $x_{1},X_{2},...,X_{n} \sim \text{Bernoulli}(\theta)$
