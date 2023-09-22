@@ -3,4 +3,4 @@ layout: page
 title: ""
 ---
 
-[CV](./assets/CV.pdf) (updated 09/03/2023)
+[CV](./assets/CV.pdf) (updated 09/22/2023)
