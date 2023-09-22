@@ -20,7 +20,7 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 
 * [Tempo Adaption in Non-stationary Reinforcement Learning]().  
 __Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
-_Under review_ for Neural Information Processing Systems (NeurIPS), 2023
+Neural Information Processing Systems (NeurIPS), 2023
 
 
 * [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf)  
