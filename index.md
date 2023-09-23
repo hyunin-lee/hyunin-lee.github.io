@@ -18,14 +18,14 @@ Besides my research, I am interested in democratizing AI education. I cofound an
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1)
 
 ### News 
-* [2023.07] New paper on ***Reinforcement learning theory*** (under revision for TAC): [Beyond Exact Gradients: Convergence of Stochastic
+* [2023.07] New paper on ***Reinforcement Learning Theory*** (under revision for TAC): [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy
 Regularization](./assets/TAC_Entropy_SPG.pdf).
-* [2023.05] New paper on ***Non-stationary reinforcement learning theory*** in ***NeurIPS 2023***: [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf).
-* [2023.01] New paper on ***Causal machine learning*** in ***CDC 2023***: [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf).
+* [2023.05] New paper on ***Non-stationary Reinforcement Learning Theory*** in ***NeurIPS 2023***: [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf).
+* [2023.01] New paper on ***Causal Machine Learning*** in ***CDC 2023***: [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf).
 * [2022.08] I started Ph.D. at UC Berkeley.
 * [2022.05] I received the Kwanjeong Education Foundation Scholarship.
-* [2022.03] New paper on ***Neuroscience and machine learning*** in ***IEEE TNSRE***: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861).
+* [2022.03] New paper on ***Neuroscience and Machine Learning*** in ***IEEE TNSRE***: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861).
 * [2022] I have co-founded OUTTA with [Haeun](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo](https://www.linkedin.com/in/chankyo-kim-603592238/)
 
 ### Education 
