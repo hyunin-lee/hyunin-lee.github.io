@@ -14,7 +14,7 @@ Prior to joining Berkeley, I received my B.S. degree from Seoul National Univers
 
 Besides my research, I am interested in democratizing AI education. I cofound and currently advise [**Outta**](https://outta.ai/). 
 
-[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [[github](https://github.com/hyunin-lee)]
+[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 
 ### News 
 * [2023.07] New paper on ***Reinforcement Learning Theory*** (under revision for TAC): [Beyond Exact Gradients: Convergence of Stochastic
