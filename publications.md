@@ -13,7 +13,8 @@ _Under revision_ for IEEE Transactions on Automatic Control (TAC).
 
 * [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861)  
 __Hyunin Lee__, Dongwook Kim, and Yong-Lae Park  
-IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022.
+IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022.   
+[[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes]()]
 
 
 ### Conference
