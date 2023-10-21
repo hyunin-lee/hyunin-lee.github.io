@@ -14,7 +14,7 @@ _Under revision_ for IEEE Transactions on Automatic Control (TAC).
 * [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861)  
 __Hyunin Lee__, Dongwook Kim, and Yong-Lae Park  
 IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022.   
-[[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes]()]
+[[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes](https://github.com/hyunin-lee/AttentionEMG)]
 
 
 ### Conference
@@ -22,7 +22,7 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 * [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf).  
 __Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
 Neural Information Processing Systems (NeurIPS), 2023   
-[[slides](./assets/TempoAdaption_NSRL_slides.pdf)] [[codes](https://github.com/hyunin-lee/TempoAdaptationNSRL)]
+[[slides](./assets/TempoAdaption_NSRL_slides.pdf)] [[codes](https://github.com/hyunin-lee/TempoRL)]
 
 
 * [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf)  
