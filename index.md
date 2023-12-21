@@ -27,7 +27,7 @@ Regularization](./assets/TAC_Entropy_SPG.pdf).
 * [2022.08] I started Ph.D. at UC Berkeley.
 * [2022.05] I received the Kwanjeong Education Foundation Scholarship.
 * [2022.03] New paper on ***Neuroscience and Machine Learning*** in ***IEEE TNSRE***: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861). [[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes](https://github.com/hyunin-lee/AttentionEMG)]
-* [2022] I have co-founded OUTTA with [Haeun](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo](https://www.linkedin.com/in/chankyo-kim-603592238/)
+* [2022] I have co-founded OUTTA with [Haeun](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo](https://www.linkedin.com/in/chankyo-kim-603592238/) :rocket:
 
 ### Education 
 * Ph.D., Mechanical Engineering, University of California, Berkeley, 2022.08 - current
