@@ -18,7 +18,7 @@ Besides my research, I am interested in democratizing AI education. __I cofound 
 
 ### News 
 * [2023.10] I received a NeurIPS scholar award
-* [2023.08] OUTTA has launched a new spinoff team, AI PLAYGROUND, dedicated to creating intuitive AI educational materials for elementary education. I lead the team. :baby: :books:
+* [2023.08] OUTTA has launched a new spinoff team, AI PLAYGROUND, dedicated to creating intuitive AI educational materials :books: for elementary education :baby:. I lead the team. 
 * [2023.07] New paper on ***Reinforcement Learning Theory*** (under revision for TAC): [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy
 Regularization](./assets/TAC_Entropy_SPG.pdf).
