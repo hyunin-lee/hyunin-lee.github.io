@@ -17,6 +17,7 @@ Besides my research, I am interested in democratizing AI education. __I cofound 
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 
 ### News 
+* [2023.10] I received a NeurIPS scholar award
 * [2023.07] New paper on ***Reinforcement Learning Theory*** (under revision for TAC): [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy
 Regularization](./assets/TAC_Entropy_SPG.pdf).
