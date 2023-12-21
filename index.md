@@ -10,9 +10,9 @@ I am a second-year Ph.D. student at UC Berkeley.
 I am interested in __devising real-world reinforcement learning algorithms with solid theoretical backgrounds__.    
 I am fortunate to work with [Prof. Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html), [Prof. Javad Lavaei](https://lavaei.ieor.berkeley.edu/).
 
-Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/) . 
+Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
-Besides my research, I am interested in democratizing AI education. __I cofound and currently advise__ [**Outta**](https://outta.ai/) provide equal educational opportunities for underprivileged students.. 
+Besides my research, __I am interested in democratizing AI education. I cofound and currently advise__ [**Outta**](https://outta.ai/) to provide equal educational opportunities for underprivileged students. 
 
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 
