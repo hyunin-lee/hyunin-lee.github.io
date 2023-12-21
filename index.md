@@ -18,7 +18,7 @@ Besides my research, __I am interested in democratizing AI education. I cofound 
 
 ### News 
 * [2023.10] I received a NeurIPS scholar award
-* [2023.08] OUTTA has launched a new spinoff team, **AI PLAYGROUND**, dedicated to creating intuitive AI educational materials :books: for elementary education :baby:. I lead the team. 
+* [2023.08] OUTTA has launched a new spinoff team, **AI PLAYGROUND**, dedicated to creating intuitive AI educational materials for elementary education. I lead the team. 
 * [2023.07] New paper on ***Reinforcement Learning Theory*** (under revision for TAC): [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy
 Regularization](./assets/TAC_Entropy_SPG.pdf).
@@ -27,7 +27,7 @@ Regularization](./assets/TAC_Entropy_SPG.pdf).
 * [2022.08] I started Ph.D. at UC Berkeley.
 * [2022.05] I received the Kwanjeong Education Foundation Scholarship.
 * [2022.03] New paper on ***Neuroscience and Machine Learning*** in ***IEEE TNSRE***: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861). [[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes](https://github.com/hyunin-lee/AttentionEMG)]
-* [2022] I have co-founded [**Outta**](https://outta.ai/) with [Haeun (MIT)](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo (UMich)](https://www.linkedin.com/in/chankyo-kim-603592238/) :rocket:
+* [2022] I have co-founded [**Outta**](https://outta.ai/) with [Haeun (MIT)](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo (UMich)](https://www.linkedin.com/in/chankyo-kim-603592238/)
 
 ### Education 
 * Ph.D., Mechanical Engineering, University of California, Berkeley, 2022.08 - current
