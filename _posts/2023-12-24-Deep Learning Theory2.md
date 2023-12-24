@@ -3,15 +3,6 @@
 **Author:** Hyunin Lee  
 **Date:** September 2023
 
-## Day1
-
-$$
-\frac{1}{\sqrt{2 \pi K}}\int_{\infty}^{\infty} dz e^{-z^2 / 2K} \mathcal{O} (z)
-$$
-
-$$
-p(z)= \frac{1}{\sqrt{|2 \pi K|}} \exp \left[ -\frac{1}{2} \sum_{\mu,\nu =1}^{N} z_{\mu} (K^{-1})_{\mu \nu} z_{\nu}  \right]
-$$
 
 ## Day2
 Lecture 2 is about Quadratic models and nearly-kernel methods. Chapter 11.4, chapter7.2 and chapter ∞.2.2 covers
