@@ -22,7 +22,7 @@ output: pdf_document
 
 
 ## Day2
-Lecture 2 is about Chapter 11.4, chapter7.2 and chapter ∞.2.2 covers
+Lecture 2 is covers Chapter 11.4, chapter7.2 and chapter ∞.2.2 if this book[https://deeplearningtheory.com/lectures/]
 
 ### Linear Models and Kernel Methods
 
@@ -96,7 +96,7 @@ $$
 
 This will find a minimum in practice.
 
-#### The Theoretical Minimum
+#### The Theoretical Minimum (linear model)
 Let's start by seeing how gradient descent solves the *linear model*:
 
 $$
@@ -161,5 +161,40 @@ for the residual training error:
 $$
 \epsilon_{i;\dot{\alpha}_1}(t + 1) = \epsilon_{i;\dot{\alpha}_1}(t) - \eta \sum_{\dot{\alpha}_2} \kappa_{\dot{\alpha}_1\dot{\alpha}_2} \epsilon_{i;\dot{\alpha}_2}(t),
 $$
+
+We can rewrite these dynamics:
+
+$$
+\epsilon_{i;\tilde{\alpha}_1} (t + 1) = \sum_{\tilde{\alpha}_2} (\delta_{\tilde{\alpha}_1\tilde{\alpha}_2} - \eta k_{\tilde{\alpha}_1\tilde{\alpha}_2}) \epsilon_{i;\tilde{\alpha}_2} (t)
+$$
+
+This is a repeated multiplication by a constant matrix:
+
+$$
+U_{\tilde{\alpha}_1\tilde{\alpha}_0} (t) = [(\delta - \eta k)^t]_{\tilde{\alpha}_1\tilde{\alpha}_0} = \sum_{\tilde{\alpha}_1,...,\tilde{\alpha}_{t-1}} (\delta_{\tilde{\alpha}_t\tilde{\alpha}_{t-1}} - \eta k_{\tilde{\alpha}_t\tilde{\alpha}_{t-1}}) \cdots (\delta_{\tilde{\alpha}_1\tilde{\alpha}_0} - \eta k_{\tilde{\alpha}_1\tilde{\alpha}_0}).
+$$
+
+The solution is given by
+
+$$
+\epsilon_{i;\tilde{\alpha}_1} (t) = \sum_{\tilde{\alpha}_2} U_{\tilde{\alpha}_1\tilde{\alpha}_2} (t) \epsilon_{i;\tilde{\alpha}_2} (0),
+$$
+
+and \( U(t) \to 0 \) as \( t \to \infty \) so that the error vanishes: \( z_{i;\tilde{\alpha}} \to y_{i;\tilde{\alpha}} \).
+
+We still have to solve the difference equation for the test error:
+
+$$
+Z_{i;\delta}(t + 1) = Z_{i;\delta}(t) - \eta \sum_{\tilde{\alpha}} k_{\delta \tilde{\alpha}} \epsilon_{i;\tilde{\alpha}}(t)
+$$
+
+but we are interested in what happens at the end (time \( t \)).
+
+$$
+Z_{i;\delta}(t) = Z_{i;\delta}(0) - \sum_{\tilde{\alpha} \in A} k_{\delta \tilde{\alpha}} \left( \eta \sum_{s=0}^{t-1} \epsilon_{i;\tilde{\alpha}}(s) \right)
+$$
+
+
+
 
 
