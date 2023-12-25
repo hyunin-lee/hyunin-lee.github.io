@@ -74,7 +74,7 @@ $$
 The loss is now quartic in the parameters, but we can optimize with gradient descent:
 
 $$
-W_{ij}(t + 1) = W_{ij}(t) - \eta \frac{\partial L_A}{\partial W_{ij}} \bigg|_{W_{ij}=W_{ij}(t)}.
+W_{ij}(t + 1) = W_{ij}(t) - \eta \frac{\partial L_A}{\partial W_{ij}} |_{W_{ij}=W_{ij}(t)}.
 $$
 
 This will find a minimum in practice.
