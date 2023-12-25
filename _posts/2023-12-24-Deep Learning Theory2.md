@@ -103,11 +103,11 @@ $$
 Then, we have
 
 $$
-\begin{align}
+\begin{align*}
 \frac{\partial L_A(W)}{\partial W_{ab}} &= - \sum_{\tilde{\alpha}, i, j} \delta_{ia}\delta_{jb} \phi_j(x_{\tilde{\alpha}}) \left[ y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right] \\
 &= \sum_{\tilde{\alpha}} \phi_b(\tilde{x}_{\alpha}) (z_{a;\tilde{\alpha}} - y_{a;\tilde{\alpha}}) \\
 &= \sum_{\tilde{\alpha}} \phi_b(\tilde{x}_{\alpha}) \epsilon_{a;\tilde{\alpha}}
-\end{align}
+\end{align*}
 $$
 
 
@@ -118,17 +118,18 @@ $$
 $$
 
 The weights will update as
-
+$$
 \begin{align*}
     W_{ij}(t + 1) &= W_{ij}(t) - \eta \frac{d\mathcal{L}}{dW_{ij}} \Bigg|_{W_{ij}=W_{ij}(t)} \\ 
     &=W_{ij}(t) - \eta \sum_{\tilde{\alpha}} \phi_j(x_{\tilde{\alpha}}) \epsilon_{i;\tilde{\alpha}}(t)
 \end{align*}
-
+$$
 For the theoretical analysis, it’s more convenient to understand how the output of the model updates:
-
+$$
 \begin{align*}
     z_{i;\delta}(t + 1) &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[ W_{ab}(t + 1) - W_{ab}(t) \right] \\ 
     &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[  - \eta \sum_{\tilde{\alpha}} \phi_b(x_{\tilde{\alpha}}) \epsilon_{a;\tilde{\alpha}}(t)  \right] \\ 
     &= z_{i;\delta}(t) + \sum_{a,b}
 \end{align*}
+$$
 
