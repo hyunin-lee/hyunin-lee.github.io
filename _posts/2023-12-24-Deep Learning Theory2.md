@@ -8,7 +8,6 @@ header-includes:
   \usepackage{amssymb}
   \usepackage{amsthm}
 output: pdf_document
-
 ---
 
 
