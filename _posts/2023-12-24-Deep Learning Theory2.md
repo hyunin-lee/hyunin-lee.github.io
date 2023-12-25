@@ -24,6 +24,9 @@ output: pdf_document
 ## Day2
 Lecture 2 is covers Chapter 11.4, chapter7.2 and chapter ∞.2.2 if this book[https://deeplearningtheory.com/lectures/]
 
+### Notations of Deep Neural Network 
+![Deep Neural Network](./assets/DLT.png "This is an example image")
+
 ### Linear Models and Kernel Methods
 
 Two forms of a solution for a linear model:
