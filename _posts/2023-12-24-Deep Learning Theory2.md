@@ -194,6 +194,31 @@ $$
 Z_{i;\delta}(t) = Z_{i;\delta}(0) - \sum_{\tilde{\alpha} \in A} k_{\delta \tilde{\alpha}} \left( \eta \sum_{s=0}^{t-1} \epsilon_{i;\tilde{\alpha}}(s) \right)
 $$
 
+Now, let's investigate what happens if \( t \to \infty \).
+
+$$
+\begin{aligned}
+Z_{i;\delta}(\infty) &= Z_{i;\delta}(0) - \sum_{\tilde{\alpha} \in A} k_{\delta \tilde{\alpha}} \left\{ \sum_{s=0}^{\infty} \eta \epsilon_{i;\tilde{\alpha}}(s) \right\} \\
+&= Z_{i;\delta}(0) - \sum_{\tilde{\alpha} \in A} k_{\delta \tilde{\alpha}} \left\{ \sum_{s=0}^{\infty} \eta \sum_{\tilde{\alpha}_1} U_{\tilde{\alpha} \tilde{\alpha}_1} (s) \epsilon_{i;\tilde{\alpha}_1}(0) \right\} \\
+&= Z_{i;\delta}(0) - \sum_{\tilde{\alpha}, \tilde{\alpha}_1 \in A} k_{\delta \tilde{\alpha}} \left\{ \eta \sum_{s=0}^{\infty} \left[ (\delta - \eta k)^s \right]_{\tilde{\alpha} \tilde{\alpha}_1} \right\} \epsilon_{i;\tilde{\alpha}_1}(0) \\
+&= Z_{i;\delta}(0) - \sum_{\tilde{\alpha}, \tilde{\alpha}_1 \in A} k_{\delta \tilde{\alpha}} \left\{ \eta \left[ \delta - (\delta - \eta k) \right]^{-1} \right\}_{\tilde{\alpha} \tilde{\alpha}_1} \epsilon_{i;\tilde{\alpha}_1}(0) \\
+&= Z_{i;\delta}(0) - \sum_{\tilde{\alpha}, \tilde{\alpha}_1 \in A} k_{\delta \tilde{\alpha}} \tilde{k}_{\tilde{\alpha}_1} \epsilon_{i;\tilde{\alpha}_1}(0)
+\end{aligned}
+$$
+
+Compare **gradient descent** vs. the **direct optimization solution**:
+
+$$
+\begin{aligned}
+z_{i;\delta}(\infty) &= Z_{i;\delta}(0) - \sum_{\tilde{\alpha}, \tilde{\alpha}_1 \in \mathcal{A}} k_{\delta \tilde{\alpha}} \tilde{k}^{\tilde{\alpha} \tilde{\alpha}_1} \epsilon_{i;\tilde{\alpha}_1}(0) \\
+z_{i}(x_{\delta}; \theta^*) &= \sum_{\tilde{\alpha}, \tilde{\alpha}_1 \in A} k_{\delta \tilde{\alpha}_1} \tilde{k}^{\tilde{\alpha} \tilde{\alpha}_1} y_{i;\tilde{\alpha}_1}.
+\end{aligned}
+$$
+
+- Those are same if \( Z_{i;\delta}(0) = 0 \), e.g. if \( W_{ij}(0) = 0 \).
+- Otherwise, linear models have **algorithm independence** (different \( \eta \) yields different predictions).
+- Importantly, \( k_{\delta \tilde{\alpha}_1} \) is fixed, and the \( \phi_i(x) \) **do not evolve**.
+
 
 
 
