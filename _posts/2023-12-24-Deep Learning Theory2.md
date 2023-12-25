@@ -103,13 +103,11 @@ $$
 Then, we have
 
 $$
-\frac{\partial L_A(W)}{\partial W_{ab}} = - \sum_{\tilde{\alpha}, i, j} \delta_{ia}\delta_{jb} \phi_j(x_{\tilde{\alpha}}) \left[ y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right]
-$$
-$$
-= \sum_{\tilde{\alpha}} \phi_b(\tilde{x}_{\alpha}) (z_{a;\tilde{\alpha}} - y_{a;\tilde{\alpha}})
-$$
-$$
-= \sum_{\tilde{\alpha}} \phi_b(\tilde{x}_{\alpha}) \epsilon_{a;\tilde{\alpha}}
+\begin{align}
+\frac{\partial L_A(W)}{\partial W_{ab}} &= - \sum_{\tilde{\alpha}, i, j} \delta_{ia}\delta_{jb} \phi_j(x_{\tilde{\alpha}}) \left[ y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right] \\
+&= \sum_{\tilde{\alpha}} \phi_b(\tilde{x}_{\alpha}) (z_{a;\tilde{\alpha}} - y_{a;\tilde{\alpha}}) \\
+&= \sum_{\tilde{\alpha}} \phi_b(\tilde{x}_{\alpha}) \epsilon_{a;\tilde{\alpha}}
+\end{align}
 $$
 
 
