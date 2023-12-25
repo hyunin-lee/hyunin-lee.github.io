@@ -18,7 +18,7 @@ output: pdf_document
 # deeplearningtheory
 
 **Author:** Hyunin Lee  
-**Date:** September 2023
+**Date:** 12.24.2023
 
 
 ## Day2
