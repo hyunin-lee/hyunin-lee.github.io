@@ -83,7 +83,7 @@ This will find a minimum in practice.
 Let's start by seeing how gradient descent solves the *linear model*:
 
 $$
-\mathcal{L}_\mathcal{A}(W) = \frac{1}{2} \sum_{\tilde{\alpha} \in A} \sum_{i=1}^{n_{out}} \left[ y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right]^2,
+\mathcal{L}_\mathcal{A}(W) = \frac{1}{2} \sum_{\tilde{\alpha} \in A} \sum_{i=1}^{n_{out}} \left[y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right]^2,
 $$
 
 Then, we have
