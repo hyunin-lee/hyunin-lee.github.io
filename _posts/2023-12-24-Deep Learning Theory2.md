@@ -118,6 +118,7 @@ $$
 $$
 
 The weights will update as
+
 $$
 \begin{aligned}
     W_{ij}(t + 1) &= W_{ij}(t) - \eta \frac{d L }{dW_{ij}} \Big|_{W_{ij}=W_{ij}(t)} \\
@@ -126,6 +127,7 @@ $$
 $$
 
 For the theoretical analysis, it’s more convenient to understand how the output of the model updates:
+
 $$
 \begin{aligned}
     z_{i;\delta}(t + 1) &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[ W_{ab}(t + 1) - W_{ab}(t) \right] \\ 
