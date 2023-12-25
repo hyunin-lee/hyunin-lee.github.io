@@ -134,8 +134,32 @@ For the theoretical analysis, it’s more convenient to understand how the outpu
 $$
 \begin{aligned}
     z_{i;\delta}(t + 1) &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[ W_{ab}(t + 1) - W_{ab}(t) \right] \\ 
-    &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[ - \eta \sum_{\tilde{\alpha}} \phi_b(x_{\tilde{\alpha}}) \epsilon_{a;\tilde{\alpha}}(t) \right] \\ 
-    &= z_{i;\delta}(t) + \sum_{a,b} \ldots \text{(continue the equation as needed)}
+    &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[  - \eta \sum_{\tilde{\alpha}} \phi_b(x_{\tilde{\alpha}}) \epsilon_{a;\tilde{\alpha}}(t)  \right] \\ 
+    &= z_{i;\delta}(t) + \sum_{a,b} \delta_{i a}\phi_b (x_\delta) \left[  - \eta \sum_{\tilde{\alpha}} \phi_b(x_{\tilde{\alpha}}) \epsilon_{a;\tilde{\alpha}}(t)  \right] \\
+    &= z_{i;\delta}(t)  - \eta \sum_{\tilde{\alpha}} \left[  \sum_{b} \phi_b (x_\delta)  \phi_b(x_{\tilde{\alpha}})  \right]\epsilon_{i;\tilde{\alpha}}(t) \\
+    &= z_{i;\delta}(t)  - \eta \sum_{\tilde{\alpha}}  k_{\delta \tilde{\alpha}} \epsilon_{i;\tilde{\alpha}}(t) 
 \end{aligned}
 $$
+
+- Fixed $\kappa_{\delta \tilde{\alpha}}$ generates the dynamics of the model.
+- $\epsilon_{i;\tilde{\alpha}}(t)$ sources the updates for general inputs $\delta \in \mathcal{D}$.
+
+We have to solve a linear difference equation:
+
+$$
+z_{i;\delta}(t + 1) = z_{i;\delta}(t) - \eta \sum_{\tilde{\alpha}} k_{\delta \tilde{\alpha}} \epsilon_{i;\tilde{\alpha}}(t).
+$$
+
+Restricting to the training set, we get a first-order homogeneous linear difference equation,
+
+$$
+z_{i;\tilde{\alpha}_1}(t + 1) = z_{i;\tilde{\alpha}_1}(t) - \eta \sum_{\dot{\alpha}_2} \kappa_{\dot{\alpha}_1\dot{\alpha}_2} \epsilon_{i;\dot{\alpha}_2}(t),
+$$
+
+for the residual training error:
+
+$$
+\epsilon_{i;\dot{\alpha}_1}(t + 1) = \epsilon_{i;\dot{\alpha}_1}(t) - \eta \sum_{\dot{\alpha}_2} \kappa_{\dot{\alpha}_1\dot{\alpha}_2} \epsilon_{i;\dot{\alpha}_2}(t),
+$$
+
 
