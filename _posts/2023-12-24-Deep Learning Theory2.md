@@ -96,7 +96,7 @@ $$
 
 This will find a minimum in practice.
 
-#### The Theoretical Minimum (linear model)
+### The Theoretical Minimum (linear model)
 Let's start by seeing how gradient descent solves the *linear model*:
 
 $$
@@ -220,6 +220,23 @@ $$
 - Importantly, \( k_{\delta \tilde{\alpha}_1} \) is fixed, and the \( \phi_i(x) \) **do not evolve**.
 
 
+### Quadratic Model Dynamics
+
+The weights will update as
+
+$$
+\begin{aligned}
+W_{ij}(t + 1) &= W_{ij}(t) - \eta \left. \frac{\partial \mathcal{L}_A}{\partial W_{ij}} \right|_{W_{ij}=W_{ij}(t)} \\
+&= W_{ij}(t) - \eta \sum_{\tilde{\alpha}} \phi^{E}_{ij;\tilde{\alpha}} (t) \epsilon_{i;\tilde{\alpha}}(t).
+\end{aligned}
+$$
+
+While the model and effective features update as
+
+$$
+\begin{aligned}
+Z_{i;\delta}(t + 1) &= Z_{i;\delta}(t) + \sum_{j} dW_{ij}(t) \phi^{E}_{ij;\delta}(t) + \frac{\epsilon}{2} \sum_{j_1,j_2} dW_{ij_1}(t) dW_{ij_2}(t) \psi_{j_1j_2}(x_{\delta}), \\
+\phi^{E}_{ij;\delta}(t + 1) &= \phi^{E}_{ij;\delta}(t) + \epsilon \sum_{k
 
 
 
