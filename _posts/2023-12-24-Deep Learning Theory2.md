@@ -15,14 +15,14 @@ output: pdf_document
 ---
 
 
-# deeplearningtheory
+# Deep Learning Theory : Quadratic models and nearly-kernel methods
 
 **Author:** Hyunin Lee  
 **Date:** 12.24.2023
 
 
 ## Day2
-Lecture 2 is about Quadratic models and nearly-kernel methods. Chapter 11.4, chapter7.2 and chapter ∞.2.2 covers
+Lecture 2 is about Chapter 11.4, chapter7.2 and chapter ∞.2.2 covers
 
 ### Linear Models and Kernel Methods
 
