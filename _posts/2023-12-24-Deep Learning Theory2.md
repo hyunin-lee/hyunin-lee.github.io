@@ -70,8 +70,8 @@ which is a blue{effective feature function}.
 
 The utility of this is as follows:
 
-- The *linear response* of $z_i(x_\delta; \theta)$ behaves *effectively* as if it has a parameter-dependent feature function, $\phi^E_{ij}(x_\delta; \theta)$.
-- The change in the $\phi^E_{ij}(x_\delta; \theta)$ given $W_{ik} \to W_{ik} + dW_{ik}$ is
+- The *linear response* of \( z_i(x_\delta; \theta) \) behaves *effectively* as if it has a parameter-dependent feature function, \( \phi^E_{ij}(x_\delta; \theta) \).
+- The change in the \( \phi^E_{ij}(x_\delta; \theta) \) given \( W_{ik} \to W_{ik} + dW_{ik} \) is
 
 $$
 \phi^E_{ij}(x_\delta; \theta + d\theta) = \phi^E
