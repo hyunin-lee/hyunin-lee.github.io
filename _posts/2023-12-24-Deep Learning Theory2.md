@@ -1,4 +1,5 @@
-title:  "Formal model in stochastic process by Markov Decision Process"
+---
+title:  "Deep Learning Theory2"
 mathjax: true
 layout: post
 categories: media
@@ -7,6 +8,8 @@ header-includes:
   \usepackage{amssymb}
   \usepackage{amsthm}
 output: pdf_document
+
+---
 
 
 # deeplearningtheory
