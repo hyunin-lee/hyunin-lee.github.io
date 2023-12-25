@@ -63,3 +63,55 @@ $$
 \phi^E_{ij}(x_\delta; \theta + d\theta) = \phi^E
 $$
 
+### Quadratic Regression
+
+Supervised learning a quadratic model doesn't have a particular name, but if it did, we'd all probably agree that its name should be quadratic regression:
+
+$$
+\mathcal{L}_\mathcal{A}(\theta) = \frac{1}{2} \sum_{\tilde{\alpha} \in A} \sum_{i=1}^{n_{out}} \left[ y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) - \frac{\epsilon}{2} \sum_{j_1, j_2 = 0}^{n_f} W_{ij_1} W_{ij_2} \psi_{j_1 j_2}(\tilde{x}_{\alpha}) \right]^2.
+$$
+
+The loss is now quartic in the parameters, but we can optimize with gradient descent:
+
+$$
+W_{ij}(t + 1) = W_{ij}(t) - \eta \frac{\partial \mathcal{L}_\mathcal{A}}{\partial W_{ij}} \Bigg|_{W_{ij}=W_{ij}(t)}.
+$$
+
+This will find a minimum in practice.
+
+#### The Theoretical Minimum
+Let's start by seeing how gradient descent solves the *linear model*:
+
+$$
+\mathcal{L}_\mathcal{A}(W) = \frac{1}{2} \sum_{\tilde{\alpha} \in A} \sum_{i=1}^{n_{out}} \left[ y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right]^2,
+$$
+
+Then, we have
+
+\begin{align*}
+    \frac{\partial \mathcal{L}_\mathcal{A}(W)}{\partial W_{ab}} &= - \sum_{\tilde{\alpha}, i, j} \delta_{ia}\delta_{jb} \phi_j(x_{\tilde{\alpha}}) \left[ y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right] \\ 
+    &= \sum_{\tilde{\alpha}} \phi_b(\tilde{x}_{\alpha}) (z_{a;\tilde{\alpha}} - y_{a;\tilde{\alpha}}) \\ 
+    &= \sum_{\tilde{\alpha}} \phi_b(\tilde{x}_{\alpha}) \epsilon_{a;\tilde{\alpha}}
+\end{align*}
+
+In the last line, we defined the *residual training error*:
+
+$$
+\textcolor{blue}{\epsilon_{i;\tilde{\alpha}}} = z_{i;\tilde{\alpha}} - y_{i;\tilde{\alpha}}.
+$$
+
+The weights will update as
+
+\begin{align*}
+    W_{ij}(t + 1) &= W_{ij}(t) - \eta \frac{d\mathcal{L}}{dW_{ij}} \Bigg|_{W_{ij}=W_{ij}(t)} \\ 
+    &=W_{ij}(t) - \eta \sum_{\tilde{\alpha}} \phi_j(x_{\tilde{\alpha}}) \epsilon_{i;\tilde{\alpha}}(t)
+\end{align*}
+
+For the theoretical analysis, it’s more convenient to understand how the output of the model updates:
+
+\begin{align*}
+    z_{i;\delta}(t + 1) &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[ W_{ab}(t + 1) - W_{ab}(t) \right] \\ 
+    &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[  - \eta \sum_{\tilde{\alpha}} \phi_b(x_{\tilde{\alpha}}) \epsilon_{a;\tilde{\alpha}}(t)  \right] \\ 
+    &= z_{i;\delta}(t) + \sum_{a,b}
+\end{align*}
+
