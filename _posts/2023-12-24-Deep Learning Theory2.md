@@ -119,18 +119,18 @@ $$
 
 The weights will update as
 $$
-\begin{aligned}
+\begin{align*}
     W_{ij}(t + 1) &= W_{ij}(t) - \eta \frac{d\mathcal{L}}{dW_{ij}} \Big|_{W_{ij}=W_{ij}(t)} \\
     &= W_{ij}(t) - \eta \sum_{\tilde{\alpha}} \phi_j(x_{\tilde{\alpha}}) \epsilon_{i;\tilde{\alpha}}(t)
-\end{aligned}
+\end{align*}
 $$
 
 For the theoretical analysis, it’s more convenient to understand how the output of the model updates:
 $$
-\begin{aligned}
+\begin{align*}
     z_{i;\delta}(t + 1) &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[ W_{ab}(t + 1) - W_{ab}(t) \right] \\ 
     &= z_{i;\delta}(t) + \sum_{a,b} \frac{\partial z_{i;\delta}(t)}{\partial W_{ab}} \left[  - \eta \sum_{\tilde{\alpha}} \phi_b(x_{\tilde{\alpha}}) \epsilon_{a;\tilde{\alpha}}(t)  \right] \\ 
     &= z_{i;\delta}(t) + \sum_{a,b} \ldots \text{(continue the equation as needed)}
-\end{aligned}
+\end{align*}
 $$
 
