@@ -153,13 +153,13 @@ $$
 Restricting to the training set, we get a first-order homogeneous linear difference equation,
 
 $$
-z_{i;\tilde{\alpha}_1}(t + 1) = z_{i;\tilde{\alpha}_1}(t) - \eta \sum_{\dot{\alpha}_2} \kappa_{\dot{\alpha}_1\dot{\alpha}_2} \epsilon_{i;\dot{\alpha}_2}(t),
+z_{i;\tilde{\alpha}_1}(t + 1) = z_{i;\tilde{\alpha}_1}(t) - \eta \sum_{\tilde{\alpha}_2} \kappa_{\tilde{\alpha}_1\tilde{\alpha}_2} \epsilon_{i;\tilde{\alpha}_2}(t),
 $$
 
 for the residual training error:
 
 $$
-\epsilon_{i;\dot{\alpha}_1}(t + 1) = \epsilon_{i;\dot{\alpha}_1}(t) - \eta \sum_{\dot{\alpha}_2} \kappa_{\dot{\alpha}_1\dot{\alpha}_2} \epsilon_{i;\dot{\alpha}_2}(t),
+\epsilon_{i;\tilde{\alpha}_1}(t + 1) = \epsilon_{i;\tilde{\alpha}_1}(t) - \eta \sum_{\tilde{\alpha}_2} \kappa_{\tilde{\alpha}_1\tilde{\alpha}_2} \epsilon_{i;\tilde{\alpha}_2}(t),
 $$
 
 We can rewrite these dynamics:
@@ -236,7 +236,9 @@ While the model and effective features update as
 $$
 \begin{aligned}
 Z_{i;\delta}(t + 1) &= Z_{i;\delta}(t) + \sum_{j} dW_{ij}(t) \phi^{E}_{ij;\delta}(t) + \frac{\epsilon}{2} \sum_{j_1,j_2} dW_{ij_1}(t) dW_{ij_2}(t) \psi_{j_1j_2}(x_{\delta}), \\
-\phi^{E}_{ij;\delta}(t + 1) &= \phi^{E}_{ij;\delta}(t) + \epsilon \sum_{k
+\phi^{E}_{ij;\delta}(t + 1) &= \phi^{E}_{ij;\delta}(t) + \epsilon \sum_{k=0}^{n_f} dW_{ik}(t) \psi_{kj}(x_{\delta}).
+\end{aligned}
+$$
 
 
 
