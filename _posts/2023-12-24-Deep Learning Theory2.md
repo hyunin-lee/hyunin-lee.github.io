@@ -46,13 +46,13 @@ $$
 z_{i;\delta}(\theta) = \sum_{j=0}^{n_f} W_{ij} \phi_j(x_\delta) + \textcolor{blue}{\frac{\epsilon}{2} \sum_{j_1, j_2 = 0}^{n_f} W_{i j_1} W_{i j_2} \psi_{j_1 j_2}(x_\delta)}
 $$
 
-- It's nonlinear because it's quadratic in the weights: $W_{ij_1} W_{ij_2}$.
+- It's nonlinear because it's quadratic in the weights: $ W_{ij_1} W_{ij_2} $.
 - $\varepsilon$ is a small parameter that controls the size of the deformation.
-- We've introduced $\frac{(n_f + 1)(n_f + 2)}{2}$ meta feature functions, $\psi_{j_1 j_2} (x)$, with two feature indices.
+- We've introduced $ \frac{(n_f + 1)(n_f + 2)}{2} $ meta feature functions, $ \psi_{j_1 j_2} (x) $, with two feature indices.
 
 ### Quadratic models
 
-To familiarize ourselves with this model, let's make a small change in the model parameters $W_{ij} \to W_{ij} + dW_{ij}$:
+To familiarize ourselves with this model, let's make a small change in the model parameters $ W_{ij} \to W_{ij} + dW_{ij} $:
 
 $$
 z_i(x_\delta; \theta + d\theta) = z_i(x_\delta; \theta) + \sum_{j=0}^{n_f} dW_{ij} \left( \phi_j(x_\delta) + \epsilon \sum_{j_1=0}^{n_f} W_{ij_1} \psi_{j_1 j}(x_\delta) \right) + \frac{\epsilon}{2} \sum_{j_1, j_2=0}^{n_f} dW_{ij_1} dW_{ij_2} \psi_{j_1 j_2}(x_\delta)
