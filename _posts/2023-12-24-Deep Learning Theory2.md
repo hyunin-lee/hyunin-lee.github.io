@@ -24,10 +24,10 @@ output: pdf_document
 ## Day2
 Lecture 2 is covers Chapter 11.4, chapter7.2 and chapter ∞.2.2 if this book[https://deeplearningtheory.com/lectures/]
 
-### Notations of Deep Neural Network 
+## 0.Notations of Deep Neural Network 
 ![Deep Neural Network](../assets/DLT.png "Notations of DNN")
 
-### Linear Models and Kernel Methods
+## 1. Linear Models and Kernel Methods
 
 Two forms of a solution for a linear model:
 
@@ -44,7 +44,7 @@ z_i(x_{\dot{\beta}}; \theta^*) = \sum_{\tilde{\alpha}_1, \tilde{\alpha}_2 \in A}
 $$
 
 
-### Nonlinear models
+## 2. Nonlinear models
 
 Let's relax the above linear model into a nonlinear model, specifically a \textcolor{blue}{quadratic model}.
 
@@ -56,7 +56,7 @@ $$
 - \( \varepsilon \) is a small parameter that controls the size of the deformation.
 - We've introduced \( \frac{(n_f + 1)(n_f + 2)}{2} \) meta feature functions, \( \psi_{j_1 j_2} (x) \), with two feature indices.
 
-### Quadratic models
+## 3. Quadratic models
 
 To familiarize ourselves with this model, let's make a small change in the model parameters $ W_{ij} \to W_{ij} + dW_{ij} $:
 
@@ -72,7 +72,7 @@ $$
 
 which is a blue{effective feature function}.
 
-### Effective Feature Functions
+## 4. Effective Feature Functions
 
 The utility of this is as follows:
 
@@ -83,7 +83,7 @@ $$
 \phi^E_{ij}(x_\delta; \theta + d\theta) = \phi^E
 $$
 
-### Quadratic Regression
+## 5. Quadratic Regression
 
 Supervised learning a quadratic model doesn't have a particular name, but if it did, we'd all probably agree that its name should be quadratic regression:
 
@@ -99,7 +99,7 @@ $$
 
 This will find a minimum in practice.
 
-### The Theoretical Minimum (linear model)
+## 6. The Theoretical Minimum (linear model)
 Let's start by seeing how gradient descent solves the *linear model*:
 
 $$
@@ -223,7 +223,7 @@ $$
 - Importantly, \( k_{\delta \tilde{\alpha}_1} \) is fixed, and the \( \phi_i(x) \) **do not evolve**.
 
 
-### Quadratic Model Dynamics
+## 7. Quadratic Model Dynamics
 
 The weights will update as
 
