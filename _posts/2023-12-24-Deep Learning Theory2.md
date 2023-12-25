@@ -40,13 +40,13 @@ $$
 
 ### Nonlinear models
 
-Let's relax the above linear model into a nonlinear model, specifically a blue{quadratic model}.
+Let's relax the above linear model into a nonlinear model, specifically a \textcolor{blue}{quadratic model}.
 
 $$
 z_{i;\delta}(\theta) = \sum_{j=0}^{n_f} W_{ij} \phi_j(x_\delta) + \textcolor{blue}{\frac{\epsilon}{2} \sum_{j_1, j_2 = 0}^{n_f} W_{i j_1} W_{i j_2} \psi_{j_1 j_2}(x_\delta)}
 $$
 
-- It's nonlinear because it's quadratic in the weights: $ W_{ij_1} W_{ij_2} $.
+- It's nonlinear because it's quadratic in the weights: \( W_{ij_1} W_{ij_2} \).
 - $\varepsilon$ is a small parameter that controls the size of the deformation.
 - We've introduced $ \frac{(n_f + 1)(n_f + 2)}{2} $ meta feature functions, $ \psi_{j_1 j_2} (x) $, with two feature indices.
 
