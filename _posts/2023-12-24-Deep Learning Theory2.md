@@ -141,7 +141,7 @@ $$
 \end{aligned}
 $$
 
-- Fixed $\kappa_{\delta \tilde{\alpha}}$ generates the dynamics of the model.
+- Fixed $k_{\delta \tilde{\alpha}}$ generates the dynamics of the model.
 - $\epsilon_{i;\tilde{\alpha}}(t)$ sources the updates for general inputs $\delta \in \mathcal{D}$.
 
 We have to solve a linear difference equation:
