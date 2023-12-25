@@ -13,7 +13,9 @@ Two forms of a solution for a linear model:
 
 - parameter space - linear regression
 
-  $$ z_i(x_{\dot{\beta}}; \theta^*) = \sum_{j=0}^{n_f} W_{ij}^* \phi_j(x_{\dot{\beta}}) $$
+  $$
+  z_i(x_{\dot{\beta}}; \theta^*) = \sum_{j=0}^{n_f} W_{ij}^* \phi_j(x_{\dot{\beta}})
+  $$
 
 - sample space - kernel methods
 
