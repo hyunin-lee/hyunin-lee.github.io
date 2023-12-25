@@ -33,7 +33,7 @@ z_{i;\delta}(\theta) = \sum_{j=0}^{n_f} W_{ij} \phi_j(x_\delta) + \textcolor{blu
 $$
 
 - It's nonlinear because it's quadratic in the weights: $W_{ij_1} W_{ij_2}$.
-- $ \varepsilon \ll 1 $ is a small parameter that controls the size of the deformation.
+- $\varepsilon$ is a small parameter that controls the size of the deformation.
 - We've introduced $\frac{(n_f + 1)(n_f + 2)}{2}$ meta feature functions, $\psi_{j_1 j_2} (x)$, with two feature indices.
 
 ### Quadratic models
