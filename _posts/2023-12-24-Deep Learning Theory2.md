@@ -68,7 +68,7 @@ $$
 Supervised learning a quadratic model doesn't have a particular name, but if it did, we'd all probably agree that its name should be quadratic regression:
 
 $$
-\mathcal{L}_\mathcal{A}(\theta) = \frac{1}{2} \sum_{\tilde{\alpha} \in A} \sum_{i=1}^{n_{out}} \left( y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) - \frac{\epsilon}{2} \sum_{j_1, j_2 = 0}^{n_f} W_{ij_1} W_{ij_2} \psi_{j_1 j_2}(\tilde{x}_{\alpha}) \right)^2
+L_A(\theta) = \frac{1}{2} \sum_{\tilde{\alpha} \in A} \sum_{i=1}^{n_{out}} \left[ y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) - \frac{\epsilon}{2} \sum_{j_1, j_2 = 0}^{n_f} W_{ij_1} W_{ij_2} \psi_{j_1 j_2}(\tilde{x}_{\alpha}) \right]^2.
 $$
 
 The loss is now quartic in the parameters, but we can optimize with gradient descent:
