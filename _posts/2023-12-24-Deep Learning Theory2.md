@@ -74,7 +74,7 @@ $$
 The loss is now quartic in the parameters, but we can optimize with gradient descent:
 
 $$
-W_{ij}(t + 1) = W_{ij}(t) - \eta \frac{\partial \mathcal{L}_\mathcal{A}}{\partial W_{ij}} \Bigg|_{W_{ij}=W_{ij}(t)}.
+W_{ij}(t + 1) = W_{ij}(t) - \eta \frac{\partial L_A}{\partial W_{ij}} \Bigg|_{W_{ij}=W_{ij}(t)}.
 $$
 
 This will find a minimum in practice.
@@ -83,7 +83,7 @@ This will find a minimum in practice.
 Let's start by seeing how gradient descent solves the *linear model*:
 
 $$
-\mathcal{L}_\mathcal{A}(W) = \frac{1}{2} \sum_{\tilde{\alpha} \in A} \sum_{i=1}^{n_{out}} \left[y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right]^2,
+L_A(W) = \frac{1}{2} \sum_{\tilde{\alpha} \in A} \sum_{i=1}^{n_{out}} \left[y_{i;\tilde{\alpha}} - \sum_{j=0}^{n_f} W_{ij} \phi_j(x_{\tilde{\alpha}}) \right]^2,
 $$
 
 Then, we have
