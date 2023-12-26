@@ -12,13 +12,13 @@ I am fortunate to work with [Prof. Somayeh Sojoudi](https://people.eecs.berkeley
 
 Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
-Besides my research, __I am interested in democratizing AI education. I cofound and currently advise__ [**Outta**](https://outta.ai/) to provide equal educational opportunities for underprivileged students. 
+Besides my research, __I am interested in democratizing AI education :school:. I cofound and currently advise__ [**Outta**](https://outta.ai/) to provide equal educational opportunities for underprivileged students. 
 
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 
 ### News 
 * [2023.10] I received a NeurIPS scholar award
-* [2023.08] OUTTA has launched a new spinoff team, **AI PLAYGROUND**, dedicated to creating intuitive AI educational materials for elementary education! I lead the team. 
+* [2023.08] OUTTA has launched a new spinoff team, **AI PLAYGROUND**, dedicated to creating intuitive AI educational materials for elementary education! :baby: I lead the team. 
 * [2023.07] New paper on ***Reinforcement Learning Theory*** (under revision for TAC): [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy
 Regularization](./assets/TAC_Entropy_SPG.pdf).
