@@ -27,6 +27,17 @@ Lecture 2 is covers Chapter 11.4, chapter7.2 and chapter ∞.2.2 if this book[ht
 ## 0.Notations of Deep Neural Network 
 ![Deep Neural Network](../assets/DLT.png "Notations of DNN")
 
+## 0.1 Definitions & Notations
+
+- Feature function, Meta feature function 
+  $$\phi_j(x_\delta), \psi_{j_1,j_2}(x_\delta)$$
+- Effective feature function 
+  $$\phi^E_{ij}(x_\delta; \theta) = \phi_j(x_\delta) + \varepsilon \sum_{k=0}^{n_f} W_{ik} \psi_{kj}(x_\delta)$$
+- Residual training error
+  $$\epsilon_{i;\tilde{\alpha}} = z_{i;\tilde{\alpha}} - y_{i;\tilde{\alpha}}$$
+- Effective kernel
+  $$k^{E}_{ij;\delta_1\delta_2} (\theta) = \sum_{j=0}^{n_f} \phi^{E}_{ij}(x_{\delta_1}; \theta) \phi^{E}_{ij}(x_{\delta_2}; \theta)$$
+
 ## 1. Linear Models and Kernel Methods
 
 Two forms of a solution for a linear model:
