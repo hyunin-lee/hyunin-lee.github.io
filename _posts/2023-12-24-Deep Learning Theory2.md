@@ -254,5 +254,41 @@ Z_{i;\delta}(t + 1) &= Z_{i;\delta}(t) + \sum_{j} dW_{ij}(t) \phi^{E}_{ij;\delta
 \end{aligned}
 $$
 
+## 8. Model prediction dynamics
+
+The weights will update as
+
+$$
+\begin{aligned}
+Z_{i;\delta}(t + 1) &= Z_{i;\delta}(t) + \sum_{j} dW_{ij}(t) \phi^{E}_{ij;\delta}(t) + \frac{\epsilon}{2} \sum_{j_1,j_2} dW_{ij_1}(t) dW_{ij_2}(t) \psi_{j_1j_2}(x_{\delta}), \\
+&= Z_{i;\delta}(t) + \sum_{j} \left[ -\eta \sum_{\tilde{\alpha}} \phi^{E}_{ij;\tilde{\alpha}}(t) \epsilon_{i;\tilde{\alpha}}(t) \right] \phi^{E}_{ij;\delta}(t) \\
+&\quad + \frac{\epsilon}{2} \sum_{j_1,j_2=0}^{n_f} \left[ -\eta \sum_{\tilde{\alpha}_1} \phi^{E}_{ij_1;\tilde{\alpha}_1}(t) \epsilon_{i;\tilde{\alpha}_1}(t) \right] \left[ -\eta \sum_{\tilde{\alpha}_2} \phi^{E}_{ij_2;\tilde{\alpha}_2}(t) \epsilon_{i;\tilde{\alpha}_2}(t) \right] \psi_{j_1j_2}(x_{\delta}), \\
+&= Z_{i;\delta}(t) - \eta \sum_{\tilde{\alpha}} \textcolor{red}{\sum_{j} \phi^{E}_{ij;\delta}(t) \phi^{E}_{ij;\tilde{\alpha}}(t)} \epsilon_{i;\tilde{\alpha}}(t) \\
+&\quad + \frac{\eta^2}{2} \sum_{\tilde{\alpha}_1,\tilde{\alpha}_2}  \textcolor{red}{ \sum_{j_1,j_2} \epsilon \psi_{j_1j_2}(x_{\delta}) \phi^{E}_{ij_1;\tilde{\alpha}_1}(t) \phi^{E}_{ij_2;\tilde{\alpha}_2}(t)} \epsilon_{i;\tilde{\alpha}_1}(t) \epsilon_{i;\tilde{\alpha}_2}(t)
+\end{aligned}
+$$
+
+To better understand this from the dual sample-space picture, let's analogously define an **effective kernel**
+
+$$
+k^{E}_{ij;\delta_1\delta_2} (\theta) = \sum_{j=0}^{n_f} \phi^{E}_{ij}(x_{\delta_1}; \theta) \phi^{E}_{ij}(x_{\delta_2}; \theta),
+$$
+
+which measures a parameter-dependent similarity between two inputs \( x_{\delta_1} \) and \( x_{\delta_2} \) using our **effective features** \( \phi^{E}_{ij}(x_{\delta}; \theta) \).
+
+This last line suggests that an important object worth defining is the **meta kernel**
+
+$$
+\mu_{\delta_0\delta_1\delta_2} \equiv \sum_{j_1,j_2=0}^{n_f} \epsilon \psi_{j_1j_2}(x_{\delta_0}) \phi_{j_1}(x_{\delta_1}) \phi_{j_2}(x_{\delta_2})
+$$
+$$
+= \sum_{j_1,j_2=0}^{n_f} \epsilon \psi_{j_1j_2}(x_{\delta_0}) \phi^{E}_{j_1i_1}(x_{\delta_1}; \theta) \phi^{E}_{j_2i_2}(x_{\delta_2}; \theta) + O(\epsilon^2),
+$$
+
+- This is a **parameter-independent** tensor given entirely in terms of the fixed \( \phi_j(x) \) and \( \psi_{j_1j_2}(x) \) that define the model.
+- For a fixed input \( x_{\delta_0} \), \( \mu_{\delta_0\delta_1\delta_2} \) computes a different feature-space inner product between the two inputs, \( x_{\delta_1} \) and \( x_{\delta_2} \).
+- Due to the inclusion of \( \epsilon \) into the definition of \( \mu_{\delta_0\delta_1\delta_2} \), we should think of it as being parametrically small too.
+
+
 
 
