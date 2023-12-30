@@ -311,6 +311,47 @@ $$
 \end{aligned}
 $$
 
+To compute the dynamic of effective kernel,
+
+$$
+\begin{aligned}
+    \sum_{j} \phi^{E}_{ij;\delta_1}(t + 1) \phi^{E}_{ij;\delta_2}(t + 1) &= \sum_{j} \phi^{E}_{ij;\delta_1}(t) \phi^{E}_{ij;\delta_2}(t) \\
+    &\quad - \eta \sum_{\tilde{\alpha}} \left[ \sum_{j,k} \epsilon \psi_{kj}(x_{\delta_1}) \phi^{E}_{ij;\delta_2}(t) \phi^{E}_{ik;\tilde{\alpha}}(t) \right] \epsilon_{i;\tilde{\alpha}}(t) \\
+    &\quad - \eta \sum_{\tilde{\alpha}} \left[ \sum_{j,k} \epsilon \psi_{kj}(x_{\delta_2}) \phi^{E}_{ij;\delta_1}(t) \phi^{E}_{ik;\tilde{\alpha}}(t) \right] \epsilon_{i;\tilde{\alpha}}(t) + O(\epsilon^2)
+\end{aligned}
+$$
+
+Above equation could be rearranged as follows.
+
+$$
+\begin{aligned}
+k^{E}_{ii;\delta_1\delta_2}(t + 1) &= k^{E}_{ii;\delta_1\delta_2}(t) - \eta \sum_{\tilde{\alpha}} (\mu_{\delta_1\tilde{\alpha}} + \mu_{\delta_2\tilde{\alpha}}) \epsilon_{i;\tilde{\alpha}}(t) + O(\epsilon^2) 
+\end{aligned}
+$$
+
+Linear difference equation, with \( \mu_{\delta_1\delta_2\tilde{\alpha}} \) playing the role of \( k_{\delta\tilde{\alpha}} \dots \)
+
+The *model predictions* will update as
+
+$$
+\begin{aligned}
+Z_{i;\delta}(t + 1) &= Z_{i;\delta}(t) - \eta \sum_{\tilde{\alpha}} k^{E}_{ii;\delta\tilde{\alpha}}(t) \epsilon_{i;\tilde{\alpha}}(t) \\
+&\quad + \frac{\eta^2}{2} \sum_{\tilde{\alpha}_1,\tilde{\alpha}_2} \mu_{\delta\tilde{\alpha}_1\tilde{\alpha}_2} \epsilon_{i;\tilde{\alpha}_1}(t) \epsilon_{i;\tilde{\alpha}_2}(t) + O(\epsilon^2)
+\end{aligned}
+$$
+
+While the *effective kernel* will update as
+
+$$
+\begin{aligned}
+k^{E}_{ii;\delta_1\delta_2}(t + 1) &= k^{E}_{ii;\delta_1\delta_2}(t) - \eta \sum_{\tilde{\alpha}} (\mu_{\delta_1\tilde{\alpha}} + \mu_{\delta_2\tilde{\alpha}}) \epsilon_{i;\tilde{\alpha}}(t) + O(\epsilon^2)
+\end{aligned}
+$$
+
+- These joint updates are coupled *difference equations*, and the first is *nonlinear* in the training error.
+- We are now going to solve these equations in a closed form to leading order in \( \epsilon \) using *perturbation theory*.
+
+
 
 
 
