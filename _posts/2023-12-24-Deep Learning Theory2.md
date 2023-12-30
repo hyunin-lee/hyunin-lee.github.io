@@ -289,6 +289,29 @@ $$
 - For a fixed input \( x_{\delta_0} \), \( \mu_{\delta_0\delta_1\delta_2} \) computes a different feature-space inner product between the two inputs, \( x_{\delta_1} \) and \( x_{\delta_2} \).
 - Due to the inclusion of \( \epsilon \) into the definition of \( \mu_{\delta_0\delta_1\delta_2} \), we should think of it as being parametrically small too.
 
+Using the definition of \( k^{E}_{ij;\delta_1\delta_2} (\theta) \) and \( \mu_{\delta_0\delta_1\delta_2} \), we have the following.
+
+$$
+\begin{aligned}
+Z_{i;\delta}(t + 1) &= Z_{i;\delta}(t) - \eta \sum_{\tilde{\alpha}} \left[ \sum_{j} \phi^{E}_{ij;\delta}(t) \phi^{E}_{ij;\tilde{\alpha}}(t) \right] \epsilon_{i;\tilde{\alpha}}(t) \\
+&\quad + \frac{\eta^2}{2} \sum_{\tilde{\alpha}_1,\tilde{\alpha}_2} \left[ \epsilon \sum_{j_1,j_2} \phi^{E}_{ij_1;\tilde{\alpha}_1}(t) \phi^{E}_{ij_2;\tilde{\alpha}_2}(t) \psi_{j_1j_2}(x_{\delta}) \right] \epsilon_{i;\tilde{\alpha}_1}(t) \epsilon_{i;\tilde{\alpha}_2}(t) \\
+&= Z_{i;\delta}(t) - \eta \sum_{\tilde{\alpha}} k^{E}_{ii;\delta\tilde{\alpha}}(t) \epsilon_{i;\tilde{\alpha}}(t) + \frac{\eta^2}{2} \sum_{\tilde{\alpha}_1,\tilde{\alpha}_2} \mu_{\delta\tilde{\alpha}_1\tilde{\alpha}_2} \epsilon_{i;\tilde{\alpha}_1}(t) \epsilon_{i;\tilde{\alpha}_2}(t) + O(\epsilon^2)
+\end{aligned}
+$$
+
+This is a coupled nonlinear difference equation...
+
+Now, to solve the coupled nonlinear difference equation, we compute effective kernel dynamics
+
+$$
+\begin{aligned}
+    \phi^{E}_{ij;\delta}(t + 1) &= \phi^{E}_{ij;\delta}(t) + \epsilon \sum_{k=0}^{n_f} dW_{ik}(t) \psi_{kj}(x_{\delta}) \\
+    &= \phi^{E}_{ij;\delta}(t) + \epsilon \sum_{k=0}^{n_f} \left[ -\eta \sum_{\tilde{\alpha}} \phi^{E}_{ik;\tilde{\alpha}}(t) \epsilon_{i;\tilde{\alpha}}(t) \right] \psi_{kj}(x_{\delta}) \\ 
+    &= \phi^{E}_{ij;\delta}(t) - \eta \sum_{\tilde{\alpha}} \left[ \epsilon \sum_{k=0}^{n_f} \psi_{kj}(x_{\delta}) \phi^{E}_{ik;\tilde{\alpha}}(t) \right] \epsilon_{i;\tilde{\alpha}}(t)
+\end{aligned}
+$$
+
+
 
 
 
