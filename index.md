@@ -12,7 +12,7 @@ I am fortunate to work with [Prof. Somayeh Sojoudi](https://people.eecs.berkeley
 
 Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
-Besides my research, __I am interested in democratizing AI education 📚👩🏻‍💻. I cofound and currently advise__ [**Outta**](https://outta.ai/) to provide equal educational opportunities for underprivileged students. 
+Besides my research, __I am interested in democratizing AI education 📚👩🏻‍💻. I cofound and currently advise__ [**OUTTA**](https://outta.ai/) to provide equal educational opportunities for underprivileged students. 
 
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 
@@ -27,7 +27,7 @@ Regularization](./assets/TAC_Entropy_SPG.pdf).
 * [2022.08] I started Ph.D. at UC Berkeley.
 * [2022.05] I received the Kwanjeong Education Foundation Scholarship.
 * [2022.03] New paper on ***Neuroscience and Machine Learning*** in ***IEEE TNSRE***: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861). [[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes](https://github.com/hyunin-lee/AttentionEMG)]
-* [2022] I have co-founded 🚀[**Outta**](https://outta.ai/)🚀 with [Haeun (MIT)](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo (UMich)](https://www.linkedin.com/in/chankyo-kim-603592238/)
+* [2022] I have co-founded 🚀[**OUTTA**](https://outta.ai/)🚀 with [Haeun (MIT)](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo (UMich)](https://www.linkedin.com/in/chankyo-kim-603592238/)
 
 ### Education 
 * Ph.D., Mechanical Engineering, University of California, Berkeley, 2022.08 - current
