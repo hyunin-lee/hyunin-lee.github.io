@@ -105,3 +105,75 @@ $$
    $$
    C^{(\ell)}_b = C_b, \quad C^{(\ell)}_W = C_W, \quad \lambda^{(\ell)}_b = \lambda_b, \quad \lambda^{(\ell)}_W = \lambda_W
    $$
+
+### One-layer network
+
+#### Statistics of \( \tilde{z}_i^{(1)} = b_i^{(1)} + \sum_{j=1}^{n_0} W_{ij}^{(1)} x_j \)
+
+Recall that \( i \) stands for the \( i^{th} \) component of the first layer.
+
+$$
+\begin{aligned}
+\mathbb{E}\left[\tilde{z}_{i_1}^{(1)} \tilde{z}_{i_2}^{(1)}\right]
+&= \mathbb{E}\left[ \left(b_{i_1}^{(1)} + \sum_{j_1=1}^{n_0} W_{i_1j_1}^{(1)} x_{j_1}\right)\left(b_{i_2}^{(1)} + \sum_{j_2=1}^{n_0} W_{i_2j_2}^{(1)} x_{j_2}\right) \right] \\
+&= C_b \delta_{i_1i_2} + \sum_{j_1,j_2=1}^{n_0} \frac{C_W}{n_0} \delta_{i_1i_2} \delta_{j_1j_2} x_{j_1} x_{j_2} \\
+&= \delta_{i_1i_2} \left[ C_b + C_W \left( \frac{1}{n_0} \sum_{j=1}^{n_0} x_j^2 \right) \right] = \delta_{i_1i_2} G^{(1)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbb{E}\left[\tilde{z}_{i_1}^{(1)} \tilde{z}_{i_2}^{(1)} \tilde{z}_{i_3}^{(1)} \tilde{z}_{i_4}^{(1)}\right] &= \mathbb{E}\Bigg[
+\left(b_{i_1}^{(1)} + \sum_{j_1=1}^{n_0} W_{i_1j_1}^{(1)} x_{j_1}\right)
+\left( b_{i_2}^{(1)} + \sum_{j_2=1}^{n_0} W_{i_2 j_2}^{(1)} x_{j_2} \right) \\
+&\quad \times \left(b_{i_3}^{(1)} + \sum_{j_3=1}^{n_0} W_{i_3j_3}^{(1)} x_{j_3}\right)
+\left(b_{i_4}^{(1)} + \sum_{j_4=1}^{n_0} W_{i_4j_4}^{(1)} x_{j_4}\right)
+\Bigg] \\
+&= \left(\delta_{i_1i_2}\delta_{i_3i_4} + \delta_{i_1i_3}\delta_{i_2i_4} + \delta_{i_1i_4}\delta_{i_2i_3}\right) \\
+&\quad \times \left(C_b^2 + 2C_bC_W\frac{1}{n_0}\sum_{j=1}^{n_0} x_j^2 + C_W^2 \frac{1}{n_0^2} \sum_{j_1,j_2=1}^{n_0} x_{j_1}^2 x_{j_2}^2\right) \\
+&= \left(G^{(1)}\right)^2 \left(\delta_{i_1i_2}\delta_{i_3i_4} + \delta_{i_1i_3}\delta_{i_2i_4} + \delta_{i_1i_4}\delta_{i_2i_3}\right)
+\end{aligned}
+$$
+
+Therefore, for a single-layer neural network, we can conclude as 
+
+$$
+p(\tilde{z}^{(1)}) \propto \exp \left( -\frac{1}{2G^{(1)}} \sum_{i=1}^{n_1} (\tilde{z}_i^{(1)})^2 \right) = \prod_{i=1}^{n_1} \left\{ \exp \left( -\frac{1}{2G^{(1)}} (\tilde{z}_i^{(1)})^2 \right) \right\}
+$$
+
+- Neurons don't talk to each other; they are statistically independent.
+- We marginalized over/integrated out \( b_i^{(1)} \) and \( W_{ij}^{(1)} \).
+- Two interpretations:
+  1. Outputs of one-layer networks; or
+  2. Preactivations in the first layer of deeper networks.
+
+#### Statistics of \( \hat{H}_{i_1i_2}^{(1)} \)
+
+$$
+\begin{aligned}
+\hat{H}_{i_1i_2}^{(1)} & := \sum_{\mu,\nu} \lambda_{\mu\nu} \frac{\partial \tilde{z}_{i_1}^{(1)}}{\partial \theta_{\mu}} \frac{\partial \tilde{z}_{i_2}^{(1)}}{\partial \theta_{\nu}} \\
+&= \lambda_b \sum_{j=1}^{n_1} \frac{\partial \tilde{z}_{i_1}^{(1)}}{\partial b_j^{(1)}} \frac{\partial \tilde{z}_{i_2}^{(1)}}{\partial b_j^{(1)}} + \frac{\lambda_W}{n_0} \sum_{j=1}^{n_1} \sum_{k=1}^{n_0} \frac{\partial \tilde{z}_{i_1}^{(1)}}{\partial W_{jk}^{(1)}} \frac{\partial \tilde{z}_{i_2}^{(1)}}{\partial W_{jk}^{(1)}} \\
+&= \lambda_b \sum_{j=1}^{n_1} \delta_{i_1j}\delta_{i_2j} + \frac{\lambda_W}{n_0} \sum_{j=1}^{n_1} \sum_{k=1}^{n_0} \delta_{i_1j}x_k\delta_{i_2j}x_k \\
+&= \lambda_b \delta_{i_1i_2} + \frac{\lambda_W}{n_0} \delta_{i_1i_2} \sum_{k=1}^{n_0} x_k x_k \\
+&= \delta_{i_1i_2} \left[ \lambda_b + \lambda_W \left( \frac{1}{n_0} \sum_{j=1}^{n_0} x_j^2 \right) \right] = \delta_{i_1i_2} H^{(1)}
+\end{aligned}
+$$
+
+- Equation \(\eqref{eq1}\) holds by 
+  $$
+  \lambda_{b_{i_1}^{(1)} b_{i_2}^{(1)}} = \delta_{i_1i_2} \lambda_b, \quad \lambda_{W_{i_1j_1}^{(1)} W_{i_2j_2}^{(1)}} = \delta_{i_1i_2} \delta_{j_1j_2} \frac{\lambda_W}{n_0}
+  $$
+- Equation \(\eqref{eq2}\) holds by 
+  $$
+  \tilde{z}_i^{(1)} = b_i^{(1)} + \sum_{j=1}^{n_0} W_{ij}^{(1)} x_j
+  $$
+
+So we can conclude as 
+
+$$
+\hat{H}_{i_1i_2}^{(1)} = \delta_{i_1i_2} H^{(1)} = \delta_{i_1i_2} \left( \lambda_b + \lambda_W \left( \frac{1}{n_0} \sum_{j=1}^{n_0} x_j^2 \right) \right)
+$$
+
+- "Deterministic": it doesn't depend on any particular initialization; you always get the same number.
+- "Frozen": it cannot evolve during training; no representation learning.
+
