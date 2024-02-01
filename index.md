@@ -17,6 +17,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 
 ### News 
+* [2024.01] New paper on ***Real-world Reinforcement Learning***: [Pausing Model Learning in Real-world Reinforcement Learning](./assets/RealWorldRL_2024.pdf)
 * [2023.10] I received a NeurIPS scholar award
 * [2023.08] OUTTA has launched a new spinoff team, **AI PLAYGROUND**, dedicated to creating intuitive AI educational materials for elementary education! 👦🏻 👧🏻 I lead the team. 
 * [2023.07] New paper on ***Reinforcement Learning Theory*** (under revision for TAC): [Beyond Exact Gradients: Convergence of Stochastic
