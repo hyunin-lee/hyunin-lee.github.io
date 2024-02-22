@@ -44,6 +44,3 @@ Now, a randomized history-dependent policy \( \pi = (d_1, d_2, \ldots , d_{N-1})
 so that the probability of a sample path \( \boldsymbol{\omega} = (s_1, a_1, \ldots, s_N) \) is given as 
 
 \[ P^{\pi}(s_1, a_1, \ldots, s_N) = P_1(s_1) q_{d_1(s_1)}(a_1) p_1(s_2 \mid s_1, a_1) q_{d_2(h_2)}(a_2) \ldots q_{d_{N-1}(h_{N-1})}(a_{N-1}) p_{N-1}(s_N) \]
-
-
-
