@@ -8,7 +8,7 @@ Hi! my name is Hyunin Lee.
 
 I am a second-year Ph.D. student at UC Berkeley.  
 I am interested in __devising real-world reinforcement learning algorithms with solid theoretical backgrounds__.    
-I am fortunate to work with [Prof. Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html), [Prof. Javad Lavaei](https://lavaei.ieor.berkeley.edu/).
+I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/).
 
 Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Prof.Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
