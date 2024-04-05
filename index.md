@@ -18,16 +18,16 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 
 ### News 
 * [2024.03] I have served as a reviewer for ICML 2024.
-* [2024.02] New paper on ***Reinforcement Learning*** in ***IEEE Transactions on Automatic Control***: [Beyond Exact Gradients: Convergence of Stochastic
+* [2024.02] New paper on Reinforcement Learning in ***IEEE Transactions on Automatic Control***: [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entropy_SPG.pdf).
-* [2024.01] New paper on ***Real-world Reinforcement Learning***: [Pausing Model Learning in Real-world Reinforcement Learning](./assets/RealWorldRL_2024.pdf)
+* [2024.01] New paper on Real-world Reinforcement Learning: [Pausing Model Learning in Real-world Reinforcement Learning](./assets/RealWorldRL_2024.pdf)
 * [2023.10] I received a NeurIPS scholar award
 * [2023.08] OUTTA has launched a new spinoff team, **AI PLAYGROUND**, dedicated to creating intuitive AI educational materials for elementary education! 👦🏻 👧🏻 I lead the team. 
-* [2023.05] New paper on ***Non-stationary Reinforcement Learning*** in ***NeurIPS 2023***: [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf). [[slides](./assets/TempoAdaption_NSRL_slides.pdf)] [[codes](https://github.com/hyunin-lee/TempoRL)]
-* [2023.01] New paper on ***Causal Machine Learning*** in ***CDC 2023***: [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf).
+* [2023.05] New paper on Non-stationary Reinforcement Learning in ***NeurIPS 2023***: [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf). [[slides](./assets/TempoAdaption_NSRL_slides.pdf)] [[codes](https://github.com/hyunin-lee/TempoRL)]
+* [2023.01] New paper on Causal Machine Learning in ***CDC 2023***: [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf).
 * [2022.08] I started Ph.D. at UC Berkeley.
 * [2022.05] I received the Kwanjeong Education Foundation Scholarship.
-* [2022.03] New paper on ***Neuroscience and Machine Learning*** in ***IEEE TNSRE***: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861). [[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes](https://github.com/hyunin-lee/AttentionEMG)]
+* [2022.03] New paper on Neuroscience and Machine Learning in ***IEEE TNSRE***: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861). [[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes](https://github.com/hyunin-lee/AttentionEMG)]
 * [2022] I have co-founded 🚀[**OUTTA**](https://outta.ai/)🚀 with [Haeun (MIT)](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo (UMich)](https://www.linkedin.com/in/chankyo-kim-603592238/)
 
 ### Education 
