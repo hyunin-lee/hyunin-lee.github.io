@@ -32,8 +32,8 @@ Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entro
 * [2022] I have co-founded 🚀[**OUTTA**](https://outta.ai/)🚀 with [Haeun (MIT)](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo (UMich)](https://www.linkedin.com/in/chankyo-kim-603592238/)
 
 ### Education 
-* Ph.D., Mechanical Engineering, University of California, Berkeley, 2022.08 - current
-* B.S., Mechanical Engineering, Seoul National University, 2015.03 - 2022.02  
+* Ph.D. University of California, Berkeley, 2022.08 - current
+* B.S. Seoul National University, 2015.03 - 2022.02  
   (Served military service in Korean Combat Traning Center, 2017.07 - 2019.03)
 
 ### Contact 
