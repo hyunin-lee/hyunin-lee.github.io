@@ -17,6 +17,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 
 ### News 
+* [2024.04] I received a Berkeley research fellowship.
 * [2024.03] I have served as a reviewer for ICML 2024.
 * [2024.02] New paper on Reinforcement Learning in ***IEEE TAC***: [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entropy_SPG.pdf).
