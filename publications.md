@@ -20,7 +20,7 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 ### Conference
 * [Pausing Model Learning in Real-world Reinforcement Learning](./assets/RealWorldRL_2024.pdf).  
 __Hyunin Lee__, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
-Under review, 2024  
+International Conference on Machine Learning (ICML), 2024  
 
 * [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf).  
 __Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
@@ -30,6 +30,6 @@ Neural Information Processing Systems (NeurIPS), 2023
 
 * [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf)  
 Samuel Pfrommer, Yatong Bai, __Hyunin Lee__, and Somayeh Sojoudi    
-IEEE conference on Decision and Control (CDC), 2023.
+IEEE Conference on Decision and Control (CDC), 2023.
 
 
