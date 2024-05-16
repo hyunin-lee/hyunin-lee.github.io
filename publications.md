@@ -8,7 +8,7 @@ title: ""
 ### Journal 
 
 * [Beyond Exact Gradients: Convergence of Stochastic Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entropy_SPG.pdf)  
-Yuhao Ding, Junzi Zhang, __Hyunin Lee__, and Javad Lavaei
+Yuhao Ding, Junzi Zhang, __Hyunin Lee__, and Javad Lavaei   
 IEEE Transactions on Automatic Control (TAC).
 
 * [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861)  
