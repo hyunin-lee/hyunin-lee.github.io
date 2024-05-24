@@ -18,7 +18,7 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 
 
 ### Conference
-* [Pausing Model Learning in Real-world Reinforcement Learning](./assets/RealWorldRL_2024.pdf).  
+* [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf).  
 __Hyunin Lee__, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
 International Conference on Machine Learning (ICML), 2024  
 
