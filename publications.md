@@ -6,7 +6,7 @@ title: ""
 
 
 ### Journal 
-* [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
+* [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)  
 Donghao Ying, Mengzi Amy Guo, __Hyunin Lee__, Yuhao Ding, Javad Lavaei, and Zuo-Jun Max Shen  
 Under revision
 
