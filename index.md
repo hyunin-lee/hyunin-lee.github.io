@@ -12,7 +12,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 
 ### News 
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
-* [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024**: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf)
+* [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024 (oral)**: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf)
 * [2024.04] I received a Berkeley research fellowship.
 * [2024.03] I have served as a reviewer for ICML 2024.
 * [2024.02] New paper on Reinforcement Learning in **IEEE TAC**: [Beyond Exact Gradients: Convergence of Stochastic
