@@ -23,7 +23,7 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 ### Conference
 * [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf).  
 __Hyunin Lee__, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
-International Conference on Machine Learning (ICML), 2024, <span style="color:red;"><b>(Oral)</b></span>  
+International Conference on Machine Learning (ICML), 2024, <span style="color:red;"><b>(Oral, top 5% among accepted papers)</b></span>  
 
 * [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf).  
 __Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
