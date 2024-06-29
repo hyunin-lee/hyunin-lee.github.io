@@ -11,6 +11,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 
 ### News 
+* [2024.05] New paper on reinforcement Learning: [A Black Swan Hypothesis in Markov Decision Process via Irrationality (coming soon)]()
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
 * [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 5% among accepted papers)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf)
 * [2024.04] I received a Berkeley research fellowship.
