@@ -8,3 +8,6 @@ title: ""
 
 ### Classes
 - [IEOR 262B Lecture note (Mathematical Programming II)](./assets/IEOR262B_LECNOTE.pdf) by Javad Lavaei. This lecture is based on a book Nonlinear programming(3rd edition) by Dimitri Bertsekas.
+
+### Articles
+- [Trust region optimization](./assets/TRO.pdf) : how do principles of trust region optimization help to understand trust region policy optimization in reinforcement learning?
