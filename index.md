@@ -7,13 +7,13 @@ title: ""
   <div>
     <h2 style="margin: 0;">Hyunin Lee</h2>
     <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
-    <p><strong>Contact:</strong> hyunin at berkeley dot edu</p>
+    <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
   </div>
 </div>
 
 ### About
-I am Hyunin Lee, a second-year Ph.D. student at UC Berkeley. I am interested in __devising real-world reinforcement learning algorithms with solid theoretical backgrounds__. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
+I am Hyunin Lee, a second-year Ph.D. student at UC Berkeley. I am interested in __devising real-world reinforcement learning algorithms and examining grounds of reinforcement learning with solid theoretical backgrounds__. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
 Besides my research, __I am interested in democratizing AI education 📚👩🏻‍💻. I cofound and currently advise__ [**OUTTA**](https://outta.ai/).
 
@@ -41,5 +41,3 @@ Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entro
 * B.S., Seoul National University, 2015.03 - 2022.02  
   (Served military service in Korean Combat Traning Center, 2017.07 - 2019.03)
 
-### Contact 
-hyunin(at)berkeley(dot)edu
