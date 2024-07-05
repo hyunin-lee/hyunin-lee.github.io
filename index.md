@@ -3,12 +3,24 @@ layout: page
 title: ""
 ---
 <div style="display: flex; align-items: center;">
-  <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 30%; border: 2px solid black; border-radius: 30px; overflow: hidden; margin-right: 20px;">
+  <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 150px; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
   <div>
-    <p>Hyunin Lee</p>
-    <p>Ph.D at UC Berkeley</p>
+    <h1 style="margin: 0;">Hyunin Lee</h1>
+    <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
+    <p><strong>Contact:</strong> hyunin at berkeley dot edu</p>
+    <p><strong>CV:</strong> <a href="#">link</a> (latest update: July 2024)</p>
+    <p><strong>Advisor:</strong> Prof. <a href="#">Advisor Name</a></p>
+    <p><strong>Research Interests:</strong> Reinforcment Learning, Risk, Optimization</p>
   </div>
 </div>
+
+<h2>Education</h2>
+<ul>
+  <li><strong>Ph.D. in Computer Science</strong><br>
+  UC Berkeley, 2022 - Present</li>
+  <li><strong>B.S. in Electrical and Computer Engineering</strong><br>
+  Seoul National University, 2018 - 2022</li>
+</ul>
 
 I am Hyunin Lee, a second-year Ph.D. student at UC Berkeley. I am interested in __devising real-world reinforcement learning algorithms with solid theoretical backgrounds__. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
