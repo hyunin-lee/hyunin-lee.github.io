@@ -3,7 +3,7 @@ layout: page
 title: ""
 ---
 <div style="text-align: center;">
-  <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 30%; border: 2px solid black;">
+  <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 50%; border: 2px solid black; border-radius: 15px; overflow: hidden;">
 </div>
 
 I am Hyunin Lee, a second-year Ph.D. student at UC Berkeley. I am interested in __devising real-world reinforcement learning algorithms with solid theoretical backgrounds__. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
