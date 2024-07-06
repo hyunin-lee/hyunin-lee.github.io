@@ -4,7 +4,7 @@ title: ""
 ---
 
 <div style="display: flex; align-items: center;">
-  <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 25%; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
+  <img src="/assets/hyunin3.jpg" alt="Hyunin Lee" style="width: 25%; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
   <div>
     <h2 style="margin: 0;">Hyunin Lee</h2>
     <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
