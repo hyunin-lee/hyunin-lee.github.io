@@ -12,6 +12,9 @@ title: ""
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
     <p>
       <a href="https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en" target="_blank">
+        <img src="/assets/CV.svg" alt="CV" style="width: 30px; height: 30px; margin-right: 30px;">
+      </a>
+      <a href="https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en" target="_blank">
         <img src="/assets/googlescholar.svg" alt="Google Scholar" style="width: 30px; height: 30px; margin-right: 30px;">
       </a>
       <a href="https://kr.linkedin.com/in/hyunin-lee-539b641b1" target="_blank">
