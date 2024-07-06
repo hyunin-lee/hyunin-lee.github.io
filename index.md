@@ -14,7 +14,7 @@ title: ""
 </div>
 -->
 <div style="display: flex; align-items: center;">
-  <div style="width: 70%; height: auto; overflow: hidden; border: 2px solid black; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
+  <div style="width: 30%; height: auto; overflow: hidden; border: 2px solid black; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
     <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 100%; height: auto; object-fit: cover;">
   </div>
   <div style="margin-left: 20px;">
