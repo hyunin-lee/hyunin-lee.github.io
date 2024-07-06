@@ -2,9 +2,22 @@
 layout: page
 title: ""
 ---
+<!--
 <div style="display: flex; align-items: center;">
   <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 150px; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
   <div>
+    <h2 style="margin: 0;">Hyunin Lee</h2>
+    <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
+    <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
+    <p><strong>Research Interests:</strong> Reinforcment Learning </p>
+  </div>
+</div>
+-->
+<div style="display: flex; align-items: center;">
+  <div style="width: 70%; height: auto; overflow: hidden; border: 2px solid black; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
+    <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 100%; height: auto; object-fit: cover;">
+  </div>
+  <div style="margin-left: 20px;">
     <h2 style="margin: 0;">Hyunin Lee</h2>
     <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
