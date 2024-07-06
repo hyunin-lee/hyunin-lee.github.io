@@ -4,12 +4,13 @@ title: ""
 ---
 
 <div style="display: flex; align-items: center;">
-  <img src="/assets/hyunin3.jpg" alt="Hyunin Lee" style="width: 25%; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
+  <img src="/assets/hyunin4.jpg" alt="Hyunin Lee" style="width: 25%; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
   <div>
     <h2 style="margin: 0;">Hyunin Lee</h2>
     <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
+    <p>[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)</p>
   </div>
 </div>
 
@@ -31,7 +32,7 @@ I am Hyunin Lee, a second-year Ph.D. student at UC Berkeley. I am interested in 
 
 Besides my research, __I am interested in democratizing AI education 📚👩🏻‍💻. I cofound and currently advise__ [**OUTTA**](https://outta.ai/).
 
-[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
+
 
 ### News 
 * [2024.07] New paper on reinforcement Learning: [A Black Swan Hypothesis in Markov Decision Process via Irrationality (coming soon)]()
