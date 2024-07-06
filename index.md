@@ -12,16 +12,16 @@ title: ""
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
     <p>
       <a href="./assets/CV_update.pdf" target="_blank">
-        <img src="/assets/CV.svg" alt="CV" style="width: 30px; height: 30px; margin-right: 30px;">
+        <img src="/assets/CV.svg" alt="CV" style="width: auto; height: 35px; margin-right: 20px;">
       </a>
       <a href="https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en" target="_blank">
-        <img src="/assets/googlescholar.svg" alt="Google Scholar" style="width: 30px; height: 30px; margin-right: 30px;">
+        <img src="/assets/googlescholar.svg" alt="Google Scholar" style="width: auto; height: 30px; margin-right: 20px;">
       </a>
       <a href="https://kr.linkedin.com/in/hyunin-lee-539b641b1" target="_blank">
-        <img src="/assets/linkedin.svg" alt="LinkedIn" style="width: 30px; height: 30px; margin-right: 30px;">
+        <img src="/assets/linkedin.svg" alt="LinkedIn" style="width: auto; height: 30px; margin-right: 20px;">
       </a>
       <a href="https://github.com/hyunin-lee" target="_blank">
-        <img src="/assets/github.svg" alt="GitHub" style="width: 30px; height: 30px;">
+        <img src="/assets/github.svg" alt="GitHub" style="width: auto; height: 30px;">
       </a>
     </p>
   </div>
