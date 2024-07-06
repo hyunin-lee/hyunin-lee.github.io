@@ -2,9 +2,9 @@
 layout: page
 title: ""
 ---
-<!--
+
 <div style="display: flex; align-items: center;">
-  <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 150px; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
+  <img src="/assets/hyunin3.jpg" alt="Hyunin Lee" style="width: 150px; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
   <div>
     <h2 style="margin: 0;">Hyunin Lee</h2>
     <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
@@ -12,7 +12,8 @@ title: ""
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
   </div>
 </div>
--->
+
+<!--
 <div style="display: flex; align-items: center;">
   <div style="width: 30%; height: auto; overflow: hidden; border: 2px solid black; border-radius: 15px; display: flex; justify-content: center; align-items: center;">
     <img src="/assets/hyunin2.jpg" alt="Hyunin Lee" style="width: 100%; height: auto; object-fit: cover;">
@@ -24,7 +25,7 @@ title: ""
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
   </div>
 </div>
-
+-->
 ### About
 I am Hyunin Lee, a second-year Ph.D. student at UC Berkeley. I am interested in __devising real-world reinforcement learning algorithms and examining grounds of reinforcement learning with solid theoretical backgrounds__. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
