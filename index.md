@@ -11,12 +11,27 @@ title: ""
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
     <p>
+      <a href="https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en" target="_blank">
+        <img src="/assets/googlescholar.svg" alt="Google Scholar" style="width: 24px; height: 24px;">
+      </a>
+      <a href="https://kr.linkedin.com/in/hyunin-lee-539b641b1" target="_blank">
+        <img src="/assets/linkedin.svg" alt="LinkedIn" style="width: 24px; height: 24px;">
+      </a>
+      <a href="https://github.com/hyunin-lee" target="_blank">
+        <img src="/assets/github.svg" alt="GitHub" style="width: 24px; height: 24px;">
+      </a>
+    </p>
+  </div>
+</div>
+
+<!-- 
+    <p>
       <a href="https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en">Google Scholar</a> /
       <a href="https://kr.linkedin.com/in/hyunin-lee-539b641b1">LinkedIn</a> /
       <a href="https://github.com/hyunin-lee">GitHub</a>
     </p>
-  </div>
-</div>
+-->
+
 
 <!--
 <div style="display: flex; align-items: center;">
