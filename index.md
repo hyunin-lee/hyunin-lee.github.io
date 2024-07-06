@@ -10,7 +10,11 @@ title: ""
     <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
-    <p>[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)</p>
+    <p>
+      <a href="https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en">Google Scholar</a> /
+      <a href="https://kr.linkedin.com/in/hyunin-lee-539b641b1">LinkedIn</a> /
+      <a href="https://github.com/hyunin-lee">GitHub</a>
+    </p>
   </div>
 </div>
 
@@ -32,7 +36,9 @@ I am Hyunin Lee, a second-year Ph.D. student at UC Berkeley. I am interested in 
 
 Besides my research, __I am interested in democratizing AI education 📚👩🏻‍💻. I cofound and currently advise__ [**OUTTA**](https://outta.ai/).
 
-
+<!--
+[Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
+-->
 
 ### News 
 * [2024.07] New paper on reinforcement Learning: [A Black Swan Hypothesis in Markov Decision Process via Irrationality (coming soon)]()
