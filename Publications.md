@@ -3,7 +3,10 @@ layout: page
 title: ""
 ---
 
-
+### Preprint
+* [A Black Swan Hypothesis in Markov Decision Process via Irrationality](./assets/blackswanHumanMDP.pdf)
+  Hyunin Lee, David Abel, Ming Jin, Javad Lavaei, and Somayeh Sojoudi
+  Preprint   
 
 ### Journal 
 * [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)  
