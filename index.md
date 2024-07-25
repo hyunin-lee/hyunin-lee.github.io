@@ -58,6 +58,11 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 -->
 
+### Research questions
+* What is the *optimal* design of agent, environment, and agent-environment boundary?
+* How to design an agent's learning algorithm based on the agent and environment's design?
+* How does problem design depend on the representation ability of the learning algorithm?
+
 ### News 
 * [2024.07] New paper on reinforcement Learning: [A Black Swan Hypothesis in Markov Decision Process via Irrationality](./assets/blackswanHumanMDP.pdf)
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
