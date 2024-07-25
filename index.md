@@ -61,7 +61,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 ### Research questions
 * What is the *optimal* design of agent, environment, and agent-environment boundary?
 * How to design an agent's learning algorithm based on the agent and environment's design?
-* How does problem design depend on the representation ability of the learning algorithm?
+* How does agent and environment design depend on the representation capacity of the learning algorithm?
 
 ### News 
 * [2024.07] New paper on reinforcement Learning: [A Black Swan Hypothesis in Markov Decision Process via Irrationality](./assets/blackswanHumanMDP.pdf)
