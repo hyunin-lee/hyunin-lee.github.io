@@ -5,7 +5,7 @@ title: ""
 
 ### Preprint
 * [A Black Swan Hypothesis in Markov Decision Process via Irrationality](./assets/blackswanHumanMDP.pdf)   
-  Hyunin Lee, David Abel, Ming Jin, Javad Lavaei, and Somayeh Sojoudi
+  Hyunin Lee, David Abel, Ming Jin, Javad Lavaei, and Somayeh Sojoudi   
   Preprint   
 
 ### Journal 
