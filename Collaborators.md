@@ -3,10 +3,10 @@ layout: page
 title: ""
 ---
 
-I am fortunate to work with following outside-group great researchers! (listed as alphabetical order)
+I am fortunate to work with the following great researchers from _outside_ groups, listed in alphabetical order:
 
-- David Abel (Google DeepMind)
-- Khimya Khater (Google DeepMind)
-- Jongmin Lee (UC berkeley)
-- Chanwoo Park (MIT)
-- Ming Jin (Virginia Tech)
+- [Chanwoo Park](https://chanwoo-park-official.github.io/) (MIT)
+- [David Abel](https://david-abel.github.io/) (Google DeepMind)
+- [Jongmin Lee](https://www.jmlee.kr/) (UC Berkeley)
+- [Khimya Khetarpal](https://kkhetarpal.github.io/) (Google DeepMind)
+- [Ming Jin](http://www.jinming.tech/) (Virginia Tech)
