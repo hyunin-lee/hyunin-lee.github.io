@@ -64,6 +64,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 * How does agent and environment design depend on the representation capacity of the learning algorithm?
 
 ### News 
+* [2024.07] I am serving as program commitee for AAAI 2025.  
 * [2024.07] New paper on reinforcement Learning: [A Black Swan Hypothesis in Markov Decision Process via Irrationality](./assets/blackswanHumanMDP.pdf)
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
 * [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 1%)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf)
