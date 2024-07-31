@@ -3,7 +3,7 @@ layout: page
 title: ""
 ---
 
-I am fortunate to work with the following great researchers from _outside_ groups, listed in alphabetical order:
+I am very fortunate to work with the following great AI researchers from _outside_ groups, listed in alphabetical order:
 
 - [Chanwoo Park](https://chanwoo-park-official.github.io/) (MIT)
 - [David Abel](https://david-abel.github.io/) (Google DeepMind)
