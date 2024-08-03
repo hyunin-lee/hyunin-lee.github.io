@@ -11,3 +11,4 @@ title: ""
 
 ### Articles
 - [Trust region optimization](./assets/TRO.pdf) : how do principles of trust region optimization help to understand trust region policy optimization in reinforcement learning?.
+- [Notes on organisms as Agents of Evolution](./asserts/Notes_on_evolutionary_agent.pdf) by Philip Ball on 04/2023. 
