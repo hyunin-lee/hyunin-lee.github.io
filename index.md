@@ -66,7 +66,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 ### News 
 * [2024.07] I am attending RLC.
 * [2024.07] I am serving on the program chair committee for AAAI 2025.  
-* [2024.07] New paper on reinforcement Learning: [A Black Swan Hypothesis in Markov Decision Process via Irrationality](./assets/blackswanHumanMDP.pdf)
+* [2024.07] New paper on reinforcement Learning: [A Hypothesis on Black Swan Origin](./assets/blackswanHumanMDP.pdf)
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
 * [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 1%)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf). [[Talk](https://icml.cc/virtual/2024/session/35272)]
 * [2024.04] I received a Berkeley research fellowship.
