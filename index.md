@@ -11,7 +11,7 @@ title: ""
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
     <p>
-      <a href="./assets/CV_update.pdf" target="_blank">
+      <a href="./assets/CV.pdf" target="_blank">
         <img src="/assets/CV2.svg" alt="CV" style="width: auto; height: 30px; margin-right: 15px;">
       </a>
       <a href="https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en" target="_blank">
