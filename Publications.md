@@ -4,7 +4,7 @@ title: ""
 ---
 
 ### Preprint
-* [A Hypothesiss on Black Swan Origin](./assets/blackswanHumanMDP.pdf)   
+* [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)   
   Hyunin Lee, Chanwoo Park, David Abel, Ming Jin, Javad Lavaei, and Somayeh Sojoudi   
   Preprint   
 
