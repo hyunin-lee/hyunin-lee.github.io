@@ -59,9 +59,9 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 -->
 
 ### Research questions
-* What is the optimal design of the agent, and environment?
-* How to design an agent's learning algorithm based on the agent and environment's design?
-* How does agent and environment design depend on the representation capacity of the learning algorithm?
+* What is the optimal design of the agent and environment in reinforcement learning?
+* How can we develop learning algorithms based on the design of the agent and environment?
+* What are the key bottlenecks preventing reinforcement learning from wider real-world application?
 
 ### News 
 * [2024.07] I am attending RLC.
