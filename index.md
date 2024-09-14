@@ -50,7 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a rising third-year Ph.D. student at UC Berkeley. I am interested in __simultaneously co-optimizing the design and learning algorithms of an agent and environment in reinforcement learning__. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
+I am Hyunin Lee, a rising third-year Ph.D. student at UC Berkeley. I am interested in __reinforcement learning__. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
 Besides my research, __I am interested in democratizing AI education 📚👩🏻‍💻. I cofound and currently advise__ [**OUTTA**](https://outta.ai/).
 
@@ -59,7 +59,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 -->
 
 ### Research questions
-* What is the *optimal* design of agent, environment, and agent-environment boundary?
+* What is the optimal design of the agent, and environment?
 * How to design an agent's learning algorithm based on the agent and environment's design?
 * How does agent and environment design depend on the representation capacity of the learning algorithm?
 
