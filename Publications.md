@@ -5,17 +5,17 @@ title: ""
 
 ### Preprint
 * [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)   
-  Hyunin Lee, Chanwoo Park, David Abel, Ming Jin, Javad Lavaei, and Somayeh Sojoudi   
-  Preprint   
+  Hyunin Lee, Chanwoo Park, David Abel, Ming Jin  
+  Preprint, 2024   
 
 ### Journal 
 * [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)  
 Donghao Ying, Mengzi Amy Guo, __Hyunin Lee__, Yuhao Ding, Javad Lavaei, and Zuo-Jun Max Shen  
-Under revision
+Under revision, 2024.
 
 * [Beyond Exact Gradients: Convergence of Stochastic Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entropy_SPG.pdf)  
 Yuhao Ding, Junzi Zhang, __Hyunin Lee__, and Javad Lavaei   
-IEEE Transactions on Automatic Control (TAC).
+IEEE Transactions on Automatic Control (TAC), 2023.
 
 * [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861)  
 __Hyunin Lee__, Dongwook Kim, and Yong-Lae Park  
