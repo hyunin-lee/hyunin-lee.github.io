@@ -68,7 +68,7 @@ Besides my research, __I am interested in democratizing AI education 📚👩�
 * [2024.07] I am serving on the program chair committee for AAAI 2025.  
 * [2024.07] New paper on reinforcement Learning: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
-* [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 1%)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf). [[Talk](https://icml.cc/virtual/2024/session/35272)/[codes][https://github.com/hyunin-lee/ForecasterSAC]]
+* [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 1%)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf). [[Talk](https://icml.cc/virtual/2024/session/35272)/[codes](https://github.com/hyunin-lee/ForecasterSAC)]
 * [2024.04] I received a Berkeley research fellowship.
 * [2024.03] I have served as a reviewer for ICML 2024.
 * [2024.02] New paper on Reinforcement Learning in **IEEE TAC**: [Beyond Exact Gradients: Convergence of Stochastic
