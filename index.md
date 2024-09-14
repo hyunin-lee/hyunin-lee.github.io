@@ -50,7 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a rising third-year Ph.D. student at UC Berkeley. I am interested in __designing an reinforcement learning algorithm and investigating __. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
+I am Hyunin Lee, a rising third-year Ph.D. student at UC Berkeley. I am interested in **developing reinforcement learning algorithms and exploring their key concepts**. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
 Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofound and currently advise [OUTTA](https://outta.ai/).
 
@@ -61,7 +61,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 ### Research questions
 * What is the optimal design of the agent and environment in reinforcement learning?
 * How can we develop learning algorithms based on the design of the agent and environment?
-* What are the key bottlenecks preventing reinforcement learning from wider real-world application?
+* What are the key bottlenecks preventing reinforcement learning from wider real-world applications?
 
 ### News 
 * [2024.07] I am attending RLC.
