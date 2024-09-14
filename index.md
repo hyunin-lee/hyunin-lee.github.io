@@ -52,7 +52,7 @@ title: ""
 ### About
 I am Hyunin Lee, a rising third-year Ph.D. student at UC Berkeley. I am interested in __reinforcement learning__. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
-Besides my research, __I am interested in democratizing AI education 📚👩🏻‍💻. I cofound and currently advise__ [**OUTTA**](https://outta.ai/).
+Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofound and currently advise__ [OUTTA](https://outta.ai/).
 
 <!--
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
