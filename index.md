@@ -7,7 +7,7 @@ title: ""
   <img src="/assets/hyunin4.jpg" alt="Hyunin Lee" style="width: 25%; height: auto; border: 2px solid black; border-radius: 15px; margin-right: 20px;">
   <div>
     <h2 style="margin: 0;">Hyunin Lee</h2>
-    <p style="margin: 0;">Ph.D at UC Berkeley & co-founder of OUTTA </p>
+    <p style="margin: 0;">Ph.D at UC Berkeley</p>
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
     <p><strong>Research Interests:</strong> Reinforcment Learning </p>
     <p>
@@ -50,7 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a rising third-year Ph.D. student at UC Berkeley. I am interested in **developing reinforcement learning algorithms and exploring their key concepts**. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
+I am Hyunin Lee, a rising third-year M.S./Ph.D. student at UC Berkeley. I am interested in **developing reinforcement learning algorithms and exploring their key concepts**. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html) and [Javad Lavaei](https://lavaei.ieor.berkeley.edu/). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
 Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofound and currently advise [OUTTA](https://outta.ai/).
 
