@@ -6,7 +6,7 @@ title: ""
 ### Preprint
 * [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)   
   Hyunin Lee, Chanwoo Park, David Abel, Ming Jin  
-  ICLR 2025 submitted.
+  ICLR 2025 submitted.   
   [[slides](./assets/BlackSwanSlides.pdf)]   
 
 ### Journal 
