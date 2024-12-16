@@ -59,9 +59,8 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 -->
 
 ### Research questions
-* What is the optimal design of the agent and environment in reinforcement learning?
-* How can we develop learning algorithms based on the design of the agent and environment?
-* What are the key bottlenecks preventing reinforcement learning from wider real-world applications?
+* Identifying Challenges Beyond Scaling: What fundamental problems remain unsolvable despite scaling up models and data?
+* Human-World Problem Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
 
 ### News 
 * [2024.07] I am attending RLC.
