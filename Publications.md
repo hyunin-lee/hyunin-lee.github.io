@@ -6,7 +6,8 @@ title: ""
 ### Preprint
 * [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)   
   Hyunin Lee, Chanwoo Park, David Abel, Ming Jin  
-  Preprint, 2024   
+  ICLR 2025 submitted.
+  [[slides](./assets/BlackSwanSlides.pdf)]   
 
 ### Journal 
 * [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)  
