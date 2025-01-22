@@ -65,7 +65,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 * Human-World Problem Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
 
 ### News 
-* [2025.05] Starting an summer intership as reserach scientist at [MetaAI](https://ai.meta.com/)!
+* [2025.05] Starting an summer intership as reserach scientist at [Meta](https://ai.meta.com/)!
 * [2025.01] New paper on AI safety perspective in **ICLR2025**: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)
 * [2024.07] I am attending RLC.
 * [2024.07] I am serving on the program chair committee for AAAI 2025.  
