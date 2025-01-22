@@ -4,15 +4,11 @@ title: ""
 ---
 
 ### Preprint
-* [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)   
-  Hyunin Lee, Chanwoo Park, David Abel, Ming Jin  
-  ICLR 2025 submitted.   
-  [[slides](./assets/BlackSwanSlides.pdf)]   
 
 ### Journal 
 * [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)  
 Donghao Ying, Mengzi Amy Guo, __Hyunin Lee__, Yuhao Ding, Javad Lavaei, and Zuo-Jun Max Shen  
-Under revision, 2024.
+Under revision for JAIR, 2024.
 [[codes](https://github.com/hyunin-lee/VR-PDPG)]
 
 * [Beyond Exact Gradients: Convergence of Stochastic Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entropy_SPG.pdf)  
@@ -26,6 +22,11 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 
 
 ### Conference
+* [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)   
+  Hyunin Lee, Chanwoo Park, David Abel, Ming Jin  
+  International Conference on Learning Representation (ICLR), 2025.     
+  [[slides](./assets/BlackSwanSlides.pdf)]
+  
 * [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf).  
 __Hyunin Lee__, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
 International Conference on Machine Learning (ICML), 2024, <span style="color:red;"><b>(Oral, top 1%)</b></span>   
@@ -35,7 +36,6 @@ International Conference on Machine Learning (ICML), 2024, <span style="color:re
 __Hyunin Lee__, Yuhao Ding, Jongmin Lee, Ming Jin, Javad Lavaei, and Somayeh Sojoudi  
 Neural Information Processing Systems (NeurIPS), 2023   
 [[slides](./assets/TempoAdaption_NSRL_slides.pdf)] [[codes](https://github.com/hyunin-lee/TempoRL)]
-
 
 * [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf)  
 Samuel Pfrommer, Yatong Bai, __Hyunin Lee__, and Somayeh Sojoudi    
