@@ -54,6 +54,8 @@ I am Hyunin Lee, a third-year M.S./Ph.D. student in Mechanical Engineering at UC
 
 Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofound and currently advise [OUTTA](https://outta.ai/).
 
+*I am starting my summer internship at MetaAI!*
+
 <!--
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
 -->
@@ -63,9 +65,11 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 * Human-World Problem Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
 
 ### News 
+* [2025.05] Starting an summer intership as reserach scientist at [MetaAI](https://ai.meta.com/)!
+* [2025.01] New paper on AI safety perspective in **ICLR2025**: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)
 * [2024.07] I am attending RLC.
 * [2024.07] I am serving on the program chair committee for AAAI 2025.  
-* [2024.07] New paper on reinforcement Learning: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)
+<!-- * [2024.07] New paper on reinforcement Learning: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf) -->
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
 * [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 1%)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf). [[Talk](https://icml.cc/virtual/2024/session/35272)/[codes](https://github.com/hyunin-lee/ForecasterSAC)]
 * [2024.04] I received a Berkeley research fellowship.
