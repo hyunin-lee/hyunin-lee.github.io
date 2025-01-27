@@ -71,14 +71,14 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 * [2024.07] I am serving on the program chair committee for AAAI 2025.  
 <!-- * [2024.07] New paper on reinforcement Learning: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf) -->
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
-* [2024.05] New paper on Non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 1%)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf). [[Talk](https://icml.cc/virtual/2024/session/35272)/[codes](https://github.com/hyunin-lee/ForecasterSAC)]
+* [2024.05] New paper on optimal early stopping of non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 1%)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf). [[Talk](https://icml.cc/virtual/2024/session/35272)/[codes](https://github.com/hyunin-lee/ForecasterSAC)]
 * [2024.04] I received a Berkeley research fellowship.
 * [2024.03] I have served as a reviewer for ICML 2024.
-* [2024.02] New paper on Reinforcement Learning in **IEEE TAC**: [Beyond Exact Gradients: Convergence of Stochastic
+* [2024.02] New paper on proposing new policy gradient estimator in reinforcement Learning in **IEEE TAC**: [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entropy_SPG.pdf).
 * [2023.10] I received a NeurIPS scholar award
 * [2023.08] OUTTA has launched a new spinoff team, **AI PLAYGROUND**, dedicated to creating intuitive AI educational materials for elementary education! I lead the team. 
-* [2023.05] New paper on Non-stationary Reinforcement Learning in **NeurIPS 2023**: [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf). [[slides](./assets/TempoAdaption_NSRL_slides.pdf)] [[codes](https://github.com/hyunin-lee/TempoRL)]
+* [2023.05] New paper on proposing *Tempo* in Non-stationary Reinforcement Learning in **NeurIPS 2023**: [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf). [[slides](./assets/TempoAdaption_NSRL_slides.pdf)] [[codes](https://github.com/hyunin-lee/TempoRL)]
 * [2023.01] New paper on Causal Machine Learning in **CDC 2023**: [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf).
 * [2022.08] I started Ph.D. at UC Berkeley.
 * [2022.05] I received the Kwanjeong Education Foundation Scholarship.
