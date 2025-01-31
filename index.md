@@ -66,6 +66,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 
 ### News 
 * [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a Research Scientist Intern!
+* [2025.02] New paper on proposing the necessity of antifragility in AI safety : *[Paper coming soon!]*
 * [2025.01] New paper proposing a novel AI safety perspective, *Black Swan* 🦢, in **ICLR2025**: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)
 * [2024.07] I am attending RLC.
 * [2024.07] I am serving on the program chair committee for AAAI 2025.  
