@@ -54,7 +54,7 @@ I am Hyunin Lee, a third-year M.S./Ph.D. student in Mechanical Engineering at UC
 
 Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofound and currently advise [OUTTA](https://outta.ai/).
 
-*I’ll be starting as a Research Scientist Intern at Meta in Summer 2025!*
+*I’ll be starting as a research scientist intern at Meta in Summer 2025.*
 
 <!--
 [Google scholar](https://scholar.google.com/citations?user=kHTDu1YAAAAJ&hl=en) / [Linkedin](https://kr.linkedin.com/in/hyunin-lee-539b641b1) / [Github](https://github.com/hyunin-lee)
@@ -65,7 +65,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 * Human-World Problem Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
 
 ### News 
-* [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a Research Scientist Intern!
+* [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (ranking team)!
 * [2025.02] New paper on proposing the necessity of antifragility in AI safety : *[Paper coming soon!]*
 * [2024.02] Serving as a reviewer for ICML, RLC 2025.
 * [2025.01] New paper proposing a novel AI safety perspective, *Black Swan* 🦢, in **ICLR2025**: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)
