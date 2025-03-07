@@ -10,3 +10,4 @@ I am very fortunate to work with the following great AI researchers from _outsid
 - [Jongmin Lee](https://www.jmlee.kr/) (UC Berkeley)
 - [Khimya Khetarpal](https://kkhetarpal.github.io/) (Google DeepMind)
 - [Ming Jin](http://www.jinming.tech/) (Virginia Tech)
+- [Negar Mehr](https://negarmehr.com)(UC Berkeley)
