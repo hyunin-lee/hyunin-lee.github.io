@@ -62,24 +62,24 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 ### News 
 * [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (Ranking team)!
 * [2025.02] New paper on proposing the necessity of antifragility in AI safety : *[Paper coming soon!]*
-* [2024.02] Serving as a reviewer for ICML, RLC 2025.
+* [2024.02] Serving as a reviewer for ICML, RLC, and Neurips 2025.
 * [2025.01] New paper proposing a novel AI safety perspective, *Black Swan* 🦢, in **ICLR2025** (& workshop: Financial AI 25): [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)
 * [2024.09] Serving as a reviewer for ICLR, AISTATS 2025.
-* [2024.07] I am attending RLC.
-* [2024.07] I am serving on the program chair committee for AAAI 2025.  
+* [2024.07] Attending RLC.
+* [2024.07] Serving on the program chair committee for AAAI 2025.  
 <!-- * [2024.07] New paper on reinforcement Learning: [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf) -->
 * [2024.05] New paper on Safe reinforcement Learning: [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)
 * [2024.05] New paper on optimal early stopping of non-stationary Reinforcement Learning in **ICML 2024** <span style="color:red;"><b>(Oral, top 1%)</b></span>: [Pausing Policy Learning in Non-stationary Reinforcement Learning](./assets/ICML2024RL_hyunin.pdf). [[Talk](https://icml.cc/virtual/2024/session/35272)/[codes](https://github.com/hyunin-lee/ForecasterSAC)]
-* [2024.04] I received a Berkeley research fellowship.
-* [2024.03] I have served as a reviewer for ICML 2024.
+* [2024.04] Received a Berkeley research fellowship.
+* [2024.03] Served as a reviewer for ICML 2024.
 * [2024.02] New paper on proposing new policy gradient estimator in reinforcement Learning in **IEEE TAC**: [Beyond Exact Gradients: Convergence of Stochastic
 Soft-Max Policy Gradient Methods with Entropy Regularization](./assets/TAC_Entropy_SPG.pdf).
-* [2023.10] I received a NeurIPS scholar award
+* [2023.10] Received a NeurIPS scholar award
 * [2023.08] OUTTA has launched a new spinoff team, **AI PLAYGROUND**, dedicated to creating intuitive AI educational materials for elementary education! I lead the team. 
 * [2023.05] New paper on proposing *Tempo* in Non-stationary Reinforcement Learning in **NeurIPS 2023**: [Tempo Adaption in Non-stationary Reinforcement Learning](./assets/TempoAdaption_NSRL.pdf). [[slides](./assets/TempoAdaption_NSRL_slides.pdf)] [[codes](https://github.com/hyunin-lee/TempoRL)]
 * [2023.01] New paper on Causal Machine Learning in **CDC 2023**: [Initial State Interventions for Deconfounded Imitation Learning](https://sam.pfrommer.us/wp-content/uploads/2023/03/main.pdf).
 * [2022.08] I started Ph.D. at UC Berkeley.
-* [2022.05] I received the Kwanjeong Education Foundation Scholarship.
+* [2022.05] Received the Kwanjeong Education Foundation Scholarship.
 * [2022.03] New paper on Neuroscience and Machine Learning in **IEEE TNSRE**: [Explainable Deep Learning Model for EMG-Based Finger Angle Estimation using Attention](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9829861). [[slides](./assets/Explainable_EMG.pdf)] [[videos](https://www.youtube.com/watch?v=yYV5koXMPzo)] [[codes](https://github.com/hyunin-lee/AttentionEMG)]
 * [2022] I have co-founded 🚀[**OUTTA**](https://outta.ai/)🚀 with [Haeun (MIT)](https://www.linkedin.com/in/david-ha-eun-kang-78b932132/), [Chankyo (UMich)](https://www.linkedin.com/in/chankyo-kim-603592238/)
 
