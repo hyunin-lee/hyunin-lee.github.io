@@ -50,7 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a third-year M.S./Ph.D. student in Mechanical Engineering at UC Berkeley. I am interested in **developing reinforcement learning algorithms and exploring their key concepts**. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
+I am Hyunin Lee, a third-year M.S./Ph.D. student at UC Berkeley. I am interested in **developing reinforcement learning algorithms and exploring their key concepts**. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
 Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofound and currently advise [OUTTA](https://outta.ai/).
 
@@ -61,7 +61,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 
 ### News 
 * [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (Ranking team)!
-* [2025.03] Started research collaboration with [OpenAI](https://openai.com/safety/)
+* [2025.03] Started research assosiate with [OpenAI](https://openai.com/safety/)
 * [2025.02] New paper on proposing the necessity of antifragility in AI safety : *[Paper coming soon!]*
 * [2024.02] Serving as a reviewer for ICML, RLC, and Neurips 2025.
 * [2025.01] New paper proposing a novel AI safety perspective, *Black Swan* 🦢, in **ICLR2025** (& workshop: Financial AI 25): [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)
