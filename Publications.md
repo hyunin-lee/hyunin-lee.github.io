@@ -22,7 +22,7 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 
 
 ### Conference
-* [A Hypothesis on Black Swan in Unchanging Environments](./assets/blackswanHumanMDP.pdf)   
+* [A Black Swan Hypothesis: The Role of Human Irrationality in AI Safety](https://arxiv.org/abs/2407.18422)   
 __Hyunin Lee__, Chanwoo Park, David Abel, and Ming Jin  
 International Conference on Learning Representation (ICLR), 2025.     
 [[slides](./assets/BlackSwanSlides.pdf)]
