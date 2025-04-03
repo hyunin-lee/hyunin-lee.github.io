@@ -61,12 +61,12 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 
 ### News 
 * [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (Ranking team)!
-* [2025.04] [*Black Swan* 🦢](https://arxiv.org/pdf/2407.18422) as <span style="color:red;"><b>oral</b></span> presentation at [ICLR25 workshop: Financial AI]
+* [2025.04] [*Black Swan Hypothesis* 🦢](https://arxiv.org/pdf/2407.18422) as <span style="color:red;"><b>oral</b></span> presentation at [ICLR25 workshop: Financial AI]
 * [2025.04] Invited to AI safety panel at [Appen](https://www.appen.com/)
 * [2025.03] Started research associate with [OpenAI](https://openai.com/safety/)
 * [2025.02] New paper on proposing the necessity of antifragility in AI safety : *[Paper coming soon!]*
 * [2024.02] Serving as a reviewer for ICML, RLC, and Neurips 2025.
-* [2025.01] New paper proposing a novel AI safety perspective, *Black Swan* 🦢, in **ICLR2025** (& workshop: Financial AI 25): [A Black Swan Hypothesis: The Role of Human Irrationality in AI Safety](https://arxiv.org/pdf/2407.18422)
+* [2025.01] New paper proposing a novel AI safety perspective, *Black Swan Hypothesis* 🦢, in **ICLR2025** (& workshop: Financial AI 25): [A Black Swan Hypothesis: The Role of Human Irrationality in AI Safety](https://arxiv.org/pdf/2407.18422)
 * [2024.09] Serving as a reviewer for ICLR, AISTATS 2025.
 * [2024.07] Attending RLC.
 * [2024.07] Serving on the program chair committee for AAAI 2025.  
