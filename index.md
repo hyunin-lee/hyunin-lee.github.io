@@ -57,7 +57,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 
 ### Research questions
 * Identifying Challenges Beyond Scaling: What fundamental problems remain unsolvable despite scaling up models and data?
-* Human-World Problem Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
+* Human-Centered AI Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
 
 ### News 
 * [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (Ranking team)!
