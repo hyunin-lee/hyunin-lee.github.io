@@ -22,6 +22,10 @@ IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE), 2022
 
 
 ### Conference
+* [Position: AI Safety Must Embrace an Antifragile Perspective](https://openreview.net/pdf?id=WpePuya3Ki)   
+Ming Jin, __Hyunin Lee__    
+International Conference on Machine Learning (ICML), 2025.
+
 * [A Black Swan Hypothesis: The Role of Human Irrationality in AI Safety](https://arxiv.org/abs/2407.18422)   
 __Hyunin Lee__, Chanwoo Park, David Abel, and Ming Jin  
 International Conference on Learning Representation (ICLR), 2025.   
