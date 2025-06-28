@@ -60,8 +60,8 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 * Human-Centered AI Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
 
 ### News 
+* [2025.06] Extension of Black swan paper: [*Antifragile*](https://openreview.net/pdf?id=WpePuya3Ki) will be presented in **ICML2025**.
 * [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (Ranking team)!
-* [2025.04] Extension of Black swan paper: [*Antifragile*] will be presented in **ICML2025**.
 * [2025.04] [*Black Swan Hypothesis* 🦢](https://arxiv.org/pdf/2407.18422) as <span style="color:red;"><b>oral</b></span> presentation at **ICLR25 workshop: Financial AI**
 * [2025.04] Invited to AI safety panel at [Appen](https://www.appen.com/)
 * [2025.03] Started research associate with [OpenAI](https://openai.com/safety/)
