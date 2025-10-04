@@ -17,17 +17,17 @@ output: pdf_document
   <table>
     <tr>
       <td align="center">
-        <img src="./vector_alignment_3d_left.png" alt="Left view of vector alignment" width="400">
+        <img src="../assets/vector_alignment_3d_left.png" alt="Left view of vector alignment" width="400">
         <br>
         <em>(a) Residual Alignment </em>
       </td>
       <td align="center">
-        <img src="./vector_alignment_3d_right.png" alt="Right view of vector alignment" width="400">
+        <img src="../assets/vector_alignment_3d_right.png" alt="Right view of vector alignment" width="400">
         <br>
         <em>(b) Orthogonal Alignment </em>
       </td>
           <td align="center">
-        <img src="./CA.png" alt="Right view of vector alignment" width="320">
+        <img src="../assets/CA.png" alt="Right view of vector alignment" width="320">
         <br>
         <em>(c) Cross-attention</em>
       </td>
@@ -129,17 +129,17 @@ Empircally, We show that Gated Cross-Attention (GCA) improves recommendation per
   <table>
     <tr>
       <td align="center">
-        <img src="./cdsrnp_cos_NDCG@10.png" alt="cdsrnp" width="400">
+        <img src="../assets/cdsrnp_cos_NDCG@10.png" alt="cdsrnp" width="400">
         <br>
         <em>(a)CDSRNP </em>
       </td>
       <td align="center">
-        <img src="./abxi_cos_NDCG@10.png" alt="abxi" width="400">
+        <img src="../assets/abxi_cos_NDCG@10.png" alt="abxi" width="400">
         <br>
         <em>(b) ABXI </em>
       </td>
           <td align="center">
-        <img src="./llm4cdsr_cos_NDCG@10.png" alt="llm4cdsr" width="400">
+        <img src="../assets/llm4cdsr_cos_NDCG@10.png" alt="llm4cdsr" width="400">
         <br>
         <em>(b) LLM4CDSR</em>
       </td>
@@ -173,27 +173,27 @@ Then, we checked that the baseline with GCA module consistently outperforms the 
   <table>
     <tr>
       <td align="center">
-        <img src="./model_comparison_plot_cdsrnp.png" alt="cdsrnp" width="200">
+        <img src="../assets/model_comparison_plot_cdsrnp.png" alt="cdsrnp" width="200">
         <br>
         <em>(a)CDSRNP </em>
       </td>
       <td align="center">
-        <img src="./model_comparison_plot_abxi_abe.png" alt="abxi" width="200">
+        <img src="../assets/model_comparison_plot_abxi_abe.png" alt="abxi" width="200">
         <br>
         <em>(b) ABXI </em>
       </td>
       <td align="center">
-        <img src="./model_comparison_plot_abxi_afk.png" alt="abxi" width="200">
+        <img src="../assets/model_comparison_plot_abxi_afk.png" alt="abxi" width="200">
         <br>
         <em>(b) LLM4CDSR</em>
       </td>
       <td align="center">
-        <img src="./model_comparison_plot_llm4cdsr_amazon.png" alt="llm4cdsr" width="200">
+        <img src="../assets/model_comparison_plot_llm4cdsr_amazon.png" alt="llm4cdsr" width="200">
         <br>
         <em>(b) ABXI </em>
       </td>
         <td align="center">
-        <img src="./model_comparison_plot_llm4cdsr_elec.png" alt="llm4cdsr" width="200">
+        <img src="../assets/model_comparison_plot_llm4cdsr_elec.png" alt="llm4cdsr" width="200">
         <br>
         <em>(b) ABXI </em>
       </td>
