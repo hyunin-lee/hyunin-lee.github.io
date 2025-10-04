@@ -13,8 +13,6 @@ header-includes:
   - \usepackage{mathrsfs}   # for math script font
 output: pdf_document
 ---
-
-# An Orthogonal Alignment Phenomenon in Cross-Attention.
 <div align="center">
   <table>
     <tr>
