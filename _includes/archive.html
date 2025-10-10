@@ -2,10 +2,12 @@
   <header><h1>{{ include.title | default: page.title }}</h1></header>
   <ul class="archive">
     {% for post in site.posts %}
+      {% unless post.path contains "2017-01-01-advanced-examples.md" or post.path contains "2017-02-01-markdown-examples.md" or post.path contains "2017-03-01-welcome-to-jekyll.md" or post.path contains "2023-09-06-Formal-model-for-stochastic-process-i" or post.path contains "2023-12-05-하루의 기록.md" or post.path contains "2023-12-21-뉴립스를 갔다오고 나서.md" %}
     <li>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
+      {% endunless %}
     {% endfor %}
   </ul>
 </article>
