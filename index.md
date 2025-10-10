@@ -54,11 +54,13 @@ I am Hyunin Lee, a third-year M.S./Ph.D. student at UC Berkeley. I am interested
 
 Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofound and currently advise [OUTTA](https://outta.ai/).
 
-
+<!--
 ### Research questions
 * Identifying Challenges Beyond Scaling: What fundamental problems remain unsolvable despite scaling up models and data?
 * Human-Centered AI Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
-
+-->
+### Research Area
+* Reinforcement Learning, Multi-Modal Learning
 ### News 
 * [2025.06] Extension of Black swan paper: [*Antifragile*](https://openreview.net/pdf?id=WpePuya3Ki) will be presented in **ICML2025**.
 * [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (Ranking team)!
