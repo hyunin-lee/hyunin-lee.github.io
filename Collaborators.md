@@ -10,4 +10,5 @@ I am very fortunate to work with the following great AI researchers from _outsid
 - [Jongmin Lee](https://www.jmlee.kr/) (UC Berkeley)
 - [Khimya Khetarpal](https://kkhetarpal.github.io/) (Google DeepMind)
 - [Ming Jin](http://www.jinming.tech/) (Virginia Tech)
-- [Negar Mehr](https://negarmehr.com)(UC Berkeley)
+- [Negar Mehr](https://negarmehr.com) (UC Berkeley)
+- [Yong Zhang](https://nickyongzhang.github.io/), [Chirstopher Jung](https://www.chrisjung.net/), [Namyong Park](https://namyongpark.github.io/) (Meta) - during Summer 2025 internship
