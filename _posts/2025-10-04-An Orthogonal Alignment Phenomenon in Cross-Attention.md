@@ -61,6 +61,7 @@ In this post, **I want to highlight one simple message**:
 
 I’ve attempted to clarify why this phenomenon *naturally occurs* and identified one possible explanation during my internship at Meta: parameter-efficient scaling. However, the underlying mechanism behind *why on earth this phenomenon naturally emerges* still remains largely a black box, presenting opportunities for deeper investigation. I would be to discuss or further explore why this phenomenon arises — please feel free to reach out.
 
+---
 
 ## The Rise of Multi-Modal Recommendation Systems
 
@@ -97,6 +98,8 @@ This has led to one of the main challenges in CDSR: designing a fusion architect
 
 The most widely adopted solution is the **cross-attention mechanism**, which aligns and projects representations from different domains into a unified latent space.
 -->
+
+---
 
 ## What Cross-Attention do?: Residual Alignment View
 
@@ -197,7 +200,7 @@ Overall, the results consistently demonstrate that the Orthogonal Alignment effe
   <em>Figure2. We observed that the gated cross-attention module introduces an unseen, orthogonal feature representation: as the input query <span style="color: #1f77b4;"><strong>X</strong></span> and its cross-attended output <span style="color: #1f77b4;"><strong>X'</strong></span> (conditioned on key and value <span style="color: #d62728;"><strong>Y</strong></span>) become more orthogonal, the ranking performance improves. Blue color dots are domain A and red color dots are domain B</em>
 </div>
 
-
+---
 
 ## Orthogonal Alignment improves scaling law
 
