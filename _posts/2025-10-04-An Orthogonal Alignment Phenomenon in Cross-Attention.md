@@ -46,7 +46,7 @@ I’m excited to share a somewhat counterintuitive phenomenon- **Orthogonal Alig
 That said, I’m optimistic that Orthogonal Alignment may also appear in vision-language settings, given that our study is grounded in transformer architectures with gated cross-attention—a core component of many modern fusion models. Still, as a researcher, I want to avoid overgeneralization and therefore frame this observation strictly within the recommendation domain until further studies confirm its presence in vision-language models.
 
 Ultimately, my hope is that this discovery inspires new ways of thinking about algorithmic design and sheds light on how to achieve parameter-efficient scaling in multi-modal systems.
-In this post, I want to highlight one simple message:
+In this post, **I want to highlight one simple message**:
 
 <!-- <div style="border: 2px solid #333; border-radius: 10px; padding: 15px; margin: 15px 0;">
 
@@ -64,11 +64,11 @@ I’ve attempted to clarify why this phenomenon naturally occurs and identified 
 
 ## The Rise of Multi-Domain Recommendation Systems
 
-Imagine you have a dataset $D_1 = (X_1, Y)$ and want to build a model that predicts a binary label $Y$ from input $X$. In many real-world cases, the label $Y$ is extremely sparse — meaning that most of the values are just zeros.
+Imagine you have a dataset \( D_1 = (X_1, Y) \) and want to build a model that predicts a binary label \(Y\) from input \(X\). In many real-world cases, the label $Y$ is extremely sparse — meaning that most of the values are just zeros.
 
-When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook. The challenge? Users rarely click on ads. Even if we show ten sponsored posts, a user might click on only one — or sometimes none at all. Since high-quality recommendations depend on understanding user engagement, this data sparsity made it tough to capture user intent accurately. Simply training on $D_1$ wasn’t enough.
+When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook. The challenge? Users rarely click on ads. Even if we show ten sponsored posts, a user might click on only one — or sometimes none at all. Since high-quality recommendations depend on understanding user engagement, this data sparsity made it tough to capture user intent accurately. Simply training on \(D_1\) wasn’t enough.
 
-One effective way to address this problem is to incorporate richer signals from other domains $D_2= (X_2, Y)$ — for example, how long a user stays on a post or whether they leave a comment. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels.
+One effective way to address this problem is to incorporate richer signals from other domains \(D_2= (X_2, Y)\) — for example, how long a user stays on a post or whether they leave a comment. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels.
 
 This naturally leads to a core research question: how can we design architectures that effectively fuse such heterogeneous behavioral data?
 
@@ -221,11 +221,11 @@ Then, we checked that the baseline with GCA module consistently outperforms the 
   <em>NDCG comparistion between baseline and baseline + gated cross attention model</em>
 </div>
 
-First, our results show that across all five experimental cases, the addition of $\text{baseline}+\text{gca}_{\text{early}}$ consistently yields higher single-domain ranking performance (Domain A’s NDCG@10) compared to parameter-matched baselines, while Domain B’s NDCG@10 also shows general improvement.
+First, our results show that across all five experimental cases, the addition of \(\text{baseline}+\text{gca}_{\text{early}}\) consistently yields higher single-domain ranking performance (Domain A’s NDCG@10) compared to parameter-matched baselines, while Domain B’s NDCG@10 also shows general improvement.
 
-Moreover, in both LLM4CDSR settings, $\text{gca}_{\text{early}}$ demonstrates the strongest parameter efficiency. We attribute this advantage to the fixed hidden dimensionality of the initial embedding vectors inherited from the pretrained LLM, which constrains the representational capacity of the baseline model. As a result, simply scaling up the baseline parameters eventually leads to performance saturation—and in some cases, degradation—as model size increases.
+Moreover, in both LLM4CDSR settings, \(\text{gca}_{\text{early}}\) demonstrates the strongest parameter efficiency. We attribute this advantage to the fixed hidden dimensionality of the initial embedding vectors inherited from the pretrained LLM, which constrains the representational capacity of the baseline model. As a result, simply scaling up the baseline parameters eventually leads to performance saturation—and in some cases, degradation—as model size increases.
 
-In contrast, introducing orthogonal alignment through $\text{gca}$ enables more effective information extraction under limited representational capacity. This property allows $\text{gca}$ to achieve a superior accuracy-per-parameter trade-off, demonstrating a more efficient use of model capacity.
+In contrast, introducing orthogonal alignment through GCA enables more effective information extraction under limited representational capacity. This property allows GCA to achieve a superior accuracy-per-parameter trade-off, demonstrating a more efficient use of model capacity.
 
 
 ## Concluding Remark: Toward Vision–Language Generalization
