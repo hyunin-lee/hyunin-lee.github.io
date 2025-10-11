@@ -59,20 +59,20 @@ In this post, **I want to highlight one simple message**:
 
 </div>
 
-I’ve attempted to clarify why this phenomenon naturally occurs and identified one possible explanation during my internship at Meta: parameter-efficient scaling. However, the underlying mechanism behind *why on earth this phenomenon naturally emerges* still remains largely a black box, presenting opportunities for deeper investigation. I’d be glad to discuss or further explore why this phenomenon arises—please feel free to reach out: hyunin@berkeley.edu
+I’ve attempted to clarify why this phenomenon *naturally occurs* and identified one possible explanation during my internship at Meta: parameter-efficient scaling. However, the underlying mechanism behind *why on earth this phenomenon naturally emerges* still remains largely a black box, presenting opportunities for deeper investigation. I would be to discuss or further explore why this phenomenon arises — please feel free to reach out.
 
 
 ## The Rise of Multi-Modal Recommendation Systems
 
 Imagine you have a dataset D₁=(X₁,Y) and want to build a model that predicts a binary label Y from input X. In many real-world cases, the label Y is extremely sparse — meaning that most of the values are just zeros.
 
-When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook. The challenge? Users rarely click on ads. Even if we show ten sponsored posts, a user might click on only one — or sometimes none at all. Since high-quality recommendations depend on understanding user engagement, this data sparsity made it tough to capture user intent accurately. Simply training on D₁ wasn’t enough.
+When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook (If user clicks those ads, then tha's how Meta earns money💰). The challenge? Users **rarely** click on ads. Even if Meta platforms show ten sponsored posts, a user might click on only one — or sometimes none at all. Since high-quality recommendations depend on understanding user engagement, this data sparsity made it tough to capture user intent accurately. Simply training on D₁ wasn’t enough.
 
-One effective way to address this problem is to incorporate richer signals from other domains D₂=(X₂,Y) — for example, how long a user stays on a post or whether they leave a comment. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels.
+One effective way to address this problem is to incorporate richer signals from other domains D₂=(X₂,Y) — for example, how long a user stays on which type of post or whether they leave a comment or have shared with others. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels of other domain D₁.
 
-This naturally leads to a core research question: how can we design architectures that effectively fuse such heterogeneous behavioral data?
+This naturally leads to a core research question in multi-modal learning community: how can we design architectures that effectively fuse such heterogeneous behavioral data?
 
-A widely adopted solution is the cross-attention mechanism, which learns to align and project information from different domains into a shared latent space. This allows the model to combine diverse signals and better capture a user’s overall intent — even when direct click data is scarce.
+A widely adopted solution is the **cross-attention** mechanism, which learns to align and project information from different domains into a shared latent space. This allows the model to combine diverse signals and better capture a user’s overall intent — even when direct click data is scarce.
 
 
 <!-- 
@@ -100,13 +100,9 @@ The most widely adopted solution is the **cross-attention mechanism**, which ali
 
 Despite its popularity, the internal mechanisms of cross-attention across domains remain poorly understood and are largely explored through empirical studies.
 
-Current research views cross-attention as enabling one domain (<span style="color: #1f77b4;"><strong>X</strong></span> in Figure 1c) to query another (**Y** in Figure 1c) and integrate only the most relevant information (<span style="color: #1f77b4;"><strong>X'</strong></span> as a weighted sum of Y in Figure 1c).
+So far, current research views cross-attention as enabling one domain (<span style="color: #1f77b4;"><strong>X</strong></span> in Figure 1c) to query another (**Y** in Figure 1c) and integrate only the most relevant information (<span style="color: #1f77b4;"><strong>X'</strong></span> as a weighted sum of Y in Figure 1c).
 
-**Empirical evidence supports this view:**
-
-- **Text-to-image diffusion**: Cross-attention maps yield faithful token-to-region correspondences that act as **denoising and relevance filters** rather than blind fusion
-- **Disentanglement**: Cross-attention serves as an inductive bias, promoting disentanglement of complementary factors and encouraging **aligned, non-redundant representations**
-- **Vision-language models**: Attention alignment with human gaze validates that effective cross-attention focuses on **causally relevant regions**
+There are lots of empirical evidence supports this view especially in vision-lanuage model. In case of *Text-to-image diffusion* cross-attention maps yield faithful token-to-region correspondences that act as denoising and relevance filters rather than blind fusion. In case of *disentanglement*, cross-attention serves as an inductive bias, promoting disentanglement of complementary factors and encouraging aligned, non-redundant representations. Furthermore, in computer vision, attention alignment with human gaze validates that effective cross-attention focuses on causally relevant regions.
 
 Therefore, understanding cross-attention as a **"residual alignment"** mechanism is the prevalent interpretation within the research community.
 
@@ -132,16 +128,22 @@ This work challenges this conventional view and uncovers a new, counter-intuitiv
 
 We first define an Orthogonal Alignment Phenomenon as follows.
 
+<div style="border: 2px solid; border-image: linear-gradient(90deg, #667eea, #8b9dc3) 1; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08); text-align: center;">
+<strong>
+<em>An Orthogonal Alignment is a phenomenon where the input query (<span style="color: #1f77b4;"><strong>X</strong></span>) and the output (<span style="color: #1f77b4;"><strong>X'</strong></span>) of the cross-attention are orthogonal, rather than simply reinforcing the existing pre-aligned features of <span style="color: #1f77b4;"><strong>X</strong></span> when updating to <span style="color: #1f77b4;"><strong>X'</strong></span>
+</em></strong>
 
-> **Orthogonal Alignment**: A representational alignment mechanism where the input query (<span style="color: #1f77b4;"><strong>X</strong></span>) and the output (<span style="color: #1f77b4;"><strong>X'</strong></span>) of the cross-attention are **orthogonal**, rather than simply reinforcing the existing pre-aligned features of <span style="color: #1f77b4;"><strong>X</strong></span> when updating to <span style="color: #1f77b4;"><strong>X'</strong></span>.
+</div>
+
+<!-- > **Orthogonal Alignment**: A representational alignment mechanism where the input query (<span style="color: #1f77b4;"><strong>X</strong></span>) and the output (<span style="color: #1f77b4;"><strong>X'</strong></span>) of the cross-attention are **orthogonal**, rather than simply reinforcing the existing pre-aligned features of <span style="color: #1f77b4;"><strong>X</strong></span> when updating to <span style="color: #1f77b4;"><strong>X'</strong></span>. -->
 
 Please refer to Figure 1 for a visual illustration of this phenomenon, contrasted with the conventional residual-alignment perspective.
 
-Empirically, we observe that the Gated Cross-Attention (GCA) module enhances recommendation performance by generating outputs that are not merely filtered versions of the input query. Instead, GCA produces complementary representations—exploring previously unseen or under-represented aspects of the query.
+Empirically, we observe that the Gated Cross-Attention (GCA) module enhances recommendation performance by generating outputs that are not merely filtered versions of the input query(See Figure 2). Instead, GCA produces complementary representations—exploring previously unseen or under-represented aspects of the query.
 
-We evaluated this effect using three recent Cross-Domain Sequential Recommendation (CDSR) models, including LLM4CDSR and CDSRNP. The metric NDCG@10 on the y-axis represents how accurately a model ranks the top 10 items compared with the ground-truth order—that is, how well it predicts both which items should appear and in what order.
+We evaluated this effect using three recent Cross-Domain Sequential Recommendation (CDSR) models: LLM4CDSR, CDSRNP, and ABXI. Note that those three models are most recent that claimed as SOTA model (in ther paper, respecitvely) and also their model architecutre is transformer-based. In Figure 2, the metric NDCG@10 on the y-axis represents how accurately a model ranks the top 10 items compared with the ground-truth order—that is, how well it predicts both which items should appear and in what order.
 
-To ensure robustness, we experimented with multiple random initializations, several GCA architectural variants, and different datasets. The results, shown across the three sub-figures below, consistently demonstrate that the orthogonal alignment effect improves both ranking accuracy and model generalization.
+To ensure robustness, we experimented with multiple random initializations, several GCA architectural variants, and different datasets, and each configuration corresponds to a single dataset in each three sub-figures below and each dataset is the best test result. The results, shown across the three sub-figures below, consistently demonstrate that the orthogonal alignment effect improves both ranking accuracy and model generalization.
 
 
 <div align="center">
@@ -164,7 +166,7 @@ To ensure robustness, we experimented with multiple random initializations, seve
       </td>
     </tr>
   </table>
-  <em>Figure2. We observed that the gated cross-attention module introduces an unseen, orthogonal feature representation: as the input query <span style="color: #1f77b4;"><strong>X</strong></span> and its cross-attended output <span style="color: #1f77b4;"><strong>X'</strong></span> (conditioned on key and value <span style="color: #d62728;"><strong>Y</strong></span>) become more orthogonal, the ranking performance improves.</em>
+  <em>Figure2. We observed that the gated cross-attention module introduces an unseen, orthogonal feature representation: as the input query <span style="color: #1f77b4;"><strong>X</strong></span> and its cross-attended output <span style="color: #1f77b4;"><strong>X'</strong></span> (conditioned on key and value <span style="color: #d62728;"><strong>Y</strong></span>) become more orthogonal, the ranking performance improves. Blue color dots are domain A and red color dots are domain B</em>
 </div>
 
 
