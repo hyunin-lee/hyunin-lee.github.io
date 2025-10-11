@@ -259,6 +259,7 @@ In Figure 3, Baseline + GCA<sub>early</sub> refers to inserting a single GCA mod
       </td>
     </tr>
   </table>
+  
   <em>Figure 3: NDCG@10 comparison between baseline and baseline + gated cross attention model</em>
 </div>
 
