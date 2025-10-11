@@ -64,13 +64,15 @@ I’ve attempted to clarify why this phenomenon *naturally occurs* and identifie
 
 ## The Rise of Multi-Modal Recommendation Systems
 
-Imagine you have a dataset D₁=(X₁,Y) and want to build a model that predicts a binary label Y from input X. In many real-world cases, the label Y is extremely sparse — meaning that most of the values are just zeros.
+Imagine you have a dataset D₁=(X₁,Z) and want to build a model that predicts a binary label Z from input X₁. In many real-world cases, the label Z is *extremely* sparse — meaning that most of the values are just zeros.
 
-When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook (If user clicks those ads, then tha's how Meta earns money💰). The challenge? Users **rarely** click on ads. Even if Meta platforms show ten sponsored posts, a user might click on only one — or sometimes none at all. Since high-quality recommendations depend on understanding user engagement, this data sparsity made it tough to capture user intent accurately. Simply training on D₁ wasn’t enough.
+When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook (If user clicks an ad, that’s how Meta earns money💰). The key challenge was data sparsity—users **rarely** clicked on ads, often engaging with only one out of ten sponsored posts, or sometimes none at all. In practice, even though the model continuously recommended posts over every minites -- say, X₁(14:00), X₁(14:01), X₁(14:02), X₁(14:03)..., -- most of these interactions resulted in no clicks, leaving almost all corresponding outcomes as Z = 0.
 
-One effective way to address this problem is to incorporate richer signals from other domains D₂=(X₂,Y) — for example, how long a user stays on which type of post or whether they leave a comment or have shared with others. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels of other domain D₁.
+Since high-quality recommendations rely on accurately modeling user engagement, this extreme sparsity made it difficult to infer user intent. In other words, simply training on D₁ was not enough to build a truly effective recommendation system.
 
-This naturally leads to a core research question in multi-modal learning community: how can we design architectures that effectively fuse such heterogeneous behavioral data?
+One effective way to address this problem is to incorporate richer signals from other domains D₂=(X₂,Z) — for example, how long a user stays on which type of post or whether they leave a comment or have shared with others. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels of other domain D₁.
+
+This observation motivates a central research problem in multi-modal learning -- *developing architectural principles that enable the effective fusion of heterogeneous behavioral modalities*.
 
 A widely adopted solution is the **cross-attention** mechanism, which learns to align and project information from different domains into a shared latent space. This allows the model to combine diverse signals and better capture a user’s overall intent — even when direct click data is scarce.
 
@@ -100,13 +102,26 @@ The most widely adopted solution is the **cross-attention mechanism**, which ali
 
 Despite its popularity, the internal mechanisms of cross-attention across domains remain poorly understood and are largely explored through empirical studies.
 
-So far, current research views cross-attention as enabling one domain (<span style="color: #1f77b4;"><strong>X</strong></span> in Figure 1c) to query another (**Y** in Figure 1c) and integrate only the most relevant information (<span style="color: #1f77b4;"><strong>X'</strong></span> as a weighted sum of Y in Figure 1c).
+So far, current research views cross-attention as enabling one domain (<span style="color: #1f77b4;"><strong>X</strong></span> in Figure 1c) to query another (<span style="color: #d62728;"><strong>Y</strong></span> in Figure 1c) and integrate only the most relevant information (<span style="color: #1f77b4;"><strong>X'</strong></span> as a weighted sum of <span style="color: #d62728;"><strong>Y</strong></span> in Figure 1c).
 
-There are lots of empirical evidence supports this view especially in vision-lanuage model. In case of *Text-to-image diffusion* cross-attention maps yield faithful token-to-region correspondences that act as denoising and relevance filters rather than blind fusion. In case of *disentanglement*, cross-attention serves as an inductive bias, promoting disentanglement of complementary factors and encouraging aligned, non-redundant representations. Furthermore, in computer vision, attention alignment with human gaze validates that effective cross-attention focuses on causally relevant regions.
+A growing body of empirical evidence supports this view, especially in various multi-modal models:
+
+- In text-to-image diffusion, cross-attention maps reveal faithful token-to-region correspondences, acting as denoising and relevance filters rather than as indiscriminate fusion.
+
+- In representation disentanglement, cross-attention functions as an inductive bias, promoting the separation of complementary factors and encouraging aligned, non-redundant representations.
+
+- In vision-language model, studies aligning attention maps with human gaze patterns show that effective cross-attention concentrates on causally relevant regions, confirming its selective filtering behavior.
 
 Therefore, understanding cross-attention as a **"residual alignment"** mechanism is the prevalent interpretation within the research community.
 
-> 💡 The field views cross-attention as primarily a **residual alignment** mechanism, where the output (<span style="color: #1f77b4;"><strong>X'</strong></span>) is a filtered version of the input (<span style="color: #1f77b4;"><strong>X</strong></span>) that retains only the most relevant information from the query (**Y**).
+<!-- > The field views cross-attention as primarily a **residual alignment** mechanism, where the output (<span style="color: #1f77b4;"><strong>X'</strong></span>) is a filtered version of the input (<span style="color: #1f77b4;"><strong>X</strong></span>) that retains only the most relevant information from the query (**Y**). -->
+
+<div style="border: 2px solid; border-image: linear-gradient(90deg, #667eea, #8b9dc3) 1; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08); text-align: center;">
+
+Current research views cross-attention as primarily a **residual alignment** mechanism, where the output (<span style="color: #1f77b4;"><strong>X'</strong></span>) is a filtered version of the input (<span style="color: #1f77b4;"><strong>X</strong></span>) that retains only the most relevant information from the query (<span style="color: #d62728;"><strong>Y</strong></span> ).
+
+</div>
+
 
 ---
 
@@ -126,7 +141,7 @@ This work challenges this conventional view and uncovers a new, counter-intuitiv
   </div>
 </div>
 
-We first define an Orthogonal Alignment Phenomenon as follows.
+We define an Orthogonal Alignment Phenomenon as follows.
 
 <div style="border: 2px solid; border-image: linear-gradient(90deg, #667eea, #8b9dc3) 1; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08); text-align: center;">
 <strong>
@@ -139,11 +154,13 @@ We first define an Orthogonal Alignment Phenomenon as follows.
 
 Please refer to Figure 1 for a visual illustration of this phenomenon, contrasted with the conventional residual-alignment perspective.
 
-Empirically, we observe that the Gated Cross-Attention (GCA) module enhances recommendation performance by generating outputs that are not merely filtered versions of the input query(See Figure 2). Instead, GCA produces complementary representations—exploring previously unseen or under-represented aspects of the query.
+Empirically, we observe that the Gated Cross-Attention (GCA) module enhances recommendation performance by generating outputs that are not merely filtered versions of the input query(See Figure 2). In simple terms, GCA introduces a learnable gating mechanism that combines the input and the cross-attention output as <span style="color: #1f77b4;"><strong>X</strong></span> + α<span style="color: #1f77b4;"><strong>X'</strong></span>  where <span style="color: #1f77b4;"><strong>X'</strong></span> is the output of cross attention and α is a learnable parameter. This formulation allows the model to produce complementary representations—capturing aspects of the input query that were previously underrepresented or unseen.
 
-We evaluated this effect using three recent Cross-Domain Sequential Recommendation (CDSR) models: LLM4CDSR, CDSRNP, and ABXI. Note that those three models are most recent that claimed as SOTA model (in ther paper, respecitvely) and also their model architecutre is transformer-based. In Figure 2, the metric NDCG@10 on the y-axis represents how accurately a model ranks the top 10 items compared with the ground-truth order—that is, how well it predicts both which items should appear and in what order.
+We evaluated this effect using three recent Cross-Domain Sequential Recommendation (CDSR) models: LLM4CDSR¹, CDSRNP², and ABXI³ -- all of which are transformer-based architectures reported as state-of-the-art in their respective papers. In Figure 2, the evaluation metric NDCG@10 (Normalized Discounted Cumulative Gain at rank 10) measures how accurately each model ranks the top 10 items compared with the ground-truth order—that is, how well it predicts both which items should appear and in what order. The x-axis represents the absolute value of the cosine similarity between <span style="color: #1f77b4;"><strong>X</strong></span> and <span style="color: #1f77b4;"><strong>X′</strong></span> for both Domain A and Domain B, where the blue dots correspond to Domain A and the red dots correspond to Domain B.
 
-To ensure robustness, we experimented with multiple random initializations, several GCA architectural variants, and different datasets, and each configuration corresponds to a single dataset in each three sub-figures below and each dataset is the best test result. The results, shown across the three sub-figures below, consistently demonstrate that the orthogonal alignment effect improves both ranking accuracy and model generalization.
+To ensure robustness, we conducted experiments with multiple random initializations, several GCA architectural variants, and different datasets. Each configuration corresponds to one datapoint in the three subfigures below, and each point represents the best test results from its train process.
+
+Overall, the results consistently demonstrate that the Orthogonal Alignment effect—induced by GCA—leads to model performance increases: **Lower cosine similarity indicates stronger orthogonal alignment, which tends to correlate with higher NDCG@10**.
 
 
 <div align="center">
@@ -182,21 +199,26 @@ We argue that this phenomenon improves scaling law in multi-modal model:
 
 </div>
 
-By ensuring that updates occupy subspace **orthogonal** to the input query, the model gains **new representational capacity** without needing more parameters.
+By ensuring that updates occupy subspace orthogonal to the input query, the model gains new representational capacity without needing more parameters.
 
 We compare two approaches:
-1. **Baseline + GCA module**
-2. **Parameter-augmented baseline** (simply increasing parameters)
+1. Baseline + GCA module
+2. Parameter-augmented baseline (simply increasing parameters)
 
-Then, we checked that the baseline with GCA module consistently outperforms the parameter-augmented baseline.
+For instance, suppose the baseline model has 2 M parameters and the GCA module adds 0.5 M. To make the comparison fair, we also evaluate a parameter-augmented baseline with 2.5 M parameters—matching the total parameter count of the GCA-enhanced model. 
+
+**We observed that the Baseline + GCA consistently outperformed the parameter-augmented baseline, demonstrating that the performance gain comes from orthogonal alignment rather than mere model scaling** (see Figure 3).
+
+In Figure 3, Baseline + GCA<sub>early</sub> refers to inserting a single GCA module at the early stage of the model, while Baseline + GCA<sub>stack</sub> denotes stacking multiple GCA modules vertically throughout the network—from early to later layers.
 
 <div align="center">
   <table>
+    <!-- First row: 3 figures -->
     <tr>
       <td align="center">
         <img src="../assets/model_comparison_plot_cdsrnp.png" alt="cdsrnp" width="200">
         <br>
-        <em>(a)CDSRNP </em>
+        <em>(a) CDSRNP </em>
       </td>
       <td align="center">
         <img src="../assets/model_comparison_plot_abxi_abe.png" alt="abxi" width="200">
@@ -206,26 +228,32 @@ Then, we checked that the baseline with GCA module consistently outperforms the 
       <td align="center">
         <img src="../assets/model_comparison_plot_abxi_afk.png" alt="abxi" width="200">
         <br>
-        <em>(b) LLM4CDSR</em>
+        <em>(c) ABXI </em>
       </td>
+    </tr>
+    <!-- Second row: 2 figures -->
+    <tr>
       <td align="center">
         <img src="../assets/model_comparison_plot_llm4cdsr_amazon.png" alt="llm4cdsr" width="200">
         <br>
-        <em>(b) ABXI </em>
+        <em>(d) LLM4CDSR </em>
       </td>
-        <td align="center">
+      <td align="center">
         <img src="../assets/model_comparison_plot_llm4cdsr_elec.png" alt="llm4cdsr" width="200">
         <br>
-        <em>(b) ABXI </em>
+        <em>(e) LLM4CDSR </em>
+      </td>
+      <td align="center">
+        <!-- Empty cell to maintain table structure -->
       </td>
     </tr>
   </table>
-  <em>NDCG comparistion between baseline and baseline + gated cross attention model</em>
+  <em>Figure3. NDCG@10 comparison between baseline and baseline + gated cross attention model</em>
 </div>
 
 First, our results show that across all five experimental cases, the addition of baseline with GCA_early consistently yields higher single-domain ranking performance (Domain A’s NDCG@10) compared to parameter-matched baselines, while Domain B’s NDCG@10 also shows general improvement.
 
-Moreover, in both LLM4CDSR settings, GCA_early demonstrates the strongest parameter efficiency. We attribute this advantage to the fixed hidden dimensionality of the initial embedding vectors inherited from the pretrained LLM, which constrains the representational capacity of the baseline model. As a result, simply scaling up the baseline parameters eventually leads to performance saturation—and in some cases, degradation—as model size increases.
+Moreover, in both LLM4CDSR settings, GCA<sub>early</sub> demonstrates the strongest parameter efficiency. We attribute this advantage to the fixed hidden dimensionality of the initial embedding vectors inherited from the pretrained LLM, which constrains the representational capacity of the baseline model. As a result, simply scaling up the baseline parameters eventually leads to performance saturation—and in some cases, degradation—as model size increases.
 
 In contrast, introducing orthogonal alignment through GCA enables more effective information extraction under limited representational capacity. This property allows GCA to achieve a superior accuracy-per-parameter trade-off, demonstrating a more efficient use of model capacity.
 
@@ -243,3 +271,13 @@ The key distinctions between our setting and typical vision–language architect
 This difference matters because most vision–language encoders are trained using self-contrastive objectives, which explicitly encourage high cosine similarity between matching image–text pairs and low similarity between mismatched ones. As a result, their latent representations are already well-aligned before cross-attention is applied—potentially making orthogonal alignment less pronounced or more difficult to observe directly.
 
 Therefore, while we expect Orthogonal Alignment to exist in vision–language models, it may manifest under more subtle and nuanced conditions, reflecting the already pre-aligned nature of their learned embeddings.
+
+---
+
+**References:**
+
+¹ LLM4CDSR: Liu, Qidong, et al. "Bridge the Domains: Large Language Models Enhanced Cross-domain Sequential Recommendation." Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval. 2025. 
+
+² CDSRNP: Li, Haipeng, et al. "Cross-Domain Sequential Recommendation via Neural Process." arXiv preprint arXiv:2410.13588 (2024).
+
+³ ABXI: Bian, Qingtian, et al. "ABXI: invariant interest adaptation for task-guided cross-domain sequential recommendation." Proceedings of the ACM on Web Conference. 2025.
