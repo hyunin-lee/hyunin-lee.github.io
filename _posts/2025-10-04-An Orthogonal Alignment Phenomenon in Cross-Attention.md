@@ -41,11 +41,12 @@ output: pdf_document
 </div>
 
 ## Preface.
-I’m excited to share a somewhat counter-intuitive phenomenon - **Orthogonal Alginment** - with the open-world research community. Before diving in, a brief disclaimer: this phenomenon has so far been observed only in multi-domain recommendation data, so I remain cautious about generalizing the finding to vision-language models (or, more broadly, multi-modal learning). That said, I’m optimistic that the orthogonal alignment phenomenon may also emerge in vision-language settings, given that our study is based on transformer architectures with gated cross-attention—a core component in many multi-modal fusion models.
+I’m excited to share a somewhat counterintuitive phenomenon- **Orthogonal Alignment**—with the open-world research community. Before diving in, a brief disclaimer: this phenomenon has so far been observed only in multi-domain recommendation data, so I remain cautious about generalizing it to vision-language models (or more broadly, to multi-modal learning).
 
-Still, as a researcher, I want to be careful about overgeneralization and thus prefer to bound this observation within the recommendation research domain until I clearly verify its presence in vision-language models through further research.
+That said, I’m optimistic that Orthogonal Alignment may also appear in vision-language settings, given that our study is grounded in transformer architectures with gated cross-attention—a core component of many modern fusion models. Still, as a researcher, I want to avoid overgeneralization and therefore frame this observation strictly within the recommendation domain until further studies confirm its presence in vision-language models.
 
-My hope is that this discovery encourages new perspectives in algorithmic design and offers insights into achieving parameter-efficient scaling in multi-modal learning. In this post, I want to emphasize just one message:
+Ultimately, my hope is that this discovery inspires new ways of thinking about algorithmic design and sheds light on how to achieve parameter-efficient scaling in multi-modal systems.
+In this post, I want to highlight one simple message:
 
 <!-- <div style="border: 2px solid #333; border-radius: 10px; padding: 15px; margin: 15px 0;">
 
@@ -63,6 +64,18 @@ I’ve attempted to clarify why this phenomenon naturally occurs and identified 
 
 ## The Rise of Multi-Domain Recommendation Systems
 
+Imagine you have a dataset $D_1 = (X_1, Y)$ and want to build a model that predicts a binary label $Y$ from input $X$. In many real-world cases, the label $Y$ is extremely sparse — meaning that most of the values are just zeros.
+
+When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook. The challenge? Users rarely click on ads. Even if we show ten sponsored posts, a user might click on only one — or sometimes none at all. Since high-quality recommendations depend on understanding user engagement, this data sparsity made it tough to capture user intent accurately. Simply training on $D_1$ wasn’t enough.
+
+One effective way to address this problem is to incorporate richer signals from other domains $D_2= (X_2, Y)$ — for example, how long a user stays on a post or whether they leave a comment. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels.
+
+This naturally leads to a core research question: how can we design architectures that effectively fuse such heterogeneous behavioral data?
+
+A widely adopted solution is the cross-attention mechanism, which learns to align and project information from different domains into a shared latent space. This allows the model to combine diverse signals and better capture a user’s overall intent — even when direct click data is scarce.
+
+
+<!-- 
 In recent years, the rapid growth in artificial intelligence (AI) has led to an explosion not only in data volume but also in data diversity. For example, users now leave interaction traces across:
 
 - Multiple platforms: Facebook, Instagram, Amazon
@@ -81,6 +94,7 @@ However, naive approaches to combining signals often suffer from performance deg
 This has led to one of the main challenges in CDSR: designing a fusion architecture that can effectively handle these heterogeneous sequences.
 
 The most widely adopted solution is the **cross-attention mechanism**, which aligns and projects representations from different domains into a unified latent space.
+-->
 
 ## What Cross-Attention do?: Residual Alignment View
 
@@ -121,9 +135,14 @@ We first define an Orthogonal Alignment Phenomenon as follows.
 
 > **Orthogonal Alignment**: A representational alignment mechanism where the input query (<span style="color: #1f77b4;"><strong>X</strong></span>) and the output (<span style="color: #1f77b4;"><strong>X'</strong></span>) of the cross-attention are **orthogonal**, rather than simply reinforcing the existing pre-aligned features of <span style="color: #1f77b4;"><strong>X</strong></span> when updating to <span style="color: #1f77b4;"><strong>X'</strong></span>.
 
-Please see Figure 1 for a visual illustration of this phenomenon, contrasted with the prior residual-alignment approach.
+Please refer to Figure 1 for a visual illustration of this phenomenon, contrasted with the conventional residual-alignment perspective.
 
-Empircally, We show that Gated Cross-Attention (GCA) improves recommendation performance by producing output that is not merely a filtered version of the input query, but is naturally constructed to be complementary by exploring previously unseen aspects of the input query. We have tested with three recnet CDSR algorithms (LLM4CDSR, CDSRNP). NDCG@10 at the y-axis means "if the model predicts the ranking of 10 items, how much the recommendation model accurates and also keep the order within 10 items comparing with the truth ranking?". we have vaired random initializationsm , Multiple architectural of gated cross attention, and different datset and plot all of those in the following three three sub figures.
+Empirically, we observe that the Gated Cross-Attention (GCA) module enhances recommendation performance by generating outputs that are not merely filtered versions of the input query. Instead, GCA produces complementary representations—exploring previously unseen or under-represented aspects of the query.
+
+We evaluated this effect using three recent Cross-Domain Sequential Recommendation (CDSR) models, including LLM4CDSR and CDSRNP. The metric NDCG@10 on the y-axis represents how accurately a model ranks the top 10 items compared with the ground-truth order—that is, how well it predicts both which items should appear and in what order.
+
+To ensure robustness, we experimented with multiple random initializations, several GCA architectural variants, and different datasets. The results, shown across the three sub-figures below, consistently demonstrate that the orthogonal alignment effect improves both ranking accuracy and model generalization.
+
 
 <div align="center">
   <table>
@@ -150,14 +169,14 @@ Empircally, We show that Gated Cross-Attention (GCA) improves recommendation per
 
 
 
-## Orthogonal Alignment as parameter-efficient scaling
+## Orthogonal Alignment improves scaling law
 
 Crucially, we classify orthogonal alignment as a **phenomenon** because we empirically show that it **emerges naturally**, without requiring **ANY** explicit orthogonality regularization in either:  Loss formulation or Model architecture. So why this pheomena just naturally happens? This is where this works' main contribution comes from.
 
-We argue that this phenomenon offers a **parameter-efficient scaling** in multi-modal model:
+We argue that this phenomenon improves scaling law in multi-modal model:
 
 <div style="border: 2px solid; border-image: linear-gradient(90deg, #667eea, #8b9dc3) 1; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08); text-align: center;">
-<strong><em>Hypothesis: Orthogonal Alignment may provide more parameter-efficient scaling law in multi-modal model.</em></strong>
+<strong><em>Hypothesis: Orthogonal Alignment improves scaling law in multi-modal model.</em></strong>
 
 </div>
 
@@ -201,3 +220,24 @@ Then, we checked that the baseline with GCA module consistently outperforms the 
   </table>
   <em>NDCG comparistion between baseline and baseline + gated cross attention model</em>
 </div>
+
+First, our results show that across all five experimental cases, the addition of $\text{baseline}+\text{gca}_{\text{early}}$ consistently yields higher single-domain ranking performance (Domain A’s NDCG@10) compared to parameter-matched baselines, while Domain B’s NDCG@10 also shows general improvement.
+
+Moreover, in both LLM4CDSR settings, $\text{gca}_{\text{early}}$ demonstrates the strongest parameter efficiency. We attribute this advantage to the fixed hidden dimensionality of the initial embedding vectors inherited from the pretrained LLM, which constrains the representational capacity of the baseline model. As a result, simply scaling up the baseline parameters eventually leads to performance saturation—and in some cases, degradation—as model size increases.
+
+In contrast, introducing orthogonal alignment through $\text{gca}$ enables more effective information extraction under limited representational capacity. This property allows $\text{gca}$ to achieve a superior accuracy-per-parameter trade-off, demonstrating a more efficient use of model capacity.
+
+
+## Concluding Remark: Toward Vision–Language Generalization
+
+We remain cautious about generalizing our findings to vision–language models, since all of our experiments on Orthogonal Alignment were conducted exclusively with recommendation data. Nonetheless, we are optimistic that similar phenomena could emerge in vision–language settings, given that our study also relies on transformer architectures with gated cross-attention—a core component in many multi-modal models.
+
+The key distinctions between our setting and typical vision–language architectures are as follows:
+
+  - Our observations of orthogonal alignment were made using recommendation data, where encoder representations were not pre-aligned.
+
+  - Vision–language models, in contrast, generally employ pretrained image and text encoders that produce highly aligned representations by design.
+
+This difference matters because most vision–language encoders are trained using self-contrastive objectives, which explicitly encourage high cosine similarity between matching image–text pairs and low similarity between mismatched ones. As a result, their latent representations are already well-aligned before cross-attention is applied—potentially making orthogonal alignment less pronounced or more difficult to observe directly.
+
+Therefore, while we expect Orthogonal Alignment to exist in vision–language models, it may manifest under more subtle and nuanced conditions, reflecting the already pre-aligned nature of their learned embeddings.
