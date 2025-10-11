@@ -6,7 +6,7 @@ title: ""
 ### Preprint
 
 * [Cross-attention Secretly Performs Orthogonal Alignment in Recommendation Models]()   
-Hyunin Lee, Yong Zhang, Hoang Vu Nguyen, Xiaoyi Liu, Namyong Park, Christopher Jung, Rong Jin, Yang Wang, Zhigang Wang, Somayeh Sojoudi, Xue Feng  
+__Hyunin Lee__, Yong Zhang, Hoang Vu Nguyen, Xiaoyi Liu, Namyong Park, Christopher Jung, Rong Jin, Yang Wang, Zhigang Wang, Somayeh Sojoudi, Xue Feng  
 Preprint   
 [[blog](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)]
 
