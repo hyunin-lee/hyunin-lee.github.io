@@ -40,7 +40,7 @@ output: pdf_document
     (c) <span style="color: #1f77b4;"><strong>X′</strong></span> is the output of cross-attention, with <span style="color: #1f77b4;"><strong>X</strong></span> as the query and <span style="color: #d62728;"><strong>Y</strong></span> as the key and value.</em>
 </div>
 
-## Preface.
+## Preface
 I’m excited to share a somewhat counterintuitive phenomenon- **Orthogonal Alignment**—with the open-world research community (see Figure 1(b)). Before diving in, a brief disclaimer: this phenomenon has so far been observed only in multi-domain recommendation data, so I remain cautious about generalizing it to vision-language models (or more broadly, to multi-modal learning).
 
 That said, I’m optimistic that Orthogonal Alignment may also appear in vision-language settings, given that our study is grounded in transformer architectures with gated cross-attention—a core component of many modern fusion models. Still, as a researcher, I want to avoid overgeneralization and therefore frame this observation strictly within the recommendation domain until further studies confirm its presence in vision-language models.
