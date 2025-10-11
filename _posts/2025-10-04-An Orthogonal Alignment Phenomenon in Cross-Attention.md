@@ -55,7 +55,7 @@ In this post, **I want to highlight one simple message**:
 </div> -->
 
 <div style="border: 2px solid; border-image: linear-gradient(90deg, #667eea, #8b9dc3) 1; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08); text-align: center;">
-<strong><em>Orthogonal Alignment may improve scaling law in multi-modal model.</em></strong>
+<strong><em>When a multi-modal model exhibits the Orthogonal Alignment phenomenon, it tends to improve scaling law.</em></strong>
 
 </div>
 
