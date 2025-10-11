@@ -45,7 +45,7 @@ I’m excited to share a somewhat counterintuitive phenomenon- **Orthogonal Alig
 
 That said, I’m optimistic that Orthogonal Alignment may also appear in vision-language settings, given that our study is grounded in transformer architectures with gated cross-attention—a core component of many modern fusion models. Still, as a researcher, I want to avoid overgeneralization and therefore frame this observation strictly within the recommendation domain until further studies confirm its presence in vision-language models.
 
-Ultimately, my hope is that this discovery inspires new ways of thinking about algorithmic design and sheds light on how to achieve parameter-efficient scaling in multi-modal systems.
+Ultimately, my hope is that this discovery inspires new ways of thinking about algorithmic design and sheds light on how to achieve better scaling law in multi-modal models.
 In this post, **I want to highlight one simple message**:
 
 <!-- <div style="border: 2px solid #333; border-radius: 10px; padding: 15px; margin: 15px 0;">
@@ -55,7 +55,7 @@ In this post, **I want to highlight one simple message**:
 </div> -->
 
 <div style="border: 2px solid; border-image: linear-gradient(90deg, #667eea, #8b9dc3) 1; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08); text-align: center;">
-<strong><em>Orthogonal Alignment may provide more parameter-efficient scaling law in multi-modal model.</em></strong>
+<strong><em>Orthogonal Alignment may improve scaling law in multi-modal model.</em></strong>
 
 </div>
 
