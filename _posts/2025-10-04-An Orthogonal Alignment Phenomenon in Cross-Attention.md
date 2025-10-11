@@ -62,13 +62,13 @@ In this post, **I want to highlight one simple message**:
 I’ve attempted to clarify why this phenomenon naturally occurs and identified one possible explanation during my internship at Meta: parameter-efficient scaling. However, the underlying mechanism behind *why on earth this phenomenon naturally emerges* still remains largely a black box, presenting opportunities for deeper investigation. I’d be glad to discuss or further explore why this phenomenon arises—please feel free to reach out: hyunin@berkeley.edu
 
 
-## The Rise of Multi-Domain Recommendation Systems
+## The Rise of Multi-Modal Recommendation Systems
 
-Imagine you have a dataset \( D_1 = (X_1, Y) \) and want to build a model that predicts a binary label \(Y\) from input \(X\). In many real-world cases, the label $Y$ is extremely sparse — meaning that most of the values are just zeros.
+Imagine you have a dataset D₁=(X₁,Y) and want to build a model that predicts a binary label Y from input X. In many real-world cases, the label Y is extremely sparse — meaning that most of the values are just zeros.
 
-When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook. The challenge? Users rarely click on ads. Even if we show ten sponsored posts, a user might click on only one — or sometimes none at all. Since high-quality recommendations depend on understanding user engagement, this data sparsity made it tough to capture user intent accurately. Simply training on \(D_1\) wasn’t enough.
+When I worked on the Ranking AI Research team at Meta, one of my main tasks was building recommendation models that display sponsored posts (ads) on Instagram and Facebook. The challenge? Users rarely click on ads. Even if we show ten sponsored posts, a user might click on only one — or sometimes none at all. Since high-quality recommendations depend on understanding user engagement, this data sparsity made it tough to capture user intent accurately. Simply training on D₁ wasn’t enough.
 
-One effective way to address this problem is to incorporate richer signals from other domains \(D_2= (X_2, Y)\) — for example, how long a user stays on a post or whether they leave a comment. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels.
+One effective way to address this problem is to incorporate richer signals from other domains D₂=(X₂,Y) — for example, how long a user stays on a post or whether they leave a comment. These additional behavioral cues provide valuable context about user interests and help reduce the impact of sparse labels.
 
 This naturally leads to a core research question: how can we design architectures that effectively fuse such heterogeneous behavioral data?
 
@@ -221,9 +221,9 @@ Then, we checked that the baseline with GCA module consistently outperforms the 
   <em>NDCG comparistion between baseline and baseline + gated cross attention model</em>
 </div>
 
-First, our results show that across all five experimental cases, the addition of \(\text{baseline}+\text{gca}_{\text{early}}\) consistently yields higher single-domain ranking performance (Domain A’s NDCG@10) compared to parameter-matched baselines, while Domain B’s NDCG@10 also shows general improvement.
+First, our results show that across all five experimental cases, the addition of baseline with GCA_early consistently yields higher single-domain ranking performance (Domain A’s NDCG@10) compared to parameter-matched baselines, while Domain B’s NDCG@10 also shows general improvement.
 
-Moreover, in both LLM4CDSR settings, \(\text{gca}_{\text{early}}\) demonstrates the strongest parameter efficiency. We attribute this advantage to the fixed hidden dimensionality of the initial embedding vectors inherited from the pretrained LLM, which constrains the representational capacity of the baseline model. As a result, simply scaling up the baseline parameters eventually leads to performance saturation—and in some cases, degradation—as model size increases.
+Moreover, in both LLM4CDSR settings, GCA_early demonstrates the strongest parameter efficiency. We attribute this advantage to the fixed hidden dimensionality of the initial embedding vectors inherited from the pretrained LLM, which constrains the representational capacity of the baseline model. As a result, simply scaling up the baseline parameters eventually leads to performance saturation—and in some cases, degradation—as model size increases.
 
 In contrast, introducing orthogonal alignment through GCA enables more effective information extraction under limited representational capacity. This property allows GCA to achieve a superior accuracy-per-parameter trade-off, demonstrating a more efficient use of model capacity.
 
