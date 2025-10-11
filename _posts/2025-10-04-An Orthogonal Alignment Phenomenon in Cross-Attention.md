@@ -248,7 +248,7 @@ In Figure 3, Baseline + GCA<sub>early</sub> refers to inserting a single GCA mod
       </td>
     </tr>
   </table>
-  <em>Figure3. NDCG@10 comparison between baseline and baseline + gated cross attention model</em>
+  <em>Figure 3: NDCG@10 comparison between baseline and baseline + gated cross attention model</em>
 </div>
 
 First, our results show that across all five experimental cases, the addition of baseline with GCA_early consistently yields higher single-domain ranking performance (Domain A’s NDCG@10) compared to parameter-matched baselines, while Domain B’s NDCG@10 also shows general improvement.
