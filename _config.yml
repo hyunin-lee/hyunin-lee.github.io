@@ -28,6 +28,7 @@ external:                  # shows a footer with social links - for available ic
   - {title: Twitter, icon: twitter, url: "/feed.xml"}
 
 comments:
+  disqus: true
   disqus_shortname: "hyunin-lee-github-io"    # Replace with your Disqus shortname
 #  isso_domain: ""         # see https://posativ.org/isso/
 
