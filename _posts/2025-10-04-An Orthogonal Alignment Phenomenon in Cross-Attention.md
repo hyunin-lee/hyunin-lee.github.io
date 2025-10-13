@@ -288,6 +288,8 @@ This difference matters because most vision–language encoders are trained usin
 
 Therefore, while we expect Orthogonal Alignment to exist in vision–language models, it may manifest under more subtle and nuanced conditions, reflecting the already pre-aligned nature of their learned embeddings.
 
+Fore more information, please check [paper](https://arxiv.org/abs/2510.09435)📗
+
 ---
 
 **References:**
