@@ -61,8 +61,12 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 -->
 ### Research Area
 * Reinforcement Learning, Multi-Modal Learning
+
+### Blog
+ * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
+
 ### News 
-* [2025.10] New paper on Multi-Modal Learning : [*Orthogonal Alignment*]() and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
+* [2025.10] New paper on Multi-Modal Learning : [*Orthogonal Alignment*](https://drive.google.com/file/d/1JKnXw-HFDaAlPh_6pgoaE13kwuB7p_fd/view) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 * [2025.06] Extension of Black swan paper: [*Antifragile*](https://openreview.net/pdf?id=WpePuya3Ki) will be presented in **ICML2025**.
 * [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (Ranking team)!
 * [2025.04] [*Black Swan Hypothesis* 🦢](https://arxiv.org/pdf/2407.18422) as <span style="color:red;"><b>oral</b></span> presentation at **ICLR25 workshop: Financial AI**
