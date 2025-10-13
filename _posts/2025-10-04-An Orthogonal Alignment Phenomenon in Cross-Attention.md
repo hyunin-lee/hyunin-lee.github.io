@@ -3,6 +3,7 @@ title: "An Orthogonal Alignment Phenomenon in Cross-Attention"
 mathjax: true
 layout: post
 categories: media
+comments: true
 header-includes:
   - \usepackage{amsmath}    # for advanced math environments
   - \usepackage{amsfonts}   # for math fonts
