@@ -64,9 +64,9 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 
 ### Questions.
 * Currently, I’m curious about the following questions:
-  * Why are many traditional exploration methods in RL not showing strong performance in LLM post-training?
-  * How can we address black swan events in AI safety or how to make antifragile algorithm: [1](https://arxiv.org/pdf/2407.18422), [2](https://openreview.net/pdf?id=WpePuya3Ki)
-  * Does orthogonal alignment also improve the scaling law in vision-language models? If so, is cross-attention the best architecture to realize orthogonal alignment? [1](https://arxiv.org/abs/2510.09435)
+  * Why are many traditional exploration methods in RL not working in LLM post-training?
+  * How can we address black swan events in AI safety or how to make antifragile algorithm?: [1](https://arxiv.org/pdf/2407.18422), [2](https://openreview.net/pdf?id=WpePuya3Ki)
+  * Does orthogonal alignment also improve the scaling law in vision-language model?: [1](https://arxiv.org/abs/2510.09435)
 
 ### Blog
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
