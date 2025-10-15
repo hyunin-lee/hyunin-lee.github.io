@@ -60,7 +60,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
 * Human-Centered AI Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
 -->
 ### Research Area
-* Reinforcement Learning, Multi-Modal Learning, AI safety
+* Reinforcement Learning, Multi-Modal Learning
 
 ### Questions.
 * Currently, I’m curious about the following questions:
