@@ -72,13 +72,13 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofo
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 
 ### News 
-* [2025.10] New paper on Multi-Modal Learning : [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
+* [2025.10] New paper on Multi-Modal Learning (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 * [2025.06] Extension of Black swan paper: [*Antifragile*](https://openreview.net/pdf?id=WpePuya3Ki) will be presented in **ICML2025**.
-* [2025.05] Joining [Meta](https://ai.meta.com/) this summer as a research scientist intern (Ranking team)!
+* [2025.05] Joining [Meta](https://ai.meta.com/) <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo_%28cropped%29.svg" alt="Meta" style="height: 13px; vertical-align: middle; margin-left: 1px;"> this summer as a research scientist intern (Ranking team)! 
 * [2025.04] [*Black Swan Hypothesis* 🦢](https://arxiv.org/pdf/2407.18422) as <span style="color:red;"><b>oral</b></span> presentation at **ICLR25 workshop: Financial AI**
 * [2025.04] Invited to AI safety panel at [Appen](https://www.appen.com/)
-* [2025.03] Started research associate with [OpenAI](https://openai.com/safety/)
-* [2025.02] New paper on proposing the necessity of antifragility in AI safety : *[Paper coming soon!]*
+* [2025.03] Started research associate with [OpenAI](https://openai.com/safety/) <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg" alt="OpenAI" style="height: 15px; vertical-align: middle; margin-left: 1px;">
+* [2025.02] New paper on proposing the necessity of antifragility in AI safety : [*Antifragile*](https://openreview.net/pdf?id=WpePuya3Ki)
 * [2024.02] Serving as a reviewer for ICML, RLC, and Neurips 2025.
 * [2025.01] New paper proposing a novel AI safety perspective, *Black Swan Hypothesis* 🦢, in **ICLR2025** (& workshop: Financial AI 25): [A Black Swan Hypothesis: The Role of Human Irrationality in AI Safety](https://arxiv.org/pdf/2407.18422)
 * [2024.09] Serving as a reviewer for ICLR, AISTATS 2025.
