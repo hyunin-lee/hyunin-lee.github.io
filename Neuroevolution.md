@@ -26,10 +26,12 @@ while True:
 ## 2.1.1 Representation
  - genotype: internal data structure used by the algorithm to represent a candidate solution - typically a string, vector, tree, or graph structure thatis subject to variation and selection
  - Phenotype: external manifestation of this solution in the context of the problem domain.
+
 ## 2.1.2 population-based search
 - the population refers to the set of individuals maintained and evolved over successive generations.
     - Smaller populations tend to converge quickly butrisk premature convergence due to insuﬃcient diversity. 
     - Larger populations maintain broader coverage of the search space but can slow down convergence and increase resourcedemand
+
 ## 2.1.3 selection
 From generation to generation. 
 - high selection: reduce genetic diversity and may cause premature convergence.
@@ -41,14 +43,19 @@ From generation to generation.
 - crossovers: combines traits from two or more parents.
 
 ## 2.2. Types of Evolutionary Algorithms
+
 ### 2.2.1. Genetic Algorithm (GA)
 - Mostly it's about cross-over
+
 ### 2.2.2. Evolution Strategy (ES)
 - Mostly it's about mutations
+
 ### 2.2.3. Covariance-Matrix Adaptation Evolution Strategy (CMA-ES)
 - Mostly it's about better mutations (adapt variance as generation goes by)
+
 ### 2.2.4. OpenAI Evolution Strategy
 - 
+
 ### 2.2.5. Multiobjective Evolutionary Algorithms
 
 ## CODE Exercise.
