@@ -5,11 +5,43 @@ layout: post
 categories: media
 ---
 
-# Chapter 2.
+# Chapter 2 The Basics.
 
+## 2.1. Evolutionary Algorithm 
+The basic solver loop.
+```
+solver = EvolutionAlgorithm()
+while True:
+    # Ask the EA to give us a set of candidate solutions.
+    solutions = solver.ask()
+    # Create an array to hold the fitness results.
+    fitness_list = np.zeros(solver.popsize)
+    # Evaluate the fitness for each given solution.
+    for i in range(solver.popsize): 
+        fitness_list[i]= evaluate(solutions[i])
+        # Give list of fitness results back to EA.
+        solver.tell(fitness_list)
+        # Get best parameter, fitness from EA.
+        best_solution, best_fitness = solver.result()
+        if best_fitness > MY_REQUIRED_FITNESS:
+            break
+```
+## 2.1.1 Representation
+ - genotype: internal data structure used by the algorithm to represent a candidate solution - typically a string, vector, tree, or graph structure thatis subject to variation and selection
+ - Phenotype: external manifestation of this solution in the context of the problem domain.
 ## 2.1.2 population-based search
+- the population refers to the set of individuals maintained and evolved over successive generations.
+    - Smaller populations tend to converge quickly butrisk premature convergence due to insuﬃcient diversity. 
+    - Larger populations maintain broader coverage of the search space but can slow down convergence and increase resourcedemand
 ## 2.1.3 selection
+From generation to generation. 
+- high selection: reduce genetic diversity and may cause premature convergence.
+- low selection: weaker individuals a chance to reproduce, which slows convergence but promotes diversity and broader exploration of the searchspace. 
+
 ## 2.1.4 variation operators
+From generation to generation.
+- mutations: alters individuals randomly.
+- crossovers: combines traits from two or more parents.
 
 ## 2.2. Types of Evolutionary Algorithms
 ### 2.2.1. Genetic Algorithm (GA)
@@ -21,6 +53,7 @@ categories: media
 ### 2.2.4. OpenAI Evolution Strategy
 - 
 ### 2.2.5. Multiobjective Evolutionary Algorithms
+
 ## CODE Exercise.
 
 ### base algorithm
