@@ -5,6 +5,7 @@ title: ""
 
 ### Books
 - [Distributional Reinforcement Learning](./assets/DistributionalRL_BOOK.pdf) by Mar G.Bellemare, Will Dabney, and Mark Rowland.
+- [Neuroevolution: Harnessing Creativity in AI Agent Design](/2026-01-01-Neuroevolution/) by S. Risi, Y. Tang, D. Ha, R. Mikkulainen.
 
 ### Classes
 - [Mathematical Programming II (IEOR 262B Lecture note)](./assets/IEOR262B_LECNOTE.pdf) by Javad Lavaei. This lecture is based on a book Nonlinear programming(3rd edition) by Dimitri Bertsekas.
