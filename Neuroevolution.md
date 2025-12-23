@@ -1,5 +1,9 @@
-# Chapter 2 The Basics.
+# Neuroevolution: harnessing Creativig in AI Agent Design
 
+This is a summary of the book [Neuroevolution: harnessing Creativig in AI Agent Design](https://neuroevolutionbook.com/).
+
+
+# Chapter 2 The Basics.
 ## 2.1. Evolutionary Algorithm 
 The basic solver loop.
 ```
