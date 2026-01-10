@@ -50,17 +50,21 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. I am interested in **developing reinforcement learning algorithms and exploring their key concepts**. I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I have worked on research projects within neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
+I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. I study **reinforcement learning algorithms** as part of my Ph.D. I am currently solving two problems:
+- (AI education) let's replace schools with AI,
+- (AI scientist) let's make highly-reasoning AI.
 
-Besides my research, I am interested in AI education 📚👩🏻‍💻. I cofound and currently advise [OUTTA](https://outta.ai/).
+I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
+
+Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-founded and currently advise [OUTTA](https://outta.ai/).
 
 <!--
 ### Research questions
 * Identifying Challenges Beyond Scaling: What fundamental problems remain unsolvable despite scaling up models and data?
 * Human-Centered AI Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
 -->
-### Research Area
-* Reinforcement Learning, Multi-Modal Learning
+<!-- ### Research Area
+* Reinforcement Learning, Multi-Modal Learning -->
 
 <!-- ### Questions.
 * Currently, I’m curious about the following questions:
