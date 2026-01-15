@@ -50,7 +50,8 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. I study **reinforcement learning algorithms** as part of my Ph.D. I am currently solving two problems:
+I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. I study **reinforcement learning algorithms** as part of my Ph.D. I am currently solving several problems:
+- Personalization of the industry model.
 - (AI education) let's replace schools with AI,
 - (AI scientist) let's make highly-reasoning AI.
 
