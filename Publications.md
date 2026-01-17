@@ -5,10 +5,10 @@ title: ""
 
 ### Preprint
 
-* [Cross-attention Secretly Performs Orthogonal Alignment in Recommendation Models](https://arxiv.org/abs/2510.09435)   
+<!--* [Cross-attention Secretly Performs Orthogonal Alignment in Recommendation Models](https://arxiv.org/abs/2510.09435)   
 __Hyunin Lee__, Yong Zhang, Hoang Vu Nguyen, Xiaoyi Liu, Namyong Park, Christopher Jung, Rong Jin, Yang Wang, Zhigang Wang, Somayeh Sojoudi, Xue Feng  
 Preprint   
-[[blog](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)]
+[[blog](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)]-->
 
 ### Journal 
 * [Policy-based Primal-Dual Methods for Concave CMDP with Variance Reduction](./assets/convexCMDP.pdf)  
