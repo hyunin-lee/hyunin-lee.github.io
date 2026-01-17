@@ -73,9 +73,6 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
   * Black swan events in AI safety: [1](https://arxiv.org/pdf/2407.18422), [2](https://openreview.net/pdf?id=WpePuya3Ki)
   * Orthogonal alignment in vision-language model: [1](https://arxiv.org/abs/2510.09435) -->
 
-### Blog
- * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
-
 ### News 
 * [2026.01] My research will be further funded by [Meta](https://ai.meta.com/).
 * [2025.10] New paper on Multi-Modal Learning (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
