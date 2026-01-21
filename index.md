@@ -51,11 +51,6 @@ title: ""
 -->
 ### About
 I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. I study **reinforcement learning algorithms** as part of my Ph.D. I am currently solving several problems on **Agentic AI**, especially on generalizing workflow, GUI agents, and Education agents.
-<!-- 
-Personalization of the industry model.
-- (AI education) let's replace schools with AI,
-- (AI scientist) let's make highly-reasoning AI.
--->
 
 I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
