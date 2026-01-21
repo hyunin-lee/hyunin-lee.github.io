@@ -51,7 +51,8 @@ title: ""
 -->
 ### About
 I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. I study **reinforcement learning algorithms** as part of my Ph.D. I am currently solving several problems on **Agentic AI**, especially on generalizing workflow, GUI agents, and Education agents.
-<!-- Personalization of the industry model.
+<!-- 
+Personalization of the industry model.
 - (AI education) let's replace schools with AI,
 - (AI scientist) let's make highly-reasoning AI.
 -->
@@ -60,7 +61,7 @@ I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~
 
 Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-founded and currently advise [OUTTA](https://outta.ai/).
 
-<!--
+<!-- 
 ### Research questions
 * Identifying Challenges Beyond Scaling: What fundamental problems remain unsolvable despite scaling up models and data?
 * Human-Centered AI Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
