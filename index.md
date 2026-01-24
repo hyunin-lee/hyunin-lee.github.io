@@ -71,7 +71,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
   * Orthogonal alignment in vision-language model: [1](https://arxiv.org/abs/2510.09435) -->
 
 ### News 
-* [2026.01] My research will be further funded by [Meta](https://ai.meta.com/).
+* [2026.01] My research will be further funded by [Meta](https://ai.meta.com/) (RL for multimodal LLM).
 <!--* [2025.10] New paper on Multi-Modal Learning (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)-->
 * [2025.06] Extension of Black swan paper: [*Antifragile*](https://openreview.net/pdf?id=WpePuya3Ki) will be presented in **ICML2025**.
 * [2025.05] Joining [Meta](https://ai.meta.com/) <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo_%28cropped%29.svg" alt="Meta" style="height: 13px; vertical-align: middle; margin-left: 1px;"> this summer as a research scientist intern (Ranking team). 
