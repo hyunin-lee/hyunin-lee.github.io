@@ -74,9 +74,9 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 
 ### News 
-* [2026.05] Joining [SakanaAI](https://sakana.ai/) <img src="https://sakana.ai/favicon.ico" alt="SakanaAI" style="height: 15px; vertical-align: middle; margin-left: 1px;"> as research intern (manager : Yujin Tang). I will be in Japan!
+* [2026.05] Joining [SakanaAI](https://sakana.ai/) <img src="https://sakana.ai/favicon.ico" alt="SakanaAI" style="height: 15px; vertical-align: middle; margin-left: 1px;"> as research intern (manager: [Yujin Tang](https://lerrytang.github.io/)). I will be in Japan!
 * [2026.01] My research will be further funded by [Meta](https://ai.meta.com/) (RL for multimodal LLM).
-* [2025.10] New paper on Multi-Modal Learning (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
+* [2025.10] New paper on Multi-Modal Recommendation (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 * [2025.06] Extension of Black swan paper: [*Antifragile*](https://openreview.net/pdf?id=WpePuya3Ki) will be presented in **ICML2025**.
 * [2025.05] Joining [Meta](https://ai.meta.com/) <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo_%28cropped%29.svg" alt="Meta" style="height: 13px; vertical-align: middle; margin-left: 1px;"> this summer as a research scientist intern (Ranking team). 
 * [2025.04] [*Black Swan Hypothesis* 🦢](https://arxiv.org/pdf/2407.18422) as <span style="color:red;"><b>oral</b></span> presentation at **ICLR25 workshop: Financial AI**
