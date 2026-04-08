@@ -50,7 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. I study **reinforcement learning algorithms** as part of my Ph.D. I am currently solving several problems on **Agentic AI**, especially on generalizing workflow, GUI agents, and Education agents.
+I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. I study **reinforcement learning algorithms** as part of my Ph.D. I am currently solving several problems on **Agentic AI**, especially on generalizing multi-agentic workflow, GUI agents, and Education agents.
 
 I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
@@ -70,9 +70,13 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
   * Black swan events in AI safety: [1](https://arxiv.org/pdf/2407.18422), [2](https://openreview.net/pdf?id=WpePuya3Ki)
   * Orthogonal alignment in vision-language model: [1](https://arxiv.org/abs/2510.09435) -->
 
+### Blog
+ * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
+
 ### News 
+* [2026.05] Joining [SakanaAI](https://sakana.ai/) <img src="https://sakana.ai/favicon.ico" alt="SakanaAI" style="height: 15px; vertical-align: middle; margin-left: 1px;"> as research intern (manager : Yujin Tang). I will be in Japan!
 * [2026.01] My research will be further funded by [Meta](https://ai.meta.com/) (RL for multimodal LLM).
-<!--* [2025.10] New paper on Multi-Modal Learning (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)-->
+* [2025.10] New paper on Multi-Modal Learning (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 * [2025.06] Extension of Black swan paper: [*Antifragile*](https://openreview.net/pdf?id=WpePuya3Ki) will be presented in **ICML2025**.
 * [2025.05] Joining [Meta](https://ai.meta.com/) <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo_%28cropped%29.svg" alt="Meta" style="height: 13px; vertical-align: middle; margin-left: 1px;"> this summer as a research scientist intern (Ranking team). 
 * [2025.04] [*Black Swan Hypothesis* 🦢](https://arxiv.org/pdf/2407.18422) as <span style="color:red;"><b>oral</b></span> presentation at **ICLR25 workshop: Financial AI**
