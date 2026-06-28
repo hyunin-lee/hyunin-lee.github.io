@@ -35,7 +35,7 @@ However, harness optimization should ultimately be viewed not merely as a
 <strong><em>Improving the <u>harness</u> — how agents are coordinated — raises the ceiling at which test-time scaling saturates, and that benefit persists even as the underlying model gets stronger.</em></strong>
 </div>
 
-This post introduces **Recursive Harness Self-Improvement (RHI)**, a black-box procedure that teaches a multi-agent system to rewrite its own coordination structure. RHI does not touch model weights and does not lengthen the model's output. It edits a prompt — and that turns out to be enough to outperform substantially more expensive scaling strategies.
+This post introduces **Recursive Harness Self-Improvement (RHI)**, a black-box procedure that teaches a multi-agent system to rewrite its own harenss represented as a prompt. RHI does not touch model weights and does not lengthen the model's output. It edits a prompt — and that turns out to be enough to outperform substantially more expensive scaling strategies.
 
 ---
 
@@ -66,7 +66,7 @@ Our claim is that this saturation ceiling reflects the *chosen harness*, not an 
 
 ## RHI: a system that rewrites its own coordination
 
-**Recursive Harness Self-Improvement** treats the harness as an *editable prompt* layered over black-box agents, and recursively optimizes it. The loop is simple and fully black-box — no gradients, no weight updates, no access to model internals:
+**Recursive Harness Self-Improvement** treats the **harness as an prompt** layered over black-box agents, and recursively optimizes it. The loop is simple and fully black-box — no gradients, no weight updates, no access to model internals:
 
 1. **Represent** the harness through its four components — roles, instructions, hops, and contracts.
 2. **Run** the current harness on the task and collect its outputs.
