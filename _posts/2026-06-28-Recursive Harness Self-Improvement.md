@@ -21,12 +21,12 @@ header-includes:
     <a href="../assets/RHI_combined_full.mp4">Download the clip instead.</a>
   </video>
   <br>
-  <em>Recursive Harness Self-Improvement (RHI) in motion: few shot RHI outperforms test-time scaling witih lower cost.</em>
+  <em>Recursive Harness Self-Improvement (RHI): few shot RHI outperforms test-time scaling witih lower cost.</em>
 </div>
 
-## The Central Question
+## Our hypothesis
 
-When we make AI agents better, we almost always reach for one of two levers: a **stronger model**, or **more compute at inference time** — longer chains of thought, more samples, more search. There is a third lever that gets far less attention, and it may be the most cost-effective of the three:
+When we want to make AI agents better, we almost always reach for one of two levers: **a stronger model**, or **more compute at inference time** — longer chains of thought, more samples, more search. There is a third lever that gets far less attention — the harness. Our hypothesis is that the harness can be the effective scaling axis in its own right:
 
 <div style="border: 2px solid; border-image: linear-gradient(90deg, #667eea, #8b9dc3) 1; border-radius: 10px; padding: 20px; margin: 24px 0; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08); text-align: center;">
 <strong><em>Improving the <u>harness</u> — how agents are coordinated — raises the ceiling at which test-time scaling saturates, and that benefit persists even as the underlying model gets stronger.</em></strong>
@@ -51,7 +51,7 @@ This inter-agent structure makes the harness a *first-order* determinant of perf
 
 ---
 
-## The hypothesis: a fixed harness puts a ceiling on test-time compute
+## Fixed harness caps test-time scaling
 
 Test-time scaling (TTS) buys performance with inference-time compute: longer reasoning traces, repeated sampling, search over candidates. Crucially, it leaves the *organizing structure* — the harness — unchanged. Even sophisticated procedures such as self-consistency and tree search are, on this view, **fixed harnesses inside which a token budget is scaled**. The same is true in multi-agent systems: raising per-agent reasoning effort or adding interaction rounds enlarges the budget without changing how the agents are coordinated.
 
