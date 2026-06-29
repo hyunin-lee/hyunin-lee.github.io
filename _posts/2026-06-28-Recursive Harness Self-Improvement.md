@@ -29,17 +29,21 @@ header-includes:
 When we want to make AI agents better, we almost always reach for one of two levers: a stronger model, or more compute at inference time — longer chains of thought, more samples, more search. There is a third lever that gets far less attention — the harness. 
 
 However, harness optimization should ultimately be viewed not merely as a
-**complement** to test- and train-time compute scaling but as a **distinct** axis of improvement, one that reallocates a fixed compute budget rather than enlarging it. This raises a sharper empirical question that we leave open, namely under what conditions harness optimization yields gains that additional test- or train-time compute **does not readily recover**. Our hypothesis makes this position concrete: 
+**complement** to test- and train-time compute scaling but as a **distinct** axis of improvement, one that reallocates a fixed compute budget rather than enlarging it. That framing raises a sharper question, which we leave open: when does harness optimization deliver gains that additional test- or train-time compute **cannot readily recover**?
+
+The community has raised a related puzzle: whether harness optimization shows diminishing returns as the base model grows stronger. We see our question as the prior one. That concern about diminishing returns is, we think, downstream of it: characterizing which gains additional compute cannot recover is what tells us how those gains should behave as the model grows stronger.
+
+Our hypothesis makes this position concrete: 
 
 <div style="border: 2px solid; border-image: linear-gradient(90deg, #667eea, #8b9dc3) 1; border-radius: 10px; padding: 20px; margin: 24px 0; box-shadow: 0 3px 10px rgba(102, 126, 234, 0.08); text-align: center;">
-<strong><em>Improving the <u>harness</u> — how agents are coordinated — raises the ceiling at which test-time scaling saturates, and that benefit persists even as the underlying model gets stronger.</em></strong>
+<strong><em>Improving the <u>harness</u> raises the ceiling at which test-time scaling saturates, and that benefit persists even as the underlying model gets stronger.</em></strong>
 </div>
 
-This post introduces **Recursive Harness Self-Improvement (RHI)**, a black-box procedure that teaches a multi-agent system to rewrite its own harenss represented as a prompt. RHI does not touch model weights and does not lengthen the model's output. It edits a prompt — and that turns out to be enough to outperform substantially more expensive scaling strategies.
+This post introduces **Recursive Harness Self-Improvement (RHI)**, a black-box procedure that teaches a multi-agent system to rewrite its own harenss represented as a prompt. RHI does not touch model weights and does not lengthen the model's output. It treats the **Harness as a editable prompt** — and that turns out to be enough to outperform substantially more expensive scaling strategies.
 
 ---
 
-## What is a "harness," and why does it matter?
+## What is a "harness"," and why does it matter?
 
 A capable agentic system is far more than its foundation model. Even a single model becomes dramatically more useful once it is wrapped in a **harness**: the prompts, tools, and control flow that orchestrate its calls. Scaffolds like chain-of-thought, ReAct, and self-reflection are all, at heart, harnesses.
 
@@ -68,7 +72,7 @@ Our claim is that this saturation ceiling reflects the *chosen harness*, not an 
 
 **Recursive Harness Self-Improvement** treats the **harness as an prompt** layered over black-box agents, and recursively optimizes it. The loop is simple and fully black-box — no gradients, no weight updates, no access to model internals:
 
-1. **Represent** the harness through its four components — roles, instructions, hops, and contracts.
+1. **Represent** the harness through its four components — roles, instructions, hops, and contracts - as prompt.
 2. **Run** the current harness on the task and collect its outputs.
 3. **Compare** consecutive harnesses from RHI's own revision history, using LLM-generated pairwise feedback.
 4. **Revise** the harness in light of that feedback, and repeat.
@@ -84,37 +88,50 @@ We evaluated RHI on **30 synthetic, open-ended machine-learning research tasks**
 We applied few-shot RHI to `high`-reasoning coding agents built on three progressively stronger model families — **Claude Sonnet 4.6**, **Claude Opus 4.7**, and **Claude Opus 4.8** — and compared against *stronger* same-family TTS baselines such as `xhigh`, `max`, and, where available, `ultracode`. Three findings stand out.
 
 **1. RHI lifts the ceiling at which test-time scaling saturates.**
-Two RHI iterations make `sonnet-4.6-high` beat `sonnet-4.6-max`. A single iteration makes `opus-4.7-high` beat the evaluated `xhigh` and `max` baselines. And two iterations on Opus 4.8 outperform *every* same-family baseline we tested — including the built-in dynamic multi-agent `ultracode` setting.
+Two RHI iterations make `sonnet-4.6-high` beat `sonnet-4.6-max`. A single iteration makes `opus-4.7-high` beat the evaluated `opus-4.7-xhigh` and `opus-4.7-max`. Two iterations on `opus-4.8-high` beat the evaluated `opus-4.8-xhigh`, `opus-4.8-max`, and `opus-4.8-ultracode` baselines.
 
 **2. The gains are not just "more tokens."**
-In two of the three model families, performance climbs across RHI iterations while output-token usage stays nearly flat. The improvement comes from *better coordination*, not longer reasoning traces.
+On `sonnet-4.6` and `opus-4.8`, performance climbs across RHI iterations while output-token usage stays nearly flat. The improvement does not come from longer reasoning traces.
 
 **3. RHI is meaningfully cheaper.**
-RHI reduces total inference cost — and especially cache read/write usage — by **up to roughly 60%** relative to the strongest TTS baselines. Better *and* cheaper.
+RHI reduces total inference cost, and especially cache read/write usage. Two iterations on `opus-4.8-high` cut cost by **up to 60%** compared to `opus-4.8-ultracode`. Better and cheaper!
 
 And critically, this advantage **persists across all three model families**. Stronger base models did not wash out the benefit of a better harness.
 
 ---
-
 ## Why it works: learning task-specific coordination
 
 Our ablations trace the gains to **task-specific coordination** rather than longer thinking. Embedding analyses show that RHI makes the full harness more task-specific, with the sharpest component-level specialization appearing in **contracts** and, to a lesser degree, **hops**.
 
-Intuitively, RHI learns a *sparsity pattern over inter-agent information flow*. By tightening what each contract carries and how each hop proceeds, every agent conditions on the information relevant to its role rather than on the entire interaction history. That simultaneously improves context efficiency and solution quality — and it explains why the cost savings concentrate in cache usage.
+Intuitively, RHI learns a *sparsity pattern over inter-agent information flow*. By tightening what each contract carries and how each hop proceeds, every agent conditions on the information relevant to its role rather than on the entire interaction history. That simultaneously improves context efficiency and solution quality, and it explains why the cost savings concentrate in cache usage.
 
-Two further observations sharpen the picture:
-
-- **RHI complements, rather than replaces, model scaling.** Optimizing the harness improves a fixed base model's TTS, but does not consistently close the gap to a genuinely stronger model. These are different axes, and they stack.
-- **Multi-agent execution genuinely matters.** Simply flipping on a model's built-in multi-agent mode is not enough; executing the *same* role-and-instruction specification as a real multi-agent workflow beats a single-agent, multi-persona variant. The gains come from learned coordination structure, not from merely stuffing more agent descriptions into one prompt.
-
+This ablation sharpens the picture: **RHI is a distinct harness scaling axis, not a replacement for model scaling.** Optimizing the harness improves a fixed base model's test-time scaling, but it does not consistently close the gap to a genuinely stronger model. These are different axes, and they stack.
 ---
 
 ## An information-theoretic view of what RHI optimizes
 
-Finally, we examined the **implicit objective** induced by RHI's update dynamics by tracking the mutual information among harness components across iterations. Two forces emerge:
+Now for some math. Finally, we examined the **implicit objective** induced by RHI's update dynamics by tracking the mutual information among harness components across iterations. Two forces emerge:
 
 - An **external, controllable** force — set by the harness optimizer's system prompt — that decides which components RHI prioritizes for revision.
 - An **internal, model-dependent** force — induced by the optimizer's base model — that maps the current harness to its successor from the revision history.
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="52%">
+        <img src="../assets/RHIobjective.png" alt="External and internal factors shaping harness updates" width="430" style="max-width:100%;">
+        <br>
+        <em>(a) Harness updates are shaped by a controllable <strong>external</strong> factor f<sub>ext</sub> and a model-dependent <strong>internal</strong> factor f<sub>int</sub>.</em>
+      </td>
+      <td align="center" width="48%">
+        <img src="../assets/objectiveRHI_gradient.png" alt="Internal factor as functional-specialization guidance on the harness landscape" width="430" style="max-width:100%;">
+        <br>
+        <em>(b) We interpret f<sub>int</sub> as <strong>functional-specialization guidance</strong>: it suppresses redundant overlap and steers harness components toward distinct functions.</em>
+      </td>
+    </tr>
+  </table>
+  <em><strong>Figure: a schematic view of the implicit preference induced by RHI.</strong> The external factor is controlled by the harness-optimizer prompt, while the internal factor reflects how the optimizer LLM interprets feedback and instantiates textual revisions.</em>
+</div>
 
 Empirically, RHI **increases** the mutual information between the emphasized harness components and the task, while **decreasing** the total correlation among components *conditional on the task*. Read together, the internal force acts as a *functional-specialization guide* for the external one: the first drives the emphasized components to encode the task as fully as possible, while the second drives each component to carry **distinct** information rather than duplicating its neighbors. The result is a harness whose parts grow less redundant and more functionally specialized — which we formalize as an information-theoretic hypothesis for RHI's implicit update objective.
 
