@@ -136,6 +136,20 @@ Now for some math. Finally, we examined the **implicit objective** induced by RH
 
 Empirically, RHI **increases** the mutual information between the emphasized harness components and the task, while **decreasing** the total correlation among components *conditional on the task*. Read together, the internal force acts as a *functional-specialization guide* for the external one: the first drives the emphasized components to encode the task as fully as possible, while the second drives each component to carry **distinct** information rather than duplicating its neighbors. The result is a harness whose parts grow less redundant and more functionally specialized — which we formalize as an information-theoretic hypothesis for RHI's implicit update objective.
 
+<div style="border: 1px solid #3a3a3a; border-radius: 10px; overflow: hidden; margin: 26px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.07);">
+  <div style="background: #333; color: #fff; padding: 11px 18px; font-weight: 700;">Hypothesis — the information-theoretic objective hidden inside RHI</div>
+  <div style="background: #f7f7f8; padding: 18px 20px; color:#222;">
+    <p style="margin: 0 0 10px;">RHI never optimizes any formula directly. Yet across iterations, its behavior is <em>consistent with</em> quietly climbing a single, intuitive objective: make the coordination components say <strong>more about the task</strong>, while making them <strong>overlap less with one another</strong>.</p>
+    <div style="overflow-x: auto;">$$ J \;=\; \underbrace{\,I(\text{components}\,;\ \text{task})\,}_{\textstyle f_{\mathrm{ext}}} \;-\; \beta\,\underbrace{\,\mathrm{TC}(\text{components}\mid \text{task})\,}_{\textstyle f_{\mathrm{int}}}\,, \qquad \beta>0. $$</div>
+    <ul style="margin: 8px 0 0; padding-left: 1.2em;">
+      <li><strong>Raise f<sub>ext</sub> — be task-relevant.</strong> The components the optimizer emphasizes (here, <em>contracts</em> and <em>hops</em>) should carry as much information about the task as possible. <em>I</em> denotes mutual information.</li>
+      <li><strong>Lower f<sub>int</sub> — don't repeat yourself.</strong> Given the task, the components should not encode the same thing twice. <em>TC</em> (total correlation) measures how much the parts duplicate one another, and the weight <em>β</em> sets how hard RHI pushes against that overlap.</li>
+    </ul>
+  </div>
+</div>
+
+In one line: RHI pushes every part of the harness to be **more about the task and less about the other parts** — which is exactly why roles, instructions, contracts, and hops stop overlapping and start specializing.
+
 ---
 
 ## The takeaway
