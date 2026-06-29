@@ -106,6 +106,7 @@ Our ablations trace the gains to **task-specific coordination** rather than long
 Intuitively, RHI learns a *sparsity pattern over inter-agent information flow*. By tightening what each contract carries and how each hop proceeds, every agent conditions on the information relevant to its role rather than on the entire interaction history. That simultaneously improves context efficiency and solution quality, and it explains why the cost savings concentrate in cache usage.
 
 This ablation sharpens the picture: **RHI is a distinct harness scaling axis, not a replacement for model scaling.** Optimizing the harness improves a fixed base model's test-time scaling, but it does not consistently close the gap to a genuinely stronger model. These are different axes, and they stack.
+
 ---
 
 ## An information-theoretic view of what RHI optimizes
