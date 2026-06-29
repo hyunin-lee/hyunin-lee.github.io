@@ -43,7 +43,7 @@ This post introduces **Recursive Harness Self-Improvement (RHI)**, a black-box p
 
 ---
 
-## What is a "harness"," and why does it matter?
+## What is a "harness", and why does it matter?
 
 A capable agentic system is far more than its foundation model. Even a single model becomes dramatically more useful once it is wrapped in a **harness**: the prompts, tools, and control flow that orchestrate its calls. Scaffolds like chain-of-thought, ReAct, and self-reflection are all, at heart, harnesses.
 
