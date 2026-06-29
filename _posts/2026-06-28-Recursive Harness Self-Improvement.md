@@ -127,7 +127,7 @@ Now for some math. Finally, we examined the **implicit objective** induced by RH
       <td align="center" width="48%">
         <img src="../assets/objectiveRHI_gradient.png" alt="Internal factor as functional-specialization guidance on the harness landscape" width="430" style="max-width:100%;">
         <br>
-        <em>(b) We interpret f<sub>int</sub> as <strong>functional-specialization guidance</strong>: it suppresses redundant overlap and steers harness components toward distinct functions.</em>
+        <em>(b) f<sub>int</sub> as <strong>functional-specialization guidance</strong>: it suppresses redundant overlap and steers harness components toward distinct functions.</em>
       </td>
     </tr>
   </table>
