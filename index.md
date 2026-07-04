@@ -9,7 +9,7 @@ title: ""
     <h2 style="margin: 0;">Hyunin Lee</h2>
     <p style="margin: 0;">Ph.D at UC Berkeley</p>
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
-    <p><strong>Research Interests:</strong> Reinforcment Learning </p>
+    <p><strong>Research Interests:</strong> Reinforcment Learning, Recursive Self-Improvement </p>
     <p>
       <a href="./assets/CV_update.pdf" target="_blank">
         <img src="/assets/CV2.svg" alt="CV" style="width: auto; height: 30px; margin-right: 15px;">
@@ -50,7 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. My research background is in reinforcement learning, and I am currently investigating how reinforcement learning can enable recursive self-improvement (RSI) in AI systems.
+I am Hyunin Lee, a fourth-year Ph.D. candidate at UC Berkeley. My research background is in **reinforcement learning**, and I am currently investigating how reinforcement learning can enable **recursive self-improvement** (RSI) in AI systems.
 
 I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). During my Ph.D., I have also had the opportunity to conduct research at Meta (ads ranking team), OpenAI (paperbenchmark project), and Sakana AI, working on topics spanning large language models, AI agents, and reinforcement learning. Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
