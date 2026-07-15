@@ -22,9 +22,9 @@ The science begins when we ask a different question:
 
 A useful theory should explain what information a good harness contains, where that information belongs, and how its components should divide responsibility. Our study of **Recursive Harness Self-Improvement (RHI)** suggests a testable answer:
 
-> **A harness improves by concentrating task information in the right harness components while reducing functional redundancy across the system**
+> **A harness improves by concentrating task information in the right components while reducing functional redundancy across all componenets in the system.**
 
-Here, we note that "recuding functional redundancy" is the key part.
+Here, the redundancy term is essential. Without it, every component could repeat the task and still appear task-informative. Penalizing this overlap instead pushes components toward distinct functions.
 
 ## A hypothesis for the harness optimization objective
 
