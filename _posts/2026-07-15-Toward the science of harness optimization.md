@@ -12,7 +12,9 @@ header-includes:
 
 Give two agents the same model and the same task, and their performance can still differ dramatically. The difference often lies in the **harness**: the prompts, tools, memory, verification rules, and control flow that organize the model's work.
 
-Harness design today remains closer to a craft than a science. Patterns such as reusable skills, verifier loops, specialized subagents, and explicit orchestration have largely emerged through trial and error. Automatic harness optimization such as meta-harness, self-harness, auto-harness, etc can search over prompts, workflows, or code, but a successful search usually returns an artifact, not an explanation. It tells us *what worked on this task*, not *why it worked* or *what should transfer to the next task*.
+Harness design today remains closer to a craft than a science. Much of current practice consists of human-composed patterns: [reusable skills](https://code.claude.com/docs/en/skills), [specialized subagents](https://code.claude.com/docs/en/sub-agents), [single- and multi-agent orchestration](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/), and [evaluator-optimizer or orchestrator-worker workflows](https://www.anthropic.com/engineering/building-effective-agents). These patterns are useful, but practitioners still choose, combine, and tune them empirically.
+
+Methods such as [Meta-Harness](https://arxiv.org/abs/2603.28052), [AutoHarness](https://arxiv.org/abs/2603.03329), and [Self-Harness](https://arxiv.org/abs/2606.09498) now automate parts of this process by searching, synthesizing, or revising harness code from execution feedback. Their results show that automatic harness optimization can work. But its immediate output is still a harness artifact: it tells us *what worked on this task*, not necessarily *why it worked* or *what should transfer to the next task*.
 
 The science begins when we ask a different question:
 
@@ -20,7 +22,9 @@ The science begins when we ask a different question:
 
 A useful theory should explain what information a good harness contains, where that information belongs, and how its components should divide responsibility. Our study of **Recursive Harness Self-Improvement (RHI)** suggests a testable answer:
 
-> **A harness improves when task information becomes better placed, not merely more abundant.**
+> **A harness improves by concentrating task information in the right harness components while reducing functional redundancy across the system**
+
+Here, we note that "recuding functional redundancy" is the key part.
 
 ## A hypothesis for the harness optimization objective
 
@@ -71,8 +75,7 @@ J(g_i)
 \sum_{c\in\mathcal{C}_{\mathrm{ext}}}
 I\!\left(Z_c^{(i)};X\right)
 }_{f_{\mathrm{ext}}:\;\text{task-relevant information}}
-\\[4pt]
-&-\beta\,
+-\beta\,
 \underbrace{
 \mathrm{TC}\!\left(
 \left\{Z_c^{(i)}:c\in\mathcal{C}\right\}
@@ -110,7 +113,7 @@ Imagine possible harnesses as a high-dimensional space. In a weak harness, sever
 
 In this coordinate system, roles answer *who*, instructions answer *how*, contracts answer *what information must move*, and hops answer *when and where it must move*. Contracts and hops align with the task, while the components become less redundant.
 
-This is an analogy, not a claim of orthogonality. **Basis learning** is more accurate than **eigenvector discovery** because RHI defines no linear operator. The evidence supports functional differentiation, not a literal eigendecomposition of harness space.
+NOTE: This is an analogy, not a claim of orthogonality. **Basis learning** is more accurate than **eigenvector discovery** because RHI defines no linear operator. The evidence supports functional differentiation, not a literal eigendecomposition of harness space.
 
 ### What the measurements show
 
