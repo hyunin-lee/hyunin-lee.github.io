@@ -10,8 +10,6 @@ header-includes:
   - \usepackage{amsthm}
 ---
 
-# Toward the science of harness optimization
-
 Give two agents the same model and the same task, and their performance can still differ dramatically. The difference often lies in the **harness**: the prompts, tools, memory, verification rules, and control flow that organize the model's work.
 
 Harness design today remains closer to a craft than a science. Patterns such as reusable skills, verifier loops, specialized subagents, and explicit orchestration have largely emerged through trial and error. Automatic harness optimization such as meta-harness, self-harness, auto-harness, etc can search over prompts, workflows, or code, but a successful search usually returns an artifact, not an explanation. It tells us *what worked on this task*, not *why it worked* or *what should transfer to the next task*.
@@ -58,7 +56,7 @@ The four RHI components provide one observable decomposition, but the idea is mo
 <div markdown="1" style="border: 1px solid #38413d; border-left: 5px solid #267a55; border-radius: 6px; background: #f7f9f7; padding: 20px 22px; margin: 26px 0;">
 <strong>Hypothesis: a general objective for harness optimization</strong>
 
-Let \(X\) be a task drawn from a task distribution, \(g_i(X)\) its harness after optimization step \(i\), and \(\mathcal{C}\) the set of harness components. Let \(\mathcal{C}_{\mathrm{ext}}\subseteq\mathcal{C}\) contain the components explicitly targeted for task-specific adaptation, and let \(Z_c^{(i)}\) represent component \(c\). Effective harness optimization should:
+Let $X$ be a task drawn from a task distribution, $g_i(X)$ its harness after optimization step $i$, and $\mathcal{C}$ the set of harness components. Let $\mathcal{C}_{\mathrm{ext}}\subseteq\mathcal{C}$ contain the components explicitly targeted for task-specific adaptation, and let $Z_c^{(i)}$ represent component $c$. Effective harness optimization should:
 
 1. **increase task information** in the targeted components; and
 2. **decrease task-conditional redundancy** across the harness as a whole.
@@ -89,8 +87,8 @@ In one sentence: **concentrate task signal where it changes behavior, without re
 </div>
 
 RHI is one instance. Here,
-\(\mathcal{C}=\{\mathrm{role},\mathrm{instruction},\mathrm{contract},\mathrm{hop}\}\) and
-\(\mathcal{C}_{\mathrm{ext}}=\{\mathrm{contract},\mathrm{hop}\}\). Our measurements support this instance. Applying the same objective to other harness decompositions is a **testable generalization**, not a result already established by our experiments.
+$\mathcal{C}=\{\mathrm{role},\mathrm{instruction},\mathrm{contract},\mathrm{hop}\}$ and
+$\mathcal{C}_{\mathrm{ext}}=\{\mathrm{contract},\mathrm{hop}\}$. Our measurements support this instance. Applying the same objective to other harness decompositions is a **testable generalization**, not a result already established by our experiments.
 
 The first term uses **mutual information**: does a targeted component reveal which task the harness is solving? A generic contract such as "return your findings" carries little task signal. A contract requesting the exact metrics, failure cases, evidence, and artifacts required by the task carries much more. In another harness, the targeted component might be a retrieval policy, verifier, or tool-selection rule.
 
@@ -136,7 +134,7 @@ Both measures decrease monotonically in every setting. Together, the tables show
 
 Other diagnostics tell the same story. The harnesses neither collapse to a generic template nor drift through arbitrary rewrites. Their representations remain task-dependent, and contracts stabilize earlier than other components. RHI appears to converge first on the information interface.
 
-This evidence is correlational. RHI never evaluates \(J\), and text embeddings are only external proxies for meaning. The results do **not** prove that the optimizer internally represents this objective.
+This evidence is correlational. RHI never evaluates $J$, and text embeddings are only external proxies for meaning. The results do **not** prove that the optimizer internally represents this objective.
 
 ### The design principle
 
