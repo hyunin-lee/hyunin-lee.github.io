@@ -43,7 +43,7 @@ RHI does not optimize an explicit scalar reward. Its updates emerge from the opt
 
 ### Two pressures behind harness improvement
 
-The update trajectories suggest two complementary pressures. An **external, controllable pressure** comes from the optimizer prompt. In RHI, that prompt emphasizes contracts and hops, biasing the search toward task-specific communication and orchestration.
+The update trajectories suggest two complementary pressures. Let $\mathcal{L}_{\mathrm{harness}}$ is an LLM based optimizer. An **external, controllable pressure** comes from the optimizer prompt. In RHI, that prompt emphasizes contracts and hops, biasing the search toward task-specific communication and orchestration.
 
 An **internal, model-dependent pressure** comes from the optimizer LLM itself. The model decides how to translate feedback into edits. Empirically, those edits behave as though they favor functional specialization: the components become less redundant and assume more distinct responsibilities.
 
