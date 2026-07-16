@@ -52,14 +52,22 @@ Across 30 synthetic machine-learning research tasks, one or two RHI updates allo
 
 ## What exactly is a harness?
 
-We define the harness as the agent loop and decompose it into four textual components:
+Much of the recent work on automatic harness optimization searches in **code space**. [Meta-Harness](https://arxiv.org/abs/2603.28052) evolves executable harness code from earlier candidates and their execution traces. [AutoHarness](https://arxiv.org/abs/2603.03329) synthesizes and refines code harnesses from environment feedback. [Self-Harness](https://arxiv.org/abs/2606.09498) proposes harness edits and accepts them through regression testing. Related workflow-search methods likewise represent agents as programs, graphs, or executable pipelines.
+
+RHI changes the optimization variable. Instead of treating the harness as an executable program, we treat it as a **prompt-level object**: a structured piece of text appended to the task prompt. The optimizer does not rewrite provider code or search over executable workflows. It rewrites the textual specification that tells the coding agent how to organize its work.
+
+> **In RHI, harness optimization is text optimization.**
+
+This choice matters because users often cannot access the implementation of a provider-built agent. They can, however, control the prompt. Representing the harness as text therefore makes task-specific optimization possible even when the model and its underlying agent system are black boxes. It also gives the LLM optimizer a natural interface: read the current harness, interpret the comparison history, and propose the next textual revision.
+
+Under this prompt-level formulation, we define the harness as the agent loop and decompose it into four components:
 
 - **Roles** define what each agent is responsible for.
 - **Instructions** define how each agent should work.
 - **Contracts** define what information an agent must return.
 - **Hops** define when agents run and how control moves through the workflow.
 
-Roles and instructions specify the agent design. Contracts and hops specify the workflow.
+Roles and instructions specify the agent design. Contracts and hops specify the workflow. Together, they turn multi-agent coordination into textual information that can be inspected, compared, and improved.
 
 <div align="center" style="margin: 28px 0;">
   <img src="../assets/rhi-harness-components.png" alt="The RHI harness consists of roles, instructions, contracts, and workflow hops" width="900" style="max-width: 100%;">
@@ -70,6 +78,8 @@ Roles and instructions specify the agent design. Contracts and hops specify the 
 This decomposition makes harness optimization an information-routing problem. For example, a generic contract may ask an experimental agent to "return its findings." A task-specific contract can instead require the exact metrics, assumptions, failure cases, and artifact paths needed by the final report. The latter sends less irrelevant context and more decision-relevant evidence.
 
 Hops provide the complementary control structure. They can require evaluation before reporting, trigger a second experiment when an acceptance criterion fails, or call a reviewer only after implementation is complete. Together, contracts and hops determine what information moves through the system and when.
+
+For concrete examples of how RHI updates a harness, see [Appendix B: Examples of RHI Harness]().
 
 ## Recursive Harness Self-Improvement
 
