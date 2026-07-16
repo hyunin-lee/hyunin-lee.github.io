@@ -174,14 +174,48 @@ The first term favors task information in the components targeted by the optimiz
 
 We test these two predictions using OpenAI `text-embedding-3-large` and `all-mpnet-base-v2`, with both raw and permutation-debiased estimates. The tables shorten these names to OpenAI and MPNet. To keep the presentation compact, they show the endpoints from RHI iteration 1 to iteration 4; the paper reports every intermediate iteration.
 
+<style>
+@keyframes rhi-pulse-up {
+  0%, 100% { background: rgba(18, 135, 91, 0.10); box-shadow: 0 0 0 0 rgba(18, 135, 91, 0); }
+  50% { background: rgba(18, 135, 91, 0.28); box-shadow: 0 0 0 3px rgba(18, 135, 91, 0.10); }
+}
+
+@keyframes rhi-pulse-down {
+  0%, 100% { background: rgba(54, 95, 180, 0.10); box-shadow: 0 0 0 0 rgba(54, 95, 180, 0); }
+  50% { background: rgba(54, 95, 180, 0.26); box-shadow: 0 0 0 3px rgba(54, 95, 180, 0.10); }
+}
+
+.rhi-pulse-up,
+.rhi-pulse-down {
+  display: inline-block;
+  padding: 0.08em 0.35em;
+  border-radius: 0.3em;
+  font-weight: 700;
+  white-space: nowrap;
+  animation-duration: 2.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.rhi-pulse-up { color: #08734d; animation-name: rhi-pulse-up; }
+.rhi-pulse-down { color: #365fa8; animation-name: rhi-pulse-down; }
+.rhi-value-up { color: #08734d; font-weight: 700; white-space: nowrap; }
+.rhi-value-down { color: #365fa8; font-weight: 700; white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rhi-pulse-up,
+  .rhi-pulse-down { animation: none; }
+}
+</style>
+
 **Task information moves into contracts and hops.** Each cell reports estimated $I(\text{component};\text{task})$ in nats, from iteration 1 to iteration 4.
 
 | Component | OpenAI, raw | OpenAI, debiased | MPNet, raw | MPNet, debiased |
 |:--|--:|--:|--:|--:|
 | Role | 0.63 → 0.42 | 0.47 → 0.33 | 0.44 → 0.28 | 0.28 → 0.19 |
 | Instruction | 1.14 → 1.09 | 0.99 → 1.00 | 0.96 → 0.82 | 0.80 → 0.73 |
-| **Contract** | **1.14 → 1.42** | **0.99 → 1.34** | **0.77 → 0.98** | **0.62 → 0.90** |
-| **Hop** | **2.10 → 2.66** | **1.96 → 2.54** | **1.89 → 2.17** | **1.74 → 2.05** |
+| <span class="rhi-pulse-up">Contract ↑</span> | <span class="rhi-value-up">1.14 → 1.42</span> | <span class="rhi-value-up">0.99 → 1.34</span> | <span class="rhi-value-up">0.77 → 0.98</span> | <span class="rhi-value-up">0.62 → 0.90</span> |
+| <span class="rhi-pulse-up">Hop ↑</span> | <span class="rhi-value-up">2.10 → 2.66</span> | <span class="rhi-value-up">1.96 → 2.54</span> | <span class="rhi-value-up">1.89 → 2.17</span> | <span class="rhi-value-up">1.74 → 2.05</span> |
 
 Contracts and hops become more informative about the task in all four settings. Roles become less task-specific, while instructions remain roughly stable or decline. RHI does not add task information everywhere; it concentrates that information in the components that coordinate the workflow.
 
@@ -190,7 +224,7 @@ Contracts and hops become more informative about the task in all four settings. 
 | Dependence measure | OpenAI, raw | OpenAI, debiased | MPNet, raw | MPNet, debiased |
 |:--|--:|--:|--:|--:|
 | Overall total correlation | 7.53 → 6.36 | 6.66 → 5.81 | 5.71 → 4.72 | 4.82 → 4.19 |
-| **Task-conditional total correlation** | **5.18 → 3.92** | **4.84 → 3.63** | **3.89 → 2.86** | **3.51 → 2.62** |
+| <span class="rhi-pulse-down">Task-conditional total correlation ↓</span> | <span class="rhi-value-down">5.18 → 3.92</span> | <span class="rhi-value-down">4.84 → 3.63</span> | <span class="rhi-value-down">3.89 → 2.86</span> | <span class="rhi-value-down">3.51 → 2.62</span> |
 
 Both dependence measures decrease in every setting. Most importantly, task-conditional total correlation falls even after accounting for the shared task signal. This pattern is consistent with the components becoming less redundant and more functionally distinct.
 
