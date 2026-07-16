@@ -232,7 +232,7 @@ Both dependence measures decrease in every setting. Most importantly, task-condi
 
 The interpretation is not that every part of a good harness should become more task-specific. It is more selective:
 
-> **Put task information in the components that route computation, and give each component a distinct function.**
+> **Put task information in the harness components that route computation, and give each component a distinct function.**
 
 Here, routing computation means deciding what information reaches each component and which component runs next. Note that the measurements use text embeddings as external proxies and are correlational; they do not reveal the optimizer model's internal mechanism.
 

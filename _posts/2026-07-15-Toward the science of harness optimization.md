@@ -141,9 +141,9 @@ Other diagnostics tell the same story. The harnesses neither collapse to a gener
 
 This evidence is correlational. RHI never evaluates $J$, and text embeddings are only external proxies for meaning. The results do **not** prove that the optimizer internally represents this objective.
 
-### The design principle
+### The harness design principle
 
-> Put task-specific information in the components that route computation, and make every harness component contribute a distinct function instead of repeating the same context everywhere.
+> Put task-specific information in the harness components that route computation, and make every harness component contribute a distinct function instead of repeating the same context everywhere.
 
 Here, routing computation means deciding what information reaches each component and which component runs next. 
 
