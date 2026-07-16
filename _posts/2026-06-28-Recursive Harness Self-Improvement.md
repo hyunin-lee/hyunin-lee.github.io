@@ -152,6 +152,12 @@ The first RHI update produced the largest semantic change to the full harness: c
 
 At the component level, **contracts showed the clearest task-dependent clustering** across embedding models and projection methods. They also stabilized earlier than roles, instructions, and hops. This suggests that RHI first learns what information should cross the interface between agents.
 
+<div align="center" style="margin: 28px 0;">
+  <img src="../assets/rhi-robotics-harness-components.png" alt="Low-dimensional projections of role, instruction, contract, and hop embeddings for robotics tasks across RHI iterations" width="1100" style="max-width: 100%;">
+  <br>
+  <em>Harness components for the robotics tasks. Colors denote tasks and marker shapes denote RHI iterations. Across two embedding models and both UMAP and t-SNE, contracts show the clearest task-dependent separation.</em>
+</div>
+
 We then asked whether the update trajectory was consistent with a more general objective. Let $X$ be the task and $Z_c$ the representation of harness component $c$. The following information-theoretic objective summarizes the observed pattern:
 
 $$
@@ -166,7 +172,27 @@ $$
 
 The first term favors task information in the components targeted by the optimizer prompt—contracts and hops in our implementation. The second discourages different harness components from repeating the same information once their shared task is taken into account.
 
-Across two embedding models and both raw and permutation-debiased estimates, task information increased monotonically in contracts and hops from iterations 1 to 4. It decreased in roles and stayed roughly flat or declined in instructions. Over the same iterations, task-conditional redundancy decreased monotonically in every configuration.
+We test these two predictions using OpenAI `text-embedding-3-large` and `all-mpnet-base-v2`, with both raw and permutation-debiased estimates. The tables shorten these names to OpenAI and MPNet. To keep the presentation compact, they show the endpoints from RHI iteration 1 to iteration 4; the paper reports every intermediate iteration.
+
+**Task information moves into contracts and hops.** Each cell reports estimated $I(\text{component};\text{task})$ in nats, from iteration 1 to iteration 4.
+
+| Component | OpenAI, raw | OpenAI, debiased | MPNet, raw | MPNet, debiased |
+|:--|--:|--:|--:|--:|
+| Role | 0.63 → 0.42 | 0.47 → 0.33 | 0.44 → 0.28 | 0.28 → 0.19 |
+| Instruction | 1.14 → 1.09 | 0.99 → 1.00 | 0.96 → 0.82 | 0.80 → 0.73 |
+| **Contract** | **1.14 → 1.42** | **0.99 → 1.34** | **0.77 → 0.98** | **0.62 → 0.90** |
+| **Hop** | **2.10 → 2.66** | **1.96 → 2.54** | **1.89 → 2.17** | **1.74 → 2.05** |
+
+Contracts and hops become more informative about the task in all four settings. Roles become less task-specific, while instructions remain roughly stable or decline. RHI does not add task information everywhere; it concentrates that information in the components that coordinate the workflow.
+
+**Redundancy falls across the harness.** Each cell reports total correlation in nats, again from iteration 1 to iteration 4.
+
+| Dependence measure | OpenAI, raw | OpenAI, debiased | MPNet, raw | MPNet, debiased |
+|:--|--:|--:|--:|--:|
+| Overall total correlation | 7.53 → 6.36 | 6.66 → 5.81 | 5.71 → 4.72 | 4.82 → 4.19 |
+| **Task-conditional total correlation** | **5.18 → 3.92** | **4.84 → 3.63** | **3.89 → 2.86** | **3.51 → 2.62** |
+
+Both dependence measures decrease in every setting. Most importantly, task-conditional total correlation falls even after accounting for the shared task signal. This pattern is consistent with the components becoming less redundant and more functionally distinct.
 
 The interpretation is not that every part of a good harness should become more task-specific. It is more selective:
 
