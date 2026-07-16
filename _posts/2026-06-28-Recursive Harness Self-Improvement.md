@@ -83,7 +83,13 @@ For concrete examples of how RHI updates a harness, see [Appendix B: Examples of
 
 ## Recursive Harness Self-Improvement
 
-Searching over a large population of harnesses is expensive: every candidate requires a complete agent execution, and comparing all candidate pairs grows quadratically with the population size. RHI replaces this broad search with a local question:
+Searching over a large population of harnesses is expensive: every candidate requires a complete agent execution, and comparing all candidate pairs grows quadratically with the population size.
+
+This cost is not merely theoretical. [*Rethinking the Evaluation of Harness Evolution for Agents*](https://arxiv.org/pdf/2607.12227) compares automatic harness evolution with simpler test-time-scaling methods under matched feedback and inference budgets. On Terminal-Bench 2.1, harness evolution did not consistently outperform parallel sampling or sequential refinement, and its improvements transferred poorly to held-out tasks.
+
+The practical lesson is not that harness search has no value. It is that search must earn its cost. For a fixed budget, every token spent discovering a harness is a token that could have been spent directly improving the task output. **A practical harness optimizer must therefore be lightweight and produce useful updates within only a few iterations.**
+
+RHI is designed around this constraint. It replaces broad population search with a local question:
 
 > Did the current harness produce a better result than the previous harness?
 
