@@ -145,6 +145,8 @@ This evidence is correlational. RHI never evaluates $J$, and text embeddings are
 
 > Put task-specific information in the components that route computation, and make every harness component contribute a distinct function instead of repeating the same context everywhere.
 
+Here, routing computation means deciding what information reaches each component and which component runs next. 
+
 This reframes harness optimization as an **information-organization problem**. The goal is not to make every prompt longer, add more agents, or expose every component to the full history. It is to route the right information through the right interface at the right moment, with as little duplication as possible.
 
 A good harness does not tell every component everything. It gives each component the context it needs, a distinct responsibility, and a precise interface to the rest of the system. That is the difference between a larger prompt and a better architecture, and it is a concrete step from harness engineering by intuition toward a science of harness design.
