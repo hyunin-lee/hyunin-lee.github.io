@@ -12,13 +12,13 @@ header-includes:
 
 <div align="center">
   <video
-    src="../assets/RHI_combined_full.mp4"
+    src="../assets/RHI_combined_full_revised.mp4"
     poster="../assets/RHI_combined_full_poster.png"
     autoplay loop muted playsinline controls
     width="860"
     style="max-width: 100%; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,0.12);">
     Your browser does not support embedded video.
-    <a href="../assets/RHI_combined_full.mp4">Open the video directly.</a>
+    <a href="../assets/RHI_combined_full_revised.mp4">Open the video directly.</a>
   </video>
   <br>
   <em>Recursive Harness Self-Improvement (RHI) reorganizes multi-agent system</em>
