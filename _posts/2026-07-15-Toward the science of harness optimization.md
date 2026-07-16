@@ -26,6 +26,8 @@ A useful theory should explain what information a good harness contains, where t
 
 Here, the redundancy term is essential. Without it, every component could repeat the task and still appear task-informative. Penalizing this overlap instead pushes components toward distinct functions.
 
+For readers who have not yet read the paper, our earlier research blog, [Recursive Harness Self-Improvement](/Recursive-Harness-Self-Improvement/), provides a concise introduction to RHI and its main results.
+
 ## A hypothesis for the harness optimization objective
 
 RHI represents the agent loop as a textual harness with four components:
