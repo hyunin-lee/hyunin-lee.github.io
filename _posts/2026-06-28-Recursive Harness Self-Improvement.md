@@ -160,6 +160,9 @@ At the component level, **contracts showed the clearest task-dependent clusterin
 
 We then asked whether the update trajectory was consistent with a more general objective. Let $X$ be the task and $Z_c$ the representation of harness component $c$. The following information-theoretic objective summarizes the observed pattern:
 
+<div markdown="1" style="border: 1px solid #38413d; border-left: 5px solid #267a55; border-radius: 6px; background: #f7f9f7; padding: 20px 22px; margin: 26px 0;">
+<strong>Hypothesis: the RHI objective function</strong>
+
 $$
 J
 =
@@ -169,6 +172,7 @@ J
 \underbrace{\mathrm{TC}(\{Z_c\}_{c\in\mathcal{C}}\mid X)}_{\text{redundancy after conditioning on the task}},
 \qquad \beta>0.
 $$
+</div>
 
 The first term favors task information in the components targeted by the optimizer prompt—contracts and hops in our implementation. The second discourages different harness components from repeating the same information once their shared task is taken into account.
 
@@ -232,7 +236,9 @@ The interpretation is not that every part of a good harness should become more t
 
 > **Put task information in the components that route computation, and give each component a distinct function.**
 
-This objective is a hypothesis, not a loss that RHI explicitly optimizes. The measurements use text embeddings as external proxies and are correlational; they do not reveal the optimizer model's internal mechanism.
+Note that this objective is a hypothesis, not an explicit loss that RHI optimizes. Whether it generalizes beyond our setting remains an open question for future work. The measurements use text embeddings as external proxies and are correlational; they do not reveal the optimizer model's internal mechanism.
+
+For a deeper discussion of this hypothesis and its implications for harness design, see my blog [*Toward the science of harness optimization*](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/).
 
 ## Scope and outlook
 
