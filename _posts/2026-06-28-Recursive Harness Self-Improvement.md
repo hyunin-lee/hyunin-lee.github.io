@@ -1,5 +1,5 @@
 ---
-title: "Recursive Harness Self-Improvement: Reorganization of multi-agent system"
+title: "Recursive Harness Self-Improvement: Reorganizing Multi-Agent Systems"
 mathjax: true
 layout: post
 categories: media
