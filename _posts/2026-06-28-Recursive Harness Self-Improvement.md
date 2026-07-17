@@ -21,7 +21,7 @@ header-includes:
     <a href="../assets/RHI_combined_full_revised.mp4">Open the video directly.</a>
   </video>
   <br>
-  <em>Recursive Harness Self-Improvement (RHI) reorganizes multi-agent system</em>
+  <em>Recursive Harness Self-Improvement (RHI) reorganizes multi-agent systems.</em>
 </div>
 
 ## Will models eat the harness?
@@ -50,15 +50,17 @@ Across 30 synthetic machine-learning research tasks, one or two RHI updates allo
 
 > **Harnesses are not only inference-time scaffolds. They are data-generating systems that shape both current agent performance and the training signal available to future models.** -->
 
-## What exactly is a harness?
+## The harness as a prompt-level object
 
 Much of the recent work on automatic harness optimization searches in **code space**. [Meta-Harness](https://arxiv.org/abs/2603.28052) evolves executable harness code from earlier candidates and their execution traces. [AutoHarness](https://arxiv.org/abs/2603.03329) synthesizes and refines code harnesses from environment feedback. [Self-Harness](https://arxiv.org/abs/2606.09498) proposes harness edits and accepts them through regression testing. Related workflow-search methods likewise represent agents as programs, graphs, or executable pipelines.
 
 RHI changes the optimization variable. Instead of treating the harness as an executable program, we treat it as a **prompt-level object**: a structured piece of text appended to the task prompt. The optimizer does not rewrite provider code or search over executable workflows. It rewrites the textual specification that tells the coding agent how to organize its work.
 
-> **In RHI, harness optimization is text optimization.**
+> **In RHI, harness optimization is prompt optimization.**
 
-This choice matters because users often cannot access the implementation of a provider-built agent. They can, however, control the prompt. Representing the harness as text therefore makes task-specific optimization possible even when the model and its underlying agent system are black boxes. It also gives the LLM optimizer a natural interface: read the current harness, interpret the comparison history, and propose the next textual revision.
+Viewing the harness itself as a prompt has two advantages. First, it works even with black-box models: the agent's behavior can be steered simply by describing the harness in text and placing it in the prompt. Second, maintaining a full code-level harness that handles arbitrary queries is labor- and cost-intensive. Expressing a task-specific harness as text instead makes harness updates very lightweight, making the harness a natural building block for model–harness co-evolution.
+
+## Our harness definition
 
 Under this prompt-level formulation, we define the harness as the agent loop and decompose it into four components:
 
@@ -67,7 +69,7 @@ Under this prompt-level formulation, we define the harness as the agent loop and
 - **Contracts** define what information an agent must return.
 - **Hops** define when agents run and how control moves through the workflow.
 
-Roles and instructions specify the agent design. Contracts and hops specify the workflow. Together, they turn multi-agent coordination into textual information that can be inspected, compared, and improved.
+Roles and instructions specify the agent design; contracts and hops specify the agent workflow. Together, the four components turn multi-agent coordination into text that can be inspected, compared, and improved.
 
 <div align="center" style="margin: 28px 0;">
   <img src="../assets/rhi-harness-components.png" alt="The RHI harness consists of roles, instructions, contracts, and workflow hops" width="900" style="max-width: 100%;">
@@ -75,30 +77,28 @@ Roles and instructions specify the agent design. Contracts and hops specify the 
   <em>RHI represents agent design and workflow as an editable textual harness.</em>
 </div>
 
-This decomposition makes harness optimization an information-routing problem. For example, a generic contract may ask an experimental agent to "return its findings." A task-specific contract can instead require the exact metrics, assumptions, failure cases, and artifact paths needed by the final report. The latter sends less irrelevant context and more decision-relevant evidence.
+The intuition behind this definition is a simple hypothesis: tailoring the agent workflow to the task should both improve performance and reduce cost, because agents exchange only the context the task actually needs.
 
-Hops provide the complementary control structure. They can require evaluation before reporting, trigger a second experiment when an acceptance criterion fails, or call a reviewer only after implementation is complete. Together, contracts and hops determine what information moves through the system and when.
+**This definition makes harness optimization an information-routing problem.** For example, a *generic* contract may ask an experimental agent to "return its findings." A *task-specific* contract instead requires the exact metrics, assumptions, failure cases, and artifact paths that downstream agents need. The task-specific contract routes less irrelevant context and more decision-relevant evidence.
 
-For concrete examples of how RHI updates a harness, see [Appendix B: Examples of RHI Harness]().
+For concrete examples of how RHI updates a harness, see [Appendix B: Examples of RHI Harnesses]().
 
 ## Recursive Harness Self-Improvement
 
-Searching over a large population of harnesses is expensive: every candidate requires a complete agent execution, and comparing all candidate pairs grows quadratically with the population size.
+With the harness defined, the remaining question is how to improve it. The natural approach—maintaining and evolving a large population of candidate harnesses—is expensive: every candidate requires a complete agent execution, and comparing all candidate pairs grows quadratically with the population size.
 
 This cost is not merely theoretical. [*Rethinking the Evaluation of Harness Evolution for Agents*](https://arxiv.org/pdf/2607.12227) compares automatic harness evolution with simpler test-time-scaling methods under matched feedback and inference budgets. On Terminal-Bench 2.1, harness evolution did not consistently outperform parallel sampling or sequential refinement, and its improvements transferred poorly to held-out tasks.
 
-The practical lesson is not that harness search has no value. It is that search must earn its cost. For a fixed budget, every token spent discovering a harness is a token that could have been spent directly improving the task output. **A practical harness optimizer must therefore be lightweight and produce useful updates within only a few iterations.**
+The practical lesson is not that harness search has no value; it is that *search must earn its cost*. For a fixed budget, every token spent discovering a harness is a token that could have been spent directly improving the task output. **A practical harness optimizer must therefore be lightweight and produce useful updates within only a few iterations.**
 
-RHI is designed around this constraint. It replaces broad population search with a local question:
+RHI is designed around this constraint. It replaces population search with local search: each update revises the current harness directly, guided only by the feedback accumulated from comparing its own consecutive attempts.
 
-> Did the current harness produce a better result than the previous harness?
-
-For a task $x$, let $H^{(i)}$ be the harness at iteration $i$ and $y^{(i)}$ the repository produced with that harness. Each RHI iteration performs four steps:
+Concretely, for a task $x$, let $H^{(i)}$ be the harness at iteration $i$ and $y^{(i)}$ the repository produced with it. Each RHI iteration performs four steps:
 
 1. Run the fixed coding agent with $H^{(i)}$ to produce $y^{(i)}$.
 2. Ask an LLM evaluator to compare $y^{(i)}$ with $y^{(i-1)}$.
-3. Add the preference feedback to a self-comparison history.
-4. Ask a separate LLM optimizer to revise the harness from $H^{(i)}$ by refering the accumulated feedback history.
+3. Append the preference feedback to the self-comparison history.
+4. Ask a separate LLM optimizer to revise $H^{(i)}$ into $H^{(i+1)}$ using the accumulated history.
 
 <div align="center" style="margin: 28px 0;">
   <img src="../assets/rhi-algorithm.png" alt="The Recursive Harness Self-Improvement loop" width="950" style="max-width: 100%;">
@@ -106,28 +106,28 @@ For a task $x$, let $H^{(i)}$ be the harness at iteration $i$ and $y^{(i)}$ the 
   <em>RHI compares consecutive outputs, saves the feedback, and uses the accumulated history to revise the harness.</em>
 </div>
 
-Because the previous output is cached, each update requires only one new agent execution and one new comparison per task, plus the harness-optimizer call. The accumulated history acts as a semantic form of momentum: later updates can preserve revisions associated with wins and reconsider those associated with losses.
+This loop is lightweight by construction. Because the previous output is cached, each update requires only one new agent execution and one new comparison per task, plus the harness-optimizer call. The accumulated history acts as a semantic form of momentum: later updates can preserve revisions associated with wins and reconsider those associated with losses.
 
-The evaluator uses the evaluation rubric to produce feedback, but the harness optimizer does not see that rubric directly. It must infer useful revisions from the comparison history.
+One detail matters here: the evaluator produces its feedback using an evaluation rubric, but the harness optimizer never sees that rubric. It must infer useful revisions from the comparison history alone.
 
-This is noisy local ascent. A comparison with one predecessor is not a global estimate of harness quality, and improvement is not guaranteed to be monotonic. But under a standard latent-utility model of pairwise preference, beating the previous harness is aligned with moving upward in the same quality ordering.
+This is indeed (very) noisy local ascent. A comparison with one predecessor is not a global estimate of harness quality, and improvement is not guaranteed to be monotonic. In practice, we keep the preference-feedback history as a momentum signal to make the ascent more robust. Moreover, under a standard latent-utility model of pairwise preference, beating the previous harness is aligned with moving upward in the same quality ordering.
 
-Here, the word *recursive* is intentionally bounded. RHI updates a persistent system component using evidence generated by its earlier versions. It does **not** change model weights, rewrite the evaluator, or improve the harness optimizer itself.
+<!-- Finally, the word *recursive* is meant in a bounded sense: RHI updates a persistent system component using evidence generated by its own earlier versions. It does **not** change model weights, rewrite the evaluator, or improve the harness optimizer itself. -->
 
 ## Experimental setup
 
 We constructed 30 synthetic, open-ended ML research tasks: ten each in quantitative finance, robotics, and pharmacy. Each task asks the agent to build a complete research repository, including a report, reproducible code, metrics, visualizations, and an artifact index.
 
-These tasks are hard to veify since those have no single correct scalar answer. We therefore compare repositories with LLM judges using six criteria: deliverable coverage, empirical rigor, reproducibility, presentation, engineering quality, and task alignment. Results are averaged across multiple evaluator configurations and three random seeds.
+These tasks are very hard to verify because they have no single correct scalar answer. We therefore compare repositories with LLM judges using six criteria: deliverable coverage, empirical rigor, reproducibility, presentation, engineering quality, and task alignment. Results are averaged across multiple evaluator configurations and three random seeds.
 
-We test three progressively stronger base models—Claude Sonnet 4.6, Opus 4.7, and Opus 4.8. In each case, RHI adapts a `high`-reasoning agent and compares it with stronger same-family settings such as `xhigh`, `max`, and `ultracode`. This isolates the question we care about: **can a better harness outperform additional reasoning inside the default harness?**
+We test three progressively stronger base models—Claude Sonnet 4.6, Opus 4.7, and Opus 4.8. In each case, RHI adapts a `high`-reasoning agent and compares it with stronger same-family settings such as `xhigh`, `max`, and `ultracode`.
 
 ## Results: a few harness updates beat the evaluated scaling baselines
 
 <div align="center" style="margin: 28px 0;">
   <img src="../assets/rhi-results.png" alt="RHI performance and normalized execution cost across Sonnet 4.6, Opus 4.7, and Opus 4.8" width="1000" style="max-width: 100%;">
   <br>
-  <em>Few RHI iterations improve pairwise wins beyond the evaluated test-time-scaling baselines. The overlaid line shows normalized execution cost.</em>
+  <em>A few RHI iterations improve pairwise wins beyond the evaluated test-time-scaling baselines. The overlaid line shows normalized execution cost.</em>
 </div>
 
 | Base model | RHI result | Execution-cost comparison |
@@ -136,25 +136,25 @@ We test three progressively stronger base models—Claude Sonnet 4.6, Opus 4.7, 
 | Opus 4.7 | After one update, `high` + RHI surpassed both `xhigh` and `max`. | 18% lower than `max` |
 | Opus 4.8 | After two updates, `high` + RHI surpassed `xhigh`, `max`, and `ultracode`. | 23% lower than `max`; 60% lower than `ultracode` |
 
-The Opus 4.8 result is especially notable because `ultracode` already uses a provider-built dynamic multi-agent workflow. On this benchmark, a task-specific user-side harness outperformed that general-purpose system harness.
+The Opus 4.8 result is especially notable because `ultracode` already uses a provider-built dynamic multi-agent workflow. On this benchmark, a task-specific user-side harness outperformed that general-purpose system harness. These cost numbers describe the final execution with the evolved harness, not the total cost of discovering it. RHI still pays for each intermediate agent run, evaluation, and optimizer call. Adaptation is therefore most attractive when the harness will be reused, when a few iterations fit within the task budget, or when the intermediate executions are themselves useful.
 
-These cost numbers describe the **final execution with the evolved harness**, not the total cost of discovering it. RHI still pays for each intermediate agent run, evaluation, and optimizer call. Adaptation is therefore most attractive when the harness will be reused, when a few iterations fit within the task budget, or when the intermediate executions are themselves useful.
-
-The gains also do not appear to come primarily from longer generations. For Sonnet 4.6 and Opus 4.8, output-token use stayed nearly flat across RHI iterations while performance improved. For Opus 4.7, tokens and performance rose together, so that experiment is inconclusive. Across all three models, however, the evolved harnesses used fewer cache reads and writes than the strongest comparison settings, consistent with more efficient context management.
+It is clear that the **RHI gains do not come primarily from generating more tokens**. For Sonnet 4.6 and Opus 4.8, output-token use stayed nearly flat across RHI iterations while performance improved. For Opus 4.7, tokens and performance rose together, so that experiment is inconclusive. Across all three models, however, the evolved harnesses used fewer cache reads and writes than the strongest comparison settings, which supports the view that the **performance gains come largely from more efficient context management**.
 
 RHI complements stronger models rather than replacing them. Improving the Sonnet 4.6 harness did not consistently close the gap to the stronger Opus 4.7 agents. Model scaling and harness optimization remain separate axes of progress.
 
-## What changes inside an improved harness?
+## What really drives RHI's performance gains?
 
-Our analysis points to the **contracts**, i.e. information flow, between agents.
+Our analysis points to the **contracts**, i.e., the information flow between agents.
 
-At the component level, **contracts showed the clearest task-dependent clustering** across embedding models and projection methods. They also converge faster than roles, instructions, and hops. This suggests that RHI first learns what information should cross the interface between agents.
+At the component level, **contracts show the clearest task-dependent clustering** across embedding models and projection methods. They also converge faster than roles, instructions, and hops. This suggests that RHI first learns what information should cross the interface between agents.
 
 <div align="center" style="margin: 28px 0;">
   <img src="../assets/rhi-robotics-harness-components.png" alt="Low-dimensional projections of role, instruction, contract, and hop embeddings for robotics tasks across RHI iterations" width="1100" style="max-width: 100%;">
   <br>
   <em>Harness components for the robotics tasks. Colors denote tasks and marker shapes denote RHI iterations. Across two embedding models and both UMAP and t-SNE, contracts show the clearest task-dependent separation.</em>
 </div>
+
+## What is harness objective function?
 
 We then asked whether the update trajectory was consistent with a more general objective. Let $X$ be the task and $Z_c$ the representation of harness component $c$. The following information-theoretic objective summarizes the observed pattern:
 
@@ -236,7 +236,7 @@ The interpretation is not that every part of a good harness should become more t
 
 Here, routing computation means deciding what information reaches each component and which component runs next. Note that the measurements use text embeddings as external proxies and are correlational; they do not reveal the optimizer model's internal mechanism.
 
-For a deeper discussion of this hypothesis and its implications for harness design, see my blog [*Toward the science of harness optimization*](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/).
+For a deeper discussion of this hypothesis and its implications for harness design, see my blog post [*Toward the science of harness optimization*](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/).
 
 ## Scope and outlook
 
