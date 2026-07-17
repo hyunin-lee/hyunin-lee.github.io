@@ -77,7 +77,7 @@ Roles and instructions specify the agent design; contracts and hops specify the 
   <em>RHI represents agent design and workflow as an editable textual harness.</em>
 </div>
 
-The intuition behind this definition is a simple hypothesis: tailoring the agent workflow to the task should both improve performance and reduce cost, because agents exchange only the context the task actually needs.
+The intuition behind this definition is a simple **hypothesis: tailoring the agent workflow to the task should both improve performance and reduce cost, because agents exchange only the context the task actually needs**.
 
 **This definition makes harness optimization an information-routing problem.** For example, a *generic* contract may ask an experimental agent to "return its findings." A *task-specific* contract instead requires the exact metrics, assumptions, failure cases, and artifact paths that downstream agents need. The task-specific contract routes less irrelevant context and more decision-relevant evidence.
 
