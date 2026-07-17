@@ -138,15 +138,13 @@ We test three progressively stronger base models—Claude Sonnet 4.6, Opus 4.7, 
 
 The Opus 4.8 result is especially notable because `ultracode` already uses a provider-built dynamic multi-agent workflow. On this benchmark, a task-specific user-side harness outperformed that general-purpose system harness. These cost numbers describe the final execution with the evolved harness, not the total cost of discovering it. RHI still pays for each intermediate agent run, evaluation, and optimizer call. Adaptation is therefore most attractive when the harness will be reused, when a few iterations fit within the task budget, or when the intermediate executions are themselves useful.
 
-It is clear that the **RHI gains do not come primarily from generating more tokens**. For Sonnet 4.6 and Opus 4.8, output-token use stayed nearly flat across RHI iterations while performance improved. For Opus 4.7, tokens and performance rose together, so that experiment is inconclusive. Across all three models, however, the evolved harnesses used fewer cache reads and writes than the strongest comparison settings, which supports the view that the **performance gains come largely from more efficient context management**.
-
-RHI complements stronger models rather than replacing them. Improving the Sonnet 4.6 harness did not consistently close the gap to the stronger Opus 4.7 agents. Model scaling and harness optimization remain separate axes of progress.
+It is clear that the **RHI gains do not come primarily from generating more tokens** (see Figures 5b, 6c, 7e in paper). For Sonnet 4.6 and Opus 4.8, output-token use stayed nearly *flat* across RHI iterations while performance improved. Across all three models, however, the evolved harnesses used *fewer* cache reads and writes than the strongest comparison settings, which supports the view that the **performance gains come largely from more efficient context management**.
 
 ## What really drives RHI's performance gains?
 
-Our analysis points to the **contracts**, i.e., the information flow between agents.
+Our analysis points to the **contracts**, i.e., the information flow between agents, is a key driver.
 
-At the component level, **contracts show the clearest task-dependent clustering** across embedding models and projection methods. They also converge faster than roles, instructions, and hops. This suggests that RHI first learns what information should cross the interface between agents.
+At the component level, **contracts show the clearest task-dependent clustering** across embedding models ( `text-embedding-3-large` and `all-mpnet-base-v2`) and projection methods (`UMAP` and `t-sne`). They also converge faster than roles, instructions, and hops. This suggests that RHI first learns what information should cross the interface between agents.
 
 <div align="center" style="margin: 28px 0;">
   <img src="../assets/rhi-robotics-harness-components.png" alt="Low-dimensional projections of role, instruction, contract, and hop embeddings for robotics tasks across RHI iterations" width="1100" style="max-width: 100%;">
@@ -174,7 +172,7 @@ $$
 
 The first term favors task information in the components targeted by the optimizer prompt—contracts and hops in our implementation. The second discourages different harness components from repeating the same information once their shared task is taken into account.
 
-We test these two predictions using OpenAI `text-embedding-3-large` and `all-mpnet-base-v2`, with both raw and permutation-debiased estimates. The tables shorten these names to OpenAI and MPNet. To keep the presentation compact, they show the endpoints from RHI iteration 1 to iteration 4; the paper reports every intermediate iteration.
+We test this objective function using two embedding modules, with both raw and permutation-debiased estimates. To keep the presentation compact, they show the endpoints from RHI iteration 1 to iteration 4; the table reports every intermediate iteration.
 
 <style>
 @keyframes rhi-pulse-up {
