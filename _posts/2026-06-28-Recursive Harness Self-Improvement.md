@@ -209,6 +209,7 @@ I\!\left(Z_c^{(i)};X\right)
 \qquad \beta>0.
 \end{aligned}
 $$
+
 In one sentence: 
 
 Encode task information in the harness components the human designer wants to improve, while keeping every component as functionally distinct as possible.
