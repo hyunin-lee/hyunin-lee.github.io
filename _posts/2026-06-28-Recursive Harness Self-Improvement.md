@@ -151,11 +151,16 @@ We text-embedded the components of every harness update and examined them in a l
 
 **Why contracts?**
 
-Our interpretation is that the contract is one of the few variables that can improve performance and inference cost at the same time. Optimizing the information flow between agents resembles finding the sparsity pattern in sparse attention. In general, optimizing a contract makes the flow more selective: it can dramatically reduce context usage—and therefore inference cost—but risks high variance in performance, since the wrong information may be dropped. RHI, however, optimizes contracts to be *task-specific*: from each agent's context and output, the contract cherry-picks only what is relevant to solving the task and passes it to the next agent. Optimizing contracts to be task-specific can therefore gain on both axes, performance and cost.
+Our interpretation is that the **contract is one of the few variables that can improve performance and inference cost at the same time**. 
+
+Optimizing the information flow between agents resembles *finding the sparsity pattern in sparse attention*. In general, optimizing a contract makes the flow more selective: it can dramatically reduce context usage—and therefore inference cost—but risks high variance in performance, since the wrong information may be dropped. RHI, however, optimizes contracts to be *task-specific*: from each agent's context and output, the contract cherry-picks only what is relevant to solving the task and passes it to the next agent. Optimizing contracts to be task-specific can therefore gain on both axes, performance and cost.
 
 **Then why do roles, instructions, and hops not cluster as clearly?** 
 
-We see three possible interpretations. First, roles, instructions, and hops may simply not be the best optimization variables for the harness; this opens a future direction of searching for harness components that can change performance more directly. Second, these three components may need more iterations to adapt. Third, the current feedback design of RHI may be informative enough to fully update contracts but not the other three components; this calls for another future direction—devising a better LLM-feedback loop for harness optimization. 
+We see three possible interpretations. 
+- First, roles, instructions, and hops may simply not be the best optimization variables for the harness; this opens a future direction of searching for harness components that can change performance more directly. 
+- Second, these three components may need more iterations to adapt. 
+- Third, the current feedback design of RHI may be informative enough to fully update contracts but not the other three components; this calls for another future direction—devising a better LLM-feedback loop for harness optimization. 
 
 ## What is the hidden objective function of black-box harness optimization?
 
@@ -270,12 +275,14 @@ This one is more interesting. Each cell reports total correlation in nats, again
 
 Both dependence measures decrease in every setting as the RHI iterations proceed. Most importantly, task-conditional total correlation falls even after accounting for the shared task signal. Qualitatively, this means that **even though the harness components all know what the task is, they evolve to become mutually independent**.
 
-To be honest, this is counterintuitive. The intuitive picture of a "task-specific harness" is that all components share as much task information as possible, so their mutual dependence should *increase* over iterations.
+**To be honest, this is counterintuitive**. The intuitive picture of a "task-specific harness" is that all components share as much task information as possible, so their mutual dependence should *increase* over iterations.
 
-Our interpretation is a bit different. We believe the decrease in task-conditional total correlation shows that the harness components are evolving to be functionally distinct. A good metaphor is that each component is evolving to find an appropriate **basis** of the harness space—that is, **harness optimization over discrete components resembles learning a basis for that space**.
+Our interpretation is a bit different. We believe the decrease in task-conditional total correlation shows that the harness components are evolving to be functionally distinct. 
+
+A good metaphor is that each component is evolving to find an appropriate **basis** of the harness space—that is, **harness optimization over discrete components resembles learning a basis for that space**.
 
 
-## A rule of thumb for practical harness optimization
+## Hypothesis: a rule of thumb for practical harness optimization
 
 Now, here is our hypothesis on a philosophy of harness engineering (one that still needs plenty of verification—please reach out; we would be happy to collaborate on this!):
 
