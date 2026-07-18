@@ -71,9 +71,12 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
   * Orthogonal alignment in vision-language model: [1](https://arxiv.org/abs/2510.09435) -->
 
 ### Blog
+ <!-- * [Recurisve Harness Self-Improvement: Reorganizing Multi-Agent Systems](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/) -->
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 
+
 ### News 
+<!-- * [2026.07] New paper on harness optimization : [Recurisve Harness Self-Improvement]() -->
 * [2026.05] Joining [SakanaAI](https://sakana.ai/) <img src="https://sakana.ai/favicon.ico" alt="SakanaAI" style="height: 15px; vertical-align: middle; margin-left: 1px;"> as research intern (manager: [Yujin Tang](https://lerrytang.github.io/)). I will be in Japan!
 * [2026.01] My research will be further funded by [Meta](https://ai.meta.com/) (RL for multimodal LLM).
 * [2025.10] New paper on Multi-Modal Recommendation (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
