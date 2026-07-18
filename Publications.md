@@ -12,7 +12,7 @@ Preprint
 
 
 * [Sakana Fugu Technical Report](https://arxiv.org/abs/2606.21228)   
-Yujin Tang, Edoardo Cetin, Jinglue Xu, Qi Sun, Stefan Nielsen, Vincent Richard, Haruto Goda, Iaroslav Tymchenko, Nhan Nguyen, __Hyunin Lee__, Mari Ashiga, Shashank Kotyan, So Kuroki, Tarin Clanuwat
+Yujin Tang, Edoardo Cetin, Jinglue Xu, Qi Sun, Stefan Nielsen, Vincent Richard, Haruto Goda, Iaroslav Tymchenko, Nhan Nguyen, __Hyunin Lee__, Mari Ashiga, Shashank Kotyan, So Kuroki, Tarin Clanuwat   
 Preprint   
 [[blog](https://sakana.ai/fugu/)]
 
