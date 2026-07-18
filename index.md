@@ -77,6 +77,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
 
 ### News 
 <!-- * [2026.07] New paper on harness optimization : [Recurisve Harness Self-Improvement](). Check the [reasearch blog](). -->
+* [2026.06] A new sakanaAI model; Fugu is out! Try the model: [technical report](https://arxiv.org/pdf/2606.21228), [blog](https://sakana.ai/fugu/).
 * [2026.05] Joining [SakanaAI](https://sakana.ai/) <img src="https://sakana.ai/favicon.ico" alt="SakanaAI" style="height: 15px; vertical-align: middle; margin-left: 1px;"> as research intern (manager: [Yujin Tang](https://lerrytang.github.io/)). I will be in Japan!
 * [2026.01] My research will be further funded by [Meta](https://ai.meta.com/) (RL for multimodal LLM).
 * [2025.10] New paper on Multi-Modal Recommendation (work done during Meta internship): [*Orthogonal Alignment*](https://arxiv.org/abs/2510.09435) and its blog post: [*An Orthogonal Alignment Phenomenon in Cross-Attention*](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)

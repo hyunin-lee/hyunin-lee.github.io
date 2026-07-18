@@ -10,6 +10,12 @@ __Hyunin Lee__, Jinglue Xu, Jeffrey Seely, Donghyun Lee, Matei Zaharia and Yujin
 Preprint   
 [[blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/)] -->
 
+
+* [Sakana Fugu Technical Report](https://arxiv.org/abs/2606.21228)   
+Yujin Tang, Edoardo Cetin, Jinglue Xu, Qi Sun, Stefan Nielsen, Vincent Richard, Haruto Goda, Iaroslav Tymchenko, Nhan Nguyen, __Hyunin Lee__, Mari Ashiga, Shashank Kotyan, So Kuroki, Tarin Clanuwat
+Preprint   
+[[blog](https://sakana.ai/fugu/)]
+
 * [Cross-attention Secretly Performs Orthogonal Alignment in Recommendation Models](https://arxiv.org/abs/2510.09435)   
 __Hyunin Lee__, Yong Zhang, Hoang Vu Nguyen, Xiaoyi Liu, Namyong Park, Christopher Jung, Rong Jin, Yang Wang, Zhigang Wang, Somayeh Sojoudi, Xue Feng  
 Preprint   
