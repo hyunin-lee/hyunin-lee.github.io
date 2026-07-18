@@ -85,13 +85,11 @@ For concrete examples of how RHI updates a harness, see [Appendix B: Examples of
 
 ## Recursive Harness Self-Improvement
 
-With the harness defined, the remaining question is how to improve it. The natural approach—maintaining and evolving a large population of candidate harnesses—is expensive: every candidate requires a complete agent execution, and comparing all candidate pairs grows quadratically with the population size.
+With the harness defined, the remaining question is how to improve it. The natural approach—maintaining and evolving a large population of candidate harnesses—is expensive: every candidate requires a complete agent execution, and comparing all candidate pairs grows quadratically with the population size. This cost is not a side issue, because what ultimately matters is *performance per unit cost*. For instance, [*Rethinking the Evaluation of Harness Evolution for Agents*](https://arxiv.org/pdf/2607.12227) compares automatic harness evolution with simpler test-time-scaling methods under matched feedback and inference budgets. On Terminal-Bench 2.1, harness evolution did not consistently outperform parallel sampling or sequential refinement, and its improvements transferred poorly to held-out tasks.
 
-This cost is not merely theoretical. [*Rethinking the Evaluation of Harness Evolution for Agents*](https://arxiv.org/pdf/2607.12227) compares automatic harness evolution with simpler test-time-scaling methods under matched feedback and inference budgets. On Terminal-Bench 2.1, harness evolution did not consistently outperform parallel sampling or sequential refinement, and its improvements transferred poorly to held-out tasks.
+The practical lesson is that *a search algorithm must account for its own cost*. For a fixed budget, every token spent discovering a harness is a token that could have been spent directly on test-time scaling. **A practical harness optimizer must therefore be lightweight in both computation and cost, yet still produce useful updates within only a few iterations.**
 
-The practical lesson is not that harness search has no value; it is that *search must earn its cost*. For a fixed budget, every token spent discovering a harness is a token that could have been spent directly improving the task output. **A practical harness optimizer must therefore be lightweight and produce useful updates within only a few iterations.**
-
-RHI is designed around this constraint. It replaces population search with local search: each update revises the current harness directly, guided only by the feedback accumulated from comparing its own consecutive attempts.
+RHI is designed around this constraint. It replaces population search with "on-trajectory" search: each update revises the current harness directly, guided only by self-comparison feedback between consecutive attempts along the trajectory.
 
 Concretely, for a task $x$, let $H^{(i)}$ be the harness at iteration $i$ and $y^{(i)}$ the repository produced with it. Each RHI iteration performs four steps:
 
@@ -106,19 +104,15 @@ Concretely, for a task $x$, let $H^{(i)}$ be the harness at iteration $i$ and $y
   <em>RHI compares consecutive outputs, saves the feedback, and uses the accumulated history to revise the harness.</em>
 </div>
 
-This loop is lightweight by construction. Because the previous output is cached, each update requires only one new agent execution and one new comparison per task, plus the harness-optimizer call. The accumulated history acts as a semantic form of momentum: later updates can preserve revisions associated with wins and reconsider those associated with losses.
+This "on-trajectory self-comparison" makes the loop computationally lightweight. Because the previous output is cached, each update requires only one harness-optimizer call and one new evaluation call per task. Here, the evaluator produces its feedback using an evaluation rubric, but the harness optimizer never sees that rubric. It must infer useful revisions from the comparison history alone.
 
-One detail matters here: the evaluator produces its feedback using an evaluation rubric, but the harness optimizer never sees that rubric. It must infer useful revisions from the comparison history alone.
+As expected, such a lightweight update rule inevitably yields noisy local ascent. A comparison with one predecessor is not a global estimate of harness quality, and improvement is not guaranteed to be monotonic. On the practical side, we keep the preference-feedback history as a momentum signal to make the ascent more robust. On the theoretical side, we show a mild guarantee: under a standard latent-utility model of pairwise preference, beating the previous harness is aligned with moving upward in the same quality ordering.
 
-This is indeed (very) noisy local ascent. A comparison with one predecessor is not a global estimate of harness quality, and improvement is not guaranteed to be monotonic. In practice, we keep the preference-feedback history as a momentum signal to make the ascent more robust. Moreover, under a standard latent-utility model of pairwise preference, beating the previous harness is aligned with moving upward in the same quality ordering.
-
-<!-- Finally, the word *recursive* is meant in a bounded sense: RHI updates a persistent system component using evidence generated by its own earlier versions. It does **not** change model weights, rewrite the evaluator, or improve the harness optimizer itself. -->
-
-## Experimental setup
+## Benchmark & Evalution
 
 We constructed 30 synthetic, open-ended ML research tasks: ten each in quantitative finance, robotics, and pharmacy. Each task asks the agent to build a complete research repository, including a report, reproducible code, metrics, visualizations, and an artifact index.
 
-These tasks are very hard to verify because they have no single correct scalar answer. We therefore compare repositories with LLM judges using six criteria: deliverable coverage, empirical rigor, reproducibility, presentation, engineering quality, and task alignment. Results are averaged across multiple evaluator configurations and three random seeds.
+These are the kinds of tasks everyday users bring to research agents; unfortunately, they are almost unverifiable (i.e., very hard to verify accurately) because they have no single correct scalar answer. We therefore approximate the evaluation with multiple verifiable criteria scored by LLM judges: deliverable coverage, empirical rigor, reproducibility, presentation, engineering quality, and task alignment. Results are averaged across multiple evaluator configurations and three random seeds.
 
 We test three progressively stronger base models—Claude Sonnet 4.6, Opus 4.7, and Opus 4.8. In each case, RHI adapts a `high`-reasoning agent and compares it with stronger same-family settings such as `xhigh`, `max`, and `ultracode`.
 
@@ -136,15 +130,18 @@ We test three progressively stronger base models—Claude Sonnet 4.6, Opus 4.7, 
 | Opus 4.7 | After one update, `high` + RHI surpassed both `xhigh` and `max`. | 18% lower than `max` |
 | Opus 4.8 | After two updates, `high` + RHI surpassed `xhigh`, `max`, and `ultracode`. | 23% lower than `max`; 60% lower than `ultracode` |
 
-The Opus 4.8 result is especially notable because `ultracode` already uses a provider-built dynamic multi-agent workflow. On this benchmark, a task-specific user-side harness outperformed that general-purpose system harness. These cost numbers describe the final execution with the evolved harness, not the total cost of discovering it. RHI still pays for each intermediate agent run, evaluation, and optimizer call. Adaptation is therefore most attractive when the harness will be reused, when a few iterations fit within the task budget, or when the intermediate executions are themselves useful.
+First, it is clear that few-shot RHI (around two iterations) adapts the `high`-reasoning agent to outperform stronger test-time scaling (`xhigh`, `max`, and `ultracode`) across all base models. **RHI can therefore lift performance beyond the plateau of test-time scaling within a few iterations.** One addition: the Opus 4.8 result is especially notable because `ultracode` already uses a provider-built dynamic multi-agent workflow. We believe this opens a *new hypothesis: a task-specific, user-side harness can be more effective than a general-purpose, built-in system harness.*
 
-It is clear that the **RHI gains do not come primarily from generating more tokens** (see Figures 5b, 6c, 7e in paper). For Sonnet 4.6 and Opus 4.8, output-token use stayed nearly *flat* across RHI iterations while performance improved. Across all three models, however, the evolved harnesses used *fewer* cache reads and writes than the strongest comparison settings, which supports the view that the **performance gains come largely from more efficient context management**.
+Note that these cost numbers describe the final execution with the evolved harness, **not** the total cost of discovering it. This remains a limitation of RHI: it still pays for each intermediate agent run, evaluation, and optimizer call. Adaptation is therefore most attractive when the harness will be reused, when a few iterations fit within the task budget, or when the intermediate executions are themselves useful.
+
+One more observation—we omit the figure here, but see Figures 5b, 6c, and 7e in the paper: it is clear that the **RHI gains do not come primarily from generating more tokens**. For Sonnet 4.6 and Opus 4.8, output-token use stayed nearly *flat* across RHI iterations while performance improved. Moreover, across all three models, the evolved harnesses used *fewer* cache reads and writes than the strongest comparison settings, which supports the view that the **performance gains come largely from more efficient context management**.
 
 ## What really drives RHI's performance gains?
 
-Our analysis points to the **contracts**, i.e., the information flow between agents, is a key driver.
+Our analysis points to the **contracts**—the information flow between agents—as a key driver.
 
-At the component level, **contracts show the clearest task-dependent clustering** across embedding models ( `text-embedding-3-large` and `all-mpnet-base-v2`) and projection methods (`UMAP` and `t-sne`). They also converge faster than roles, instructions, and hops. This suggests that RHI first learns what information should cross the interface between agents.
+We text-embedded the components of every harness update and examined them in a low-dimensional space. At the component level, **contracts show the clearest task-dependent clustering** across embedding models (`text-embedding-3-large` and `all-mpnet-base-v2`) and projection methods (`UMAP` and `t-SNE`). In the paper's figures, contracts also converge faster than roles, instructions, and hops.
+
 
 <div align="center" style="margin: 28px 0;">
   <img src="../assets/rhi-robotics-harness-components.png" alt="Low-dimensional projections of role, instruction, contract, and hop embeddings for robotics tasks across RHI iterations" width="1100" style="max-width: 100%;">
@@ -152,11 +149,21 @@ At the component level, **contracts show the clearest task-dependent clustering*
   <em>Harness components for the robotics tasks. Colors denote tasks and marker shapes denote RHI iterations. Across two embedding models and both UMAP and t-SNE, contracts show the clearest task-dependent separation.</em>
 </div>
 
-## What is harness objective function?
+**Why contracts?**
 
-We then asked whether the update trajectory was consistent with a more general objective. Let $X$ be the task and $Z_c$ the representation of harness component $c$. The following information-theoretic objective summarizes the observed pattern:
+Our interpretation is that the contract is one of the few variables that can improve performance and inference cost at the same time. Optimizing the information flow between agents resembles finding the sparsity pattern in sparse attention. In general, optimizing a contract makes the flow more selective: it can dramatically reduce context usage—and therefore inference cost—but risks high variance in performance, since the wrong information may be dropped. RHI, however, optimizes contracts to be *task-specific*: from each agent's context and output, the contract cherry-picks only what is relevant to solving the task and passes it to the next agent. Optimizing contracts to be task-specific can therefore gain on both axes, performance and cost.
 
-<div markdown="1" style="border: 1px solid #38413d; border-left: 5px solid #267a55; border-radius: 6px; background: #f7f9f7; padding: 20px 22px; margin: 26px 0;">
+**Then why do roles, instructions, and hops not cluster as clearly?** 
+
+We see three possible interpretations. First, roles, instructions, and hops may simply not be the best optimization variables for the harness; this opens a future direction of searching for harness components that can change performance more directly. Second, these three components may need more iterations to adapt. Third, the current feedback design of RHI may be informative enough to fully update contracts but not the other three components; this calls for another future direction—devising a better LLM-feedback loop for harness optimization. 
+
+## What is the hidden objective function of black-box harness optimization?
+
+Now we bring up an interesting analysis. The whole harness-optimization loop is a entirely black-box procedure: we cannot observe what is happening inside. 
+
+Here we suggest one elegant candidate for the objective that general harness optimization may be implicitly pursuing. The following information-theoretic objective summarizes the pattern we observe across all harness updates:
+
+<!-- <div markdown="1" style="border: 1px solid #38413d; border-left: 5px solid #267a55; border-radius: 6px; background: #f7f9f7; padding: 20px 22px; margin: 26px 0;">
 <strong>Hypothesis: the RHI objective function</strong>
 
 $$
@@ -168,11 +175,42 @@ J
 \underbrace{\mathrm{TC}(\{Z_c\}_{c\in\mathcal{C}}\mid X)}_{\text{redundancy after conditioning on the task}},
 \qquad \beta>0.
 $$
+</div> -->
+<div markdown="1" style="border: 1px solid #38413d; border-left: 5px solid #267a55; border-radius: 6px; background: #f7f9f7; padding: 20px 22px; margin: 26px 0;">
+<strong>Hypothesis: a general objective for harness optimization</strong>
+
+Let $X$ be a task drawn from a task distribution, $g_i(X)$ its harness after optimization step $i$, and $\mathcal{C}$ the set of harness components. Let $\mathcal{C}_{\mathrm{ext}}\subseteq\mathcal{C}$ contain the components explicitly targeted for task-specific adaptation, and let $Z_c^{(i)}$ represent component $c$. Effective harness optimization should:
+
+1. **increase task information** in the targeted components; and
+2. **decrease task-conditional redundancy** across the harness as a whole.
+
+Suppressing averages over repeated components for readability, the corresponding objective is
+
+$$
+\begin{aligned}
+J(g_i)
+=
+&\underbrace{
+\sum_{c\in\mathcal{C}_{\mathrm{ext}}}
+I\!\left(Z_c^{(i)};X\right)
+}_{f_{\mathrm{ext}}:\;\text{task-relevant information}}
+-\beta\,
+\underbrace{
+\mathrm{TC}\!\left(
+\left\{Z_c^{(i)}:c\in\mathcal{C}\right\}
+\mid X
+\right)
+}_{f_{\mathrm{int}}:\;\text{redundancy given the task}},
+\qquad \beta>0.
+\end{aligned}
+$$
+
+In one sentence: **concentrate task signal where it changes behavior, without repeating that signal everywhere.**
 </div>
 
-The first term favors task information in the components targeted by the optimizer prompt—contracts and hops in our implementation. The second discourages different harness components from repeating the same information once their shared task is taken into account.
+The first term favors task information in the components driven by the "Harness-optimizer prompt"—contracts and hops in our implementation. The second discourages different harness components from repeating the same information once their shared task is taken into account.
 
-We test this objective function using two embedding modules, with both raw and permutation-debiased estimates. To keep the presentation compact, they show the endpoints from RHI iteration 1 to iteration 4; the table reports every intermediate iteration.
+We test whether the RHI algorihtm maximizes objective function using two embedding modules, with both raw and permutation-debiased estimates. To keep the presentation compact, the table show the endpoints from RHI iteration 1 to iteration 4; the table reports every intermediate iteration.
 
 <style>
 @keyframes rhi-pulse-up {
@@ -208,7 +246,7 @@ We test this objective function using two embedding modules, with both raw and p
 }
 </style>
 
-**Task information moves into contracts and hops.** Each cell reports estimated $I(\text{component};\text{task})$ in nats, from iteration 1 to iteration 4.
+**First term: task information moves into the harness components we target.** Each cell reports estimated $I(\text{component};\text{task})$ in nats, from iteration 1 to iteration 4.
 
 | Component | OpenAI, raw | OpenAI, debiased | MPNet, raw | MPNet, debiased |
 |:--|--:|--:|--:|--:|
@@ -217,22 +255,31 @@ We test this objective function using two embedding modules, with both raw and p
 | <span class="rhi-pulse-up">Contract ↑</span> | <span class="rhi-value-up">1.14 → 1.42</span> | <span class="rhi-value-up">0.99 → 1.34</span> | <span class="rhi-value-up">0.77 → 0.98</span> | <span class="rhi-value-up">0.62 → 0.90</span> |
 | <span class="rhi-pulse-up">Hop ↑</span> | <span class="rhi-value-up">2.10 → 2.66</span> | <span class="rhi-value-up">1.96 → 2.54</span> | <span class="rhi-value-up">1.89 → 2.17</span> | <span class="rhi-value-up">1.74 → 2.05</span> |
 
-Contracts and hops become more informative about the task in all four settings. Roles become less task-specific, while instructions remain roughly stable or decline. RHI does not add task information everywhere; it concentrates that information in the components that coordinate the workflow.
+As the RHI iterations proceed, contracts and hops become more informative about the task in all four settings. Roles become less task-specific, while instructions remain roughly stable or decline.
 
-**Redundancy falls across the harness.** Each cell reports total correlation in nats, again from iteration 1 to iteration 4.
+Our interpretation is that RHI emphasizes updating the workflow components (contracts and hops) rather than the agent design (roles and instructions)—we say so explicitly in the harness-optimizer prompt. The RHI algorithm therefore encodes task information into the harness components the human designer cares about. This is a kind of "nudging" process.
+
+**Second term: Redundancy falls across all harness components.** 
+
+This one is more interesting. Each cell reports total correlation in nats, again from iteration 1 to iteration 4.
 
 | Dependence measure | OpenAI, raw | OpenAI, debiased | MPNet, raw | MPNet, debiased |
 |:--|--:|--:|--:|--:|
 | Overall total correlation | 7.53 → 6.36 | 6.66 → 5.81 | 5.71 → 4.72 | 4.82 → 4.19 |
 | <span class="rhi-pulse-down">Task-conditional total correlation ↓</span> | <span class="rhi-value-down">5.18 → 3.92</span> | <span class="rhi-value-down">4.84 → 3.63</span> | <span class="rhi-value-down">3.89 → 2.86</span> | <span class="rhi-value-down">3.51 → 2.62</span> |
 
-Both dependence measures decrease in every setting. Most importantly, task-conditional total correlation falls even after accounting for the shared task signal. This pattern is consistent with the components becoming less redundant and more functionally distinct.
+Both dependence measures decrease in every setting as the RHI iterations proceed. Most importantly, task-conditional total correlation falls even after accounting for the shared task signal. Qualitatively, this means that **even though the harness components all know what the task is, they evolve to become mutually independent**.
 
-The interpretation is not that every part of a good harness should become more task-specific. It is more selective:
+To be honest, this is counterintuitive. The intuitive picture of a "task-specific harness" is that all components share as much task information as possible, so their mutual dependence should *increase* over iterations.
 
-> **Put task information in the harness components that route computation, and give each component a distinct function.**
+Our interpretation is a bit different. We believe the decrease in task-conditional total correlation shows that the harness components are evolving to be functionally distinct. A good metaphor is that each component is evolving to find an appropriate **basis** of the harness space—that is, **harness optimization over discrete components resembles learning a basis for that space**.
 
-Here, routing computation means deciding what information reaches each component and which component runs next. Note that the measurements use text embeddings as external proxies and are correlational; they do not reveal the optimizer model's internal mechanism.
+
+## A rule of thumb for practical harness optimization
+
+Now, here is our hypothesis on a philosophy of harness engineering (one that still needs plenty of verification—please reach out; we would be happy to collaborate on this!):
+
+> **Encode task information in the harness components the human designer cares about, and evolve each component to be functionally distinct.**
 
 For a deeper discussion of this hypothesis and its implications for harness design, see my blog post [*Toward the science of harness optimization*](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/).
 
@@ -241,8 +288,6 @@ For a deeper discussion of this hypothesis and its implications for harness desi
 The results are promising, but their scope matters. The benchmark contains 30 synthetic ML research tasks, and quality is measured through pairwise LLM judgment. Broader conclusions require real user workloads, other agent environments, and additional model providers. The efficiency analysis also separates the cost of an evolved execution from the total adaptation cost.
 
 RHI provides one concrete step toward the larger model–harness co-evolution loop. The next step is to test whether the resulting execution traces improve future models through post-training—and whether those models, in turn, enable the next generation of harnesses.
-
-The usual scaling question is: *How much more reasoning should the model do?* RHI asks a prior question: *What structure should organize that reasoning?* Our results suggest that, for agent systems, improving that structure can be a powerful complement to scaling.
 
 ---
 
