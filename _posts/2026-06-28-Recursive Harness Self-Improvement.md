@@ -184,7 +184,7 @@ $$
 <div markdown="1" style="border: 1px solid #38413d; border-left: 5px solid #267a55; border-radius: 6px; background: #f7f9f7; padding: 20px 22px; margin: 26px 0;">
 <strong>Hypothesis: a general objective for harness optimization</strong>
 
-Let $X$ be a task drawn from a task distribution, $g_i(X)$ its harness after optimization step $i$, and $\mathcal{C}$ the set of harness components. Let $\mathcal{C}_{\mathrm{ext}}\subseteq\mathcal{C}$ contain the components explicitly targeted for task-specific adaptation, and let $Z_c^{(i)}$ represent component $c$. Effective harness optimization should:
+Let $X$ be a task drawn from a task distribution, $g_i(X)$ its harness after optimization step $i$, and $\mathcal{C}$ the set of harness components. Let $\mathcal{C}_{\mathrm{ext}}\subseteq\mathcal{C}$ contain the components explicitly targeted by human designer, and let $Z_c^{(i)}$ represent component $c$. Effective harness optimization should:
 
 1. **increase task information** in the targeted components; and
 2. **decrease task-conditional redundancy** across the harness as a whole.
@@ -209,11 +209,14 @@ I\!\left(Z_c^{(i)};X\right)
 \qquad \beta>0.
 \end{aligned}
 $$
+In one sentence: 
 
-In one sentence: **concentrate task signal where it changes behavior, without repeating that signal everywhere.**
+Encode task information in the harness components the human designer wants to improve, while keeping every component as functionally distinct as possible.
 </div>
 
-The first term favors task information in the components driven by the "Harness-optimizer prompt"—contracts and hops in our implementation. The second discourages different harness components from repeating the same information once their shared task is taken into account.
+The first term favors task information in the components driven by the "Harness-optimizer prompt"—contracts and hops in our implementation. 
+
+The second discourages different harness components from repeating the same information once their shared task is taken into account.
 
 We test whether the RHI algorihtm maximizes objective function using two embedding modules, with both raw and permutation-debiased estimates. To keep the presentation compact, the table show the endpoints from RHI iteration 1 to iteration 4; the table reports every intermediate iteration.
 
@@ -279,14 +282,16 @@ Both dependence measures decrease in every setting as the RHI iterations proceed
 
 Our interpretation is a bit different. We believe the decrease in task-conditional total correlation shows that the harness components are evolving to be functionally distinct. 
 
-A good metaphor is that each component is evolving to find an appropriate **basis** of the harness space—that is, **harness optimization over discrete components resembles learning a basis for that space**.
+A good metaphor is that each component is evolving to find an appropriate **basis** of the harness space. That is:  
+
+**Harness optimization over discrete components resembles learning a basis for that space**.
 
 
 ## Hypothesis: a rule of thumb for practical harness optimization
 
 Now, here is our hypothesis on a philosophy of harness engineering (one that still needs plenty of verification—please reach out; we would be happy to collaborate on this!):
 
-> **Encode task information in the harness components the human designer cares about, and evolve each component to be functionally distinct.**
+> **Encode task information in the harness components the human designer wants to improve, while keeping every component as functionally distinct as possible.**
 
 For a deeper discussion of this hypothesis and its implications for harness design, see my blog post [*Toward the science of harness optimization*](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/).
 
