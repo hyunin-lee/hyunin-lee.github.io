@@ -5,11 +5,10 @@ title: ""
 
 ### Preprint
 
-<!-- * [Recurisve Harness Self-Improvement]()   
+* [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524)   
 __Hyunin Lee__, Jinglue Xu, Jeffrey Seely, Donghyun Lee, Matei Zaharia and Yujin Tang  
 Preprint   
-[[blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/)] -->
-
+[[blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/)]
 
 * [Sakana Fugu Technical Report](https://arxiv.org/abs/2606.21228)   
 Yujin Tang, Edoardo Cetin, Jinglue Xu, Qi Sun, Stefan Nielsen, Vincent Richard, Haruto Goda, Iaroslav Tymchenko, Nhan Nguyen, __Hyunin Lee__, Mari Ashiga, Shashank Kotyan, So Kuroki, Tarin Clanuwat   

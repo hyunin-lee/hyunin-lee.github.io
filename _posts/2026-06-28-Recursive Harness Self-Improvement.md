@@ -85,7 +85,7 @@ A welcome corollary of this framing is that it sheds light on how harness optimi
 
 **This decomposition makes harness optimization an information-routing problem.** For example, a *generic* contract may ask an experimental agent to "return its findings." A *task-specific* contract instead requires the exact metrics, assumptions, failure cases, and artifact paths that downstream agents need. The task-specific contract routes less irrelevant context and more decision-relevant evidence.
 
-For concrete examples of how RHI updates a harness, see [Appendix B: Examples of RHI Harnesses]().
+For concrete examples of how RHI updates a harness, see [Appendix B: Examples of RHI Harnesses](https://arxiv.org/abs/2607.15524).
 
 ## Recursive Harness Self-Improvement
 
@@ -302,6 +302,10 @@ RHI provides one concrete step toward the larger model–harness co-evolution lo
   <em><sup>1</sup>Sakana AI &nbsp;·&nbsp; <sup>2</sup>UC Berkeley</em>
 </div>
 
-**Paper and code:** links will be added when the public release is available.
+**Paper and code:** 
+
+- paper : [https://arxiv.org/abs/2607.15524](https://arxiv.org/abs/2607.15524)
+- code : will be released soon.
+
 
 For questions or potential collaborations, please [reach out](mailto:hyunin@berkeley.edu).
