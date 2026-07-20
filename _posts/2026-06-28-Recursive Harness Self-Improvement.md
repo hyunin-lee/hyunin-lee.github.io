@@ -56,7 +56,7 @@ Viewing the harness itself as a prompt confers two advantages.
 
 First, it works even with black-box models: the agent's behavior can be steered simply by describing the harness in text and placing that description in the prompt. Second, it makes the harness cheap to revise: maintaining a full code-level harness that handles arbitrary queries is labor- and cost-intensive, whereas a task-specific harness expressed as text can be updated with little effort—a lightness that makes the harness a natural building block for model–harness co-evolution.
 
-## The intuition behind our harness definition
+## Intuition behind our harness definition
 
 Under this prompt-level formulation, we define the harness as the agent loop and decompose it into four components:
 
