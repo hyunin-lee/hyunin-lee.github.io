@@ -79,7 +79,7 @@ We chose the loop because it is the piece of the harness whose importance practi
 
 Granting the loop, a second question follows: why decompose it into precisely these four components?
 
-The decomposition rests on our hypothesis, one that speaks to performance and cost at once: **tailoring the agent workflow to the task should both improve performance and reduce cost, because agents exchange only the context the task actually needs**.
+The decomposition rests on our hypothesis, one that speaks to performance and cost at once: **tailoring the agent workflow to the task should both improve performance and reduce cost, because agents exchange only the context the task actually needs**. The hypothesis is attractive. Drawing on [Lil'Log's discussion of Harness Engineering for Self-Improvement](https://lilianweng.github.io/posts/2026-07-04-harness/), one observes that existing work on harness optimization tends to address either context engineering or workflow design in isolation. The present hypothesis implies that these two strands need not remain separate: if the workflow is revised automatically to suit the task, context optimization follows as a natural consequence, since agents then exchange only the information the revised workflow admits. Optimizing workflow can naturally optimize other harness compoenents!
 
 A welcome corollary of this framing is that it sheds light on how harness optimization itself should be defined. 
 
