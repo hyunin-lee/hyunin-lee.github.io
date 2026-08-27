@@ -52,7 +52,7 @@ title: ""
 ### About
 I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. My research background is in **reinforcement learning**, and I am currently investigating **recursive self-improvement** (RSI) in AI systems. 
 
-Currenlty, I am with SakanaAI, working on making multi-agent harness and its self-improvement.
+Currenlty, I am with SakanaAI, working on making multi-agent harness and its recursive self-improvement.
 
 I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). During my Ph.D., I have also had the opportunity to conduct research at Meta (ads ranking team), OpenAI (paperbenchmark project), and Sakana AI (Fugu team), working on topics spanning LLM agents, and reinforcement learning. Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
@@ -80,7 +80,8 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
 
 ### News 
 * [2026.08] Get involved in [RSI-benchmark](https://www.rsi-benchmark.com/)
-* [2026.07] New paper on harness optimization : [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524). Check the [blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/).
+* [2026.07] [Talk](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) about RSI in SNU.
+* [2026.07] New paper on RSI &harness optimization : [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524). Check the [blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/).
 * [2026.06] A new sakanaAI model; Fugu is out! Try the model: [technical report](https://arxiv.org/pdf/2606.21228), [blog](https://sakana.ai/fugu/).
 * [2026.05] Joining [SakanaAI](https://sakana.ai/) <img src="https://sakana.ai/favicon.ico" alt="SakanaAI" style="height: 15px; vertical-align: middle; margin-left: 1px;"> as research intern (manager: [Yujin Tang](https://lerrytang.github.io/)). I will be in Japan!
 * [2026.01] My research will be further funded by [Meta](https://ai.meta.com/) (RL for multimodal LLM).
