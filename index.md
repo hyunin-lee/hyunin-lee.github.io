@@ -81,7 +81,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
 ### News 
 * [2026.08] Get involved in [RSI-benchmark](https://www.rsi-benchmark.com/)
 * [2026.07] [Talk](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) about RSI in Seoul Nataionl Univ.
-* [2026.07] New paper on RSI &harness optimization : [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524). Check the [blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/).
+* [2026.07] New paper on RSI & harness optimization : [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524). Check the [blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/).
 * [2026.06] A new sakanaAI model; Fugu is out! Try the model: [technical report](https://arxiv.org/pdf/2606.21228), [blog](https://sakana.ai/fugu/).
 * [2026.05] Joining [SakanaAI](https://sakana.ai/) <img src="https://sakana.ai/favicon.ico" alt="SakanaAI" style="height: 15px; vertical-align: middle; margin-left: 1px;"> as research intern (manager: [Yujin Tang](https://lerrytang.github.io/)). I will be in Japan!
 * [2026.01] My research will be further funded by [Meta](https://ai.meta.com/) (RL for multimodal LLM).
