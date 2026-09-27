@@ -52,8 +52,8 @@ title: ""
 ### About
 I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. My research background is in **reinforcement learning**, and I am currently investigating **recursive self-improvement** (RSI) in AI systems. 
 
-Currenlty, I am with SakanaAI, working on making multi-agent harness and its recursive self-improvement.
-
+<!-- Currenlty, I am with SakanaAI, working on making multi-agent harness and its recursive self-improvement.
+-->
 I am fortunate to work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). During my Ph.D., I have also had the opportunity to conduct research at Meta (ads ranking team), OpenAI (paperbenchmark project), and Sakana AI (Fugu team), working on topics spanning LLM agents, and reinforcement learning. Prior to joining Berkeley, I received my B.S. degree from Seoul National University where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/). 
 
 Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-founded and currently advise [OUTTA](https://outta.ai/).
@@ -73,13 +73,12 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
   * Orthogonal alignment in vision-language model: [1](https://arxiv.org/abs/2510.09435) -->
 
 ### Research blog
- * Towards the science of harness optimization (comming soon!)
+ * [Toward the science of harness optimization](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/)
  * [Recurisve Harness Self-Improvement: Reorganizing Multi-Agent Systems](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/)
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 
 
 ### News 
-* [2026.08] Get involved in [RSI-benchmark](https://www.rsi-benchmark.com/)
 * [2026.07] [Talk](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) about RSI in Seoul Nataionl Univ.
 * [2026.07] New paper on RSI & harness optimization : [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524). Check the [blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/).
 * [2026.06] A new sakanaAI model; Fugu is out! Try the model: [technical report](https://arxiv.org/pdf/2606.21228), [blog](https://sakana.ai/fugu/).
