@@ -73,7 +73,7 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
   * Orthogonal alignment in vision-language model: [1](https://arxiv.org/abs/2510.09435) -->
 
 ### Research blog
- * [Recurisve self-improvement with collective intelligence)](https://pub.sakana.ai/mass/)
+ * [Recurisve self-improvement with Multi-Agent Self-Supervision](https://pub.sakana.ai/mass/)
  <!-- * [Toward the science of harness optimization](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/) -->
  * [Recurisve Harness Self-Improvement](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/)
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
