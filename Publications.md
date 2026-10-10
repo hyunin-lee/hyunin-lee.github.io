@@ -7,7 +7,7 @@ title: ""
 * [Recursive Self-Improvement with Multi-Agent Self-Supervision](https://arxiv.org/abs/2610.12176)   
 __Hyunin Lee__, Jinglue Xu, Jeffrey Seely, Somayeh Sojoudi, Donghyun Lee, Matei Zaharia and Yujin Tang  
 Preprint   
-[[blog]()]  
+[[blog](https://pub.sakana.ai/mass/)]  
 
 * [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524)   
 __Hyunin Lee__, Jinglue Xu, Jeffrey Seely, Donghyun Lee, Matei Zaharia and Yujin Tang  

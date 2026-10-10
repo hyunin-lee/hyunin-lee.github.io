@@ -73,14 +73,14 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
   * Orthogonal alignment in vision-language model: [1](https://arxiv.org/abs/2510.09435) -->
 
 ### Research blog
- * [Recurisve self-improvement with collective intelligence (comming soon!)]()
- * [Toward the science of harness optimization](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/)
- * [Recurisve Harness Self-Improvement: Reorganizing Multi-Agent Systems](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/)
+ * [Recurisve self-improvement with collective intelligence)](https://pub.sakana.ai/mass/)
+ <!-- * [Toward the science of harness optimization](https://hyunin-lee.github.io/Toward-the-science-of-harness-optimization/) -->
+ * [Recurisve Harness Self-Improvement](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/)
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 
 
 ### News 
-* [2026.10] New paper on RSI : [Recursive Self-Improvement with Multi-Agent Self-Supervision](https://arxiv.org/abs/2610.12176)
+* [2026.10] New paper on RSI : [Recursive Self-Improvement with Multi-Agent Self-Supervision](https://arxiv.org/abs/2610.12176). Check the [blog](https://pub.sakana.ai/mass/)
 * [2026.09] Involved in [RSI benchmark](https://rsi-benchmark.com/) project.
 * [2026.07] [Talk](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) about RSI in Seoul Nataionl Univ.
 * [2026.07] New paper on RSI & harness optimization : [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524). Check the [blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/).
