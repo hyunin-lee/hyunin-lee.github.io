@@ -80,9 +80,10 @@ Besides my research, I am interested in AI education 📚👩🏻‍💻. I co-f
 
 
 ### News 
+* [2026.10] Talk about RSI in [LEMAS](https://sites.google.com/berkeley.edu/lemas-seminar) group
 * [2026.10] New paper on RSI : [Recursive Self-Improvement with Multi-Agent Self-Supervision](https://arxiv.org/abs/2610.12176). Check the [blog](https://pub.sakana.ai/mass/)
 * [2026.09] Involved in [RSI benchmark](https://rsi-benchmark.com/) project.
-* [2026.07] [Talk](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) about RSI in Seoul Nataionl Univ.
+* [2026.07] [Talk](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) about RSI in Seoul National Univ.
 * [2026.07] New paper on RSI & harness optimization : [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524). Check the [blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/).
 * [2026.06] A new sakanaAI model; Fugu is out! Try the model: [technical report](https://arxiv.org/pdf/2606.21228), [blog](https://sakana.ai/fugu/).
 * [2026.05] Joining [SakanaAI](https://sakana.ai/) <img src="https://sakana.ai/favicon.ico" alt="SakanaAI" style="height: 15px; vertical-align: middle; margin-left: 1px;"> as research intern (manager: [Yujin Tang](https://lerrytang.github.io/)). I will be in Japan!
