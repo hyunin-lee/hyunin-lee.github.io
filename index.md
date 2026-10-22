@@ -50,7 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. I work on the recursive self-improvement of AI systems, aiming to solve problems that go beyond human supervision. See my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). During my Ph.D., my research background has been in reinforcement learning. 
+I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. I work on the **recursive self-improvement** of AI systems, aiming to solve problems that go beyond human supervision. See my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). During my Ph.D., my research background has been in reinforcement learning. 
 <!-- My research background is in **reinforcement learning**, and I am currently investigating **recursive self-improvement** (RSI) in AI systems.  -->
 
 <!-- Currenlty, I am with SakanaAI, working on making multi-agent harness and its recursive self-improvement.
