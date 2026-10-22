@@ -50,12 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. I work on the **recursive self-improvement** of AI systems, aiming to solve problems that go beyond human supervision. See my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). During my Ph.D., my research background has been in reinforcement learning. 
-<!-- My research background is in **reinforcement learning**, and I am currently investigating **recursive self-improvement** (RSI) in AI systems.  -->
-
-<!-- Currenlty, I am with SakanaAI, working on making multi-agent harness and its recursive self-improvement.
--->
-During my Ph.D., I have been working with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). I have worked at Meta (ads ranking), OpenAI (PaperBench), and Sakana AI (multi-agent) on topics spanning LLM agents and reinforcement learning. Prior to joining Berkeley, I received my B.S. from Seoul National University. 
+I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. I work on the **recursive self-improvement** of AI systems, aiming to solve problems that go beyond human supervision. Check my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). During my Ph.D., my research background has been in reinforcement learning, and I have been working with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). I have worked at Meta (ads ranking), OpenAI (PaperBench), and Sakana AI (multi-agent) on topics spanning LLM agents and reinforcement learning. Prior to joining Berkeley, I received my B.S. from Seoul National University. 
 <!-- where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/).  -->
 
 Besides my research, I am interested in AI education 👩🏻‍💻. I co-founded and currently advise [OUTTA](https://outta.ai/).
