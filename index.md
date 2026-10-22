@@ -55,7 +55,7 @@ I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. I work on the recu
 
 <!-- Currenlty, I am with SakanaAI, working on making multi-agent harness and its recursive self-improvement.
 -->
-I work with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). I have worked at Meta (ads ranking), OpenAI (paperbenchmark project), and Sakana AI (multi-agent), working on topics spanning LLM agents, and reinforcement learning. Prior to joining Berkeley, I received my B.S. degree from Seoul National University. 
+During my Ph.D., I have been working with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). I have worked at Meta (ads ranking), OpenAI (PaperBench), and Sakana AI (multi-agent) on topics spanning LLM agents and reinforcement learning. Prior to joining Berkeley, I received my B.S. from Seoul National University. 
 <!-- where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/).  -->
 
 Besides my research, I am interested in AI education 👩🏻‍💻. I co-founded and currently advise [OUTTA](https://outta.ai/).
