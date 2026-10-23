@@ -77,6 +77,7 @@ Besides my research, I am interested in AI education 👩🏻‍💻. I co-found
 
 
 ### News 
+* [2026.10] Talk about RSI in [FuriosaAI](https://furiosa.ai/)
 * [2026.10] Talk about RSI in [LEMAS](https://sites.google.com/berkeley.edu/lemas-seminar) group
 * [2026.10] New paper on RSI : [Recursive Self-Improvement with Multi-Agent Self-Supervision](https://arxiv.org/abs/2610.12176). Check the [blog](https://pub.sakana.ai/mass/)
 * [2026.09] Involved in [RSI benchmark](https://rsi-benchmark.com/) project.
