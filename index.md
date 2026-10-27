@@ -50,7 +50,7 @@ title: ""
 </div>
 -->
 ### About
-I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. I work on the **recursive self-improvement** of AI systems, aiming to solve problems that go beyond human supervision. Check my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). I am currently working on problems that go far beyond human supervision, where RSI becomes inevitable. Espeically nowadays, I believe it is good timing to solve problems where humans can specify a goal but cannot clearly define the objective function.
+I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. I work on the **recursive self-improvement** of AI systems. My research seeks to solve problems that transcend the limits of human supervision—problems for which RSI is an indispensable algorithmic property. Check my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). I believe we are entering a pivotal era in which AI systems can now tackle problems where humans can articulate the ultimate goal but cannot fully specify the objective function, evaluation criteria, or etc.
 
 During my Ph.D., my research background has been in reinforcement learning, and I have been working with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). I have worked at Meta (ads ranking), OpenAI (PaperBench), and Sakana AI (multi-agent) on topics spanning LLM agents and reinforcement learning. Prior to joining Berkeley, I received my B.S. from Seoul National University. 
 <!-- where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/).  -->
