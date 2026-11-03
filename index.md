@@ -9,7 +9,7 @@ title: ""
     <h2 style="margin: 0;">Hyunin Lee</h2>
     <p style="margin: 0;">Ph.D at UC Berkeley</p>
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
-    <p><strong>Research Interests:</strong> Reinforcment Learning, Recursive Self-Improvement </p>
+    <p><strong>Research Interests:</strong> Multi-agent, Recursive Self-Improvement </p>
     <p>
       <a href="./assets/CV_update.pdf" target="_blank">
         <img src="/assets/CV2.svg" alt="CV" style="width: auto; height: 30px; margin-right: 15px;">
