@@ -79,7 +79,7 @@ Besides my research, I am interested in AI education 👩🏻‍💻. I co-found
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 
 ### Invited talks
-# * [2027.02] Talk on RSI at 645 Ventures
+<!-- * [2027.02] Talk on RSI at 645 Ventures -->
 * [2026.12] Talk on RSI at UW–Madison (host: Prof. Sharon Li)
 * [2026.11] Talk on RSI at Yonsei university (host: Prof. Kyungwoo Song)
 * [2026.10] Talk on RSI at [FuriosaAI](https://furiosa.ai/)
