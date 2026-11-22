@@ -53,10 +53,11 @@ title: ""
 ### About
 I am a final-year UC Berkeley Ph.D. candidate, advised by [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). My research seeks to establish the principles and mechanisms for fully autonomous self-improvement in multi-agent systems. I study how scaling collective intelligence can enable recursive self-improvement beyond the limits of human supervision. See my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). 
 
-Earlier in my Ph.D, I studied RL algorithms for training agents in time-varying environments and AI saftey. I have worked on ranking at Meta, PaperBench at OpenAI, and multi-agent systems at Sakana AI. Before joining Berkeley, I earned my B.S. from Seoul National University.
+Earlier in my Ph.D, I studied RL algorithms for training agents in time-varying environments and AI saftey. I have worked on ranking at Meta, PaperBench at OpenAI, and multi-agent systems at Sakana AI. Before joining Berkeley, I earned my B.S. from Seoul National University. 
 
 Besides my research, I am interested in AI education 👩🏻‍💻. I co-founded and currently advise [OUTTA](https://outta.ai/).
-<!-- , specifically, 
+
+<!-- specifically, 
 - How can we design multi-agent systems that recursively self-improve themselves?
 - How can we adapt domain-specific multi-agent systems to unseen domains? -->
 
