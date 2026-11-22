@@ -52,7 +52,7 @@ title: ""
 
 ### About
 I am a final-year UC Berkeley Ph.D. candidate, advised by [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). My research focuses on building effective multi-agent systems, specifically, 
-- How can we design multi-agent systems that recursively improve themselves?
+- How can we design multi-agent systems that recursively self-improve themselves?
 - How can we adapt domain-specific multi-agent systems to unseen domains?
 
 I believe in the power of scaling collective intelligence. See my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). 
@@ -67,13 +67,13 @@ Besides my research, I am interested in AI education 👩🏻‍💻. I co-found
  * [Recurisve Harness Self-Improvement](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/)
  * [An Orthogonal Alignment Phenomenon in Cross-Attention](https://hyunin-lee.github.io/An-Orthogonal-Alignment-Phenomenon-in-Cross-Attention/)
 
-### Invited talks
+### Invited talks (RSI, multi-agent)
 <!-- * [2027.02] Talk on RSI at 645 Ventures -->
-* [2026.12] Talk on RSI at UW–Madison (host: Prof. Sharon Li)
-* [2026.11] Talk on RSI at Yonsei university (host: Prof. Kyungwoo Song)
-* [2026.10] Talk on RSI at [FuriosaAI](https://furiosa.ai/)
-* [2026.10] Talk on RSI at [LEMAS](https://sites.google.com/berkeley.edu/lemas-seminar) (host: Prof. Shankar Sastry)
-* [2026.07] Talk on RSI at [Seoul National University](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) (host: Prof. Eunhyek Joa)
+* [2026.12] UW–Madison (host: Prof. Sharon Li)
+* [2026.11] Yonsei university (host: Prof. Kyungwoo Song)
+* [2026.10] [FuriosaAI](https://furiosa.ai/)
+* [2026.10] [LEMAS](https://sites.google.com/berkeley.edu/lemas-seminar) (host: Prof. Shankar Sastry)
+* [2026.07] [Seoul National University](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) (host: Prof. Eunhyek Joa)
 
 ### News 
 * [2026.10] New paper on RSI & multi-agent system: [Recursive Self-Improvement with Multi-Agent Self-Supervision](https://arxiv.org/abs/2610.12176). Check the [blog](https://pub.sakana.ai/mass/)
