@@ -9,7 +9,7 @@ title: ""
     <h2 style="margin: 0;">Hyunin Lee</h2>
     <p style="margin: 0;">Ph.D at UC Berkeley</p>
     <p><strong>Contact:</strong> hyunin(at)berkeley(dot)edu</p>
-    <p><strong>Research Interests:</strong> Multi-agent, Recursive Self-Improvement </p>
+    <p><strong>Research Interests:</strong> Multi-agent system, Recursive self-improvement </p>
     <p>
       <a href="./assets/CV_update.pdf" target="_blank">
         <img src="/assets/CV2.svg" alt="CV" style="width: auto; height: 30px; margin-right: 15px;">
@@ -49,28 +49,17 @@ title: ""
   </div>
 </div>
 -->
-### About
-I am Hyunin Lee, a final-year Ph.D. candidate at UC Berkeley. I work on the **recursive self-improvement** of multi-agent systems. My research seeks to solve problems that transcend the limits of human supervision—problems for which RSI is an indispensable algorithmic property. Check my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). 
-<!-- The timing is ripe to tackle problems where AI can pursue goals that humans can name, yet cannot fully formalize—objectives, evaluation criteria, and reward signals that resist complete specification. -->
 
-During my Ph.D., my research background has been in reinforcement learning, and I have been working with [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). I have worked at Meta (ads ranking), OpenAI (PaperBench), and Sakana AI (multi-agent) on topics spanning LLM agents and reinforcement learning. Prior to joining Berkeley, I received my B.S. from Seoul National University. 
-<!-- where I worked on research projects in neuroscience and machine learning with [Yong-Lae Park](https://softrobotics.snu.ac.kr/).  -->
+### About
+I am a final-year UC Berkeley Ph.D. candidate, advised by [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi/index.html). My research focuses on building effective multi-agent systems, specifically, 
+- How can we design multi-agent systems that recursively improve themselves?
+- How can we adapt domain-specific multi-agent systems to unseen domains?
+
+I believe in the power of scaling collective intelligence. See my recent work: [MASS](https://arxiv.org/abs/2610.12176) and [RHI](https://arxiv.org/abs/2607.15524). 
+
+Earlier in my Ph.D, I studied RL algorithms for training agents in time-varying environments and AI saftey. I have worked on ranking at Meta, PaperBench at OpenAI, and multi-agent systems at Sakana AI. Before joining Berkeley, I earned my B.S. from Seoul National University.
 
 Besides my research, I am interested in AI education 👩🏻‍💻. I co-founded and currently advise [OUTTA](https://outta.ai/).
-
-<!-- 
-### Research questions
-* Identifying Challenges Beyond Scaling: What fundamental problems remain unsolvable despite scaling up models and data?
-* Human-Centered AI Representation: How can we translate intangible challenges from human environments into tractable decision-making formulations?
--->
-<!-- ### Research Area
-* Reinforcement Learning, Multi-Modal Learning -->
-
-<!-- ### Questions.
-* Currently, I’m curious about the following questions:
-  * Why are many traditional exploration methods in RL not working in LLM post-training?
-  * Black swan events in AI safety: [1](https://arxiv.org/pdf/2407.18422), [2](https://openreview.net/pdf?id=WpePuya3Ki)
-  * Orthogonal alignment in vision-language model: [1](https://arxiv.org/abs/2510.09435) -->
 
 ### Research blog
  * [Recurisve self-improvement with Multi-Agent Self-Supervision](https://pub.sakana.ai/mass/)
