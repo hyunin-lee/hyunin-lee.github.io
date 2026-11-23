@@ -69,6 +69,7 @@ Besides my research, I am interested in AI education 👩🏻‍💻. I co-found
 
 ### Invited talks (RSI, multi-agent)
 <!-- * [2027.02] Talk on RSI at 645 Ventures -->
+* [2026.12] [Noeri](https://noeri.ai/)
 * [2026.12] UW–Madison (host: Prof. Sharon Li)
 * [2026.11] Yonsei university (host: Prof. Kyungwoo Song)
 * [2026.10] [FuriosaAI](https://furiosa.ai/)
