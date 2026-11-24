@@ -72,6 +72,7 @@ Besides my research, I am interested in AI education 👩🏻‍💻. I co-found
 * [2026.12] [Noeri](https://noeri.ai/)
 * [2026.12] UW–Madison (host: Prof. Sharon Li)
 * [2026.11] Yonsei university (host: Prof. Kyungwoo Song)
+* [2026.11] SakanaAI
 * [2026.10] [FuriosaAI](https://furiosa.ai/)
 * [2026.10] [LEMAS](https://sites.google.com/berkeley.edu/lemas-seminar) (host: Prof. Shankar Sastry)
 * [2026.07] [Seoul National University](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) (host: Prof. Eunhyek Joa)
