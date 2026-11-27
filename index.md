@@ -78,6 +78,7 @@ Besides my research, I am interested in AI education 👩🏻‍💻. I co-found
 * [2026.07] [Seoul National University](https://me.snu.ac.kr/%ec%84%b8%eb%af%b8%eb%82%98-%eb%b0%8f-%ed%96%89%ec%82%ac/?mod=document&uid=22084) (host: Prof. Eunhyek Joa)
 
 ### News 
+* [2026.11] New paper on LLM post-training: [PRIOR: Pre-Call Reasoning in SFT and Its Influence on Tool-Use Retention under RL](https://arxiv.org/pdf/2611.33648)
 * [2026.10] New paper on RSI & multi-agent system: [Recursive Self-Improvement with Multi-Agent Self-Supervision](https://arxiv.org/abs/2610.12176). Check the [blog](https://pub.sakana.ai/mass/)
 * [2026.09] Involved in [RSI benchmark](https://rsi-benchmark.com/) project.
 * [2026.07] New paper on RSI & harness optimization : [Recurisve Harness Self-Improvement](https://arxiv.org/abs/2607.15524). Check the [blog](https://hyunin-lee.github.io/Recursive-Harness-Self-Improvement/).

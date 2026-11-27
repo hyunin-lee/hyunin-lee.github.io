@@ -4,6 +4,10 @@ title: ""
 ---
 
 ### Preprint
+* [PRIOR: Pre-Call Reasoning in SFT and Its Influence on Tool-Use Retention under RL](https://arxiv.org/pdf/2611.33648)   
+Kaiwen Hu, __Hyunin Lee__, Joesph Suh, Serina Chang, Shuai Shao, Yong Zhang, Namyong Park, Xiaoqiang Luo, Luke Simon, Somayeh Sojoudi   
+Preprint   
+
 * [Recursive Self-Improvement with Multi-Agent Self-Supervision](https://arxiv.org/abs/2610.12176)   
 __Hyunin Lee__, Jinglue Xu, Jeffrey Seely, Somayeh Sojoudi, Donghyun Lee, Matei Zaharia and Yujin Tang  
 Preprint   
